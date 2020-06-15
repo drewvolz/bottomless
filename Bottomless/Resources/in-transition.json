@@ -1,0 +1,93 @@
+
+{
+    "_id": "5ee53c906215cb00458b1db4",
+    "cost": 0,
+    "roast_options": [],
+    "notes_deprecated": [],
+    "tracking_updates": [],
+    "predictions": null,
+    "sentWithScale": false,
+    "user_id": "5edfe91e3c82b40045634650",
+    "product_id": {
+        "product": {
+            "_id": "5e13a054476ef30004a41e0f",
+            "name": "Big Joy",
+            "vendor_name": "Camber Coffee",
+            "small_image_src": "https://bottomless.imgix.net/products/camber-nobg-smaller.png?auto=compress&w=300"
+        },
+        "variant": "5e13bc739ed7a70033ef3fb1"
+    },
+    "original_product_id": {
+        "product": "5e13a054476ef30004a41e0f",
+        "variant": "5e13bc739ed7a70033ef3fb1"
+    },
+    "vendor_id": {
+        "_id": "5e0eb67943863427ec3279db",
+        "name": "Camber Coffee",
+        "fulfillment_timelines": {
+            "sunday": false,
+            "saturday": false,
+            "friday": true,
+            "thursday": true,
+            "wednesday": true,
+            "tuesday": true,
+            "monday": false
+        }
+    },
+    "quantity": "1",
+    "date_initiated": "2020-06-13T20:52:32.838Z",
+    "status": "initiated",
+    "source": "user_one_off",
+    "user_generated": true,
+    "grind": {
+        "_id": "5eaa7fc066c17ce02128fa3a",
+        "name": "Whole Beans",
+        "default": true,
+        "__v": 0
+    },
+    "created_at": "2020-06-13T20:52:32.847Z",
+    "updated_at": "2020-06-14T09:30:37.974Z",
+    "__v": 0,
+    "fulfillmentErrors": {
+        "smoke": {
+            "date": "2020-06-14T09:30:37.972Z",
+            "error": null
+        }
+    },
+    "exclude_fulfilment_dates": [
+        "2020-06-14T00:00:00.000Z",
+        "2020-06-19T00:00:00.000Z",
+        "2020-06-20T00:00:00.000Z",
+        "2020-06-21T00:00:00.000Z",
+        "2020-06-26T00:00:00.000Z",
+        "2020-06-27T00:00:00.000Z",
+        "2020-06-28T00:00:00.000Z",
+        "2020-07-03T00:00:00.000Z",
+        "2020-07-04T00:00:00.000Z",
+        "2020-07-05T00:00:00.000Z",
+        "2020-07-10T00:00:00.000Z",
+        "2020-07-11T00:00:00.000Z",
+        "2020-07-12T00:00:00.000Z",
+        "2020-07-17T00:00:00.000Z",
+        "2020-07-18T00:00:00.000Z",
+        "2020-07-19T00:00:00.000Z",
+        "2020-07-24T00:00:00.000Z",
+        "2020-07-25T00:00:00.000Z",
+        "2020-07-26T00:00:00.000Z",
+        "2020-07-31T00:00:00.000Z",
+        "2020-08-01T00:00:00.000Z",
+        "2020-08-02T00:00:00.000Z",
+        "2020-08-07T00:00:00.000Z",
+        "2020-08-08T00:00:00.000Z",
+        "2020-08-09T00:00:00.000Z"
+    ],
+    "fulfillment_timelines": {
+        "sunday": false,
+        "saturday": false,
+        "friday": false,
+        "thursday": true,
+        "wednesday": true,
+        "tuesday": true,
+        "monday": true
+    }
+}

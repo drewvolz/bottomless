@@ -1,0 +1,1163 @@
+{
+    "data": [
+        {
+            "_id": "5edfe91e3c82b40045634652",
+            "original_product_id": {
+                "product": "5e477572154727000432370b",
+                "variant": "5e4775721547270004323711"
+            },
+            "product_id": {
+                "product": "5e477572154727000432370b",
+                "variant": "5e4775721547270004323711"
+            },
+            "subproduct_id": {
+                "product": {
+                    "_id": "5e2a25d167dfcd0004d5f6fc",
+                    "name": "Ethiopia Yirgacheffe Yetagesu Bulebula",
+                    "vendor_name": "Revel Coffee",
+                    "variants": [
+                        {
+                            "bottomlessProvidesPackaging": false,
+                            "skipShipment": false,
+                            "_id": "5e2a58efb18a530033fe778a",
+                            "created_at": "2020-01-24T02:39:43.897Z",
+                            "updated_at": "2020-05-21T05:07:28.258Z",
+                            "available": true,
+                            "size": 12,
+                            "price": 17.5,
+                            "parcel": "5d398f8c2d63c01e62f316b2"
+                        },
+                        {
+                            "bottomlessProvidesPackaging": false,
+                            "skipShipment": false,
+                            "_id": "5e7b26d3e8068600337ce143",
+                            "created_at": "2020-03-25T09:39:31.467Z",
+                            "updated_at": "2020-05-21T05:07:28.258Z",
+                            "available": true,
+                            "size": 32,
+                            "parcel": "5e8329aa468b50d2939df570",
+                            "price": 49
+                        }
+                    ],
+                    "small_image_src": "https://bottomless.imgix.net/RevelCoffeeNoBG.png?auto=compress&w=300"
+                },
+                "variant": "5e2a58efb18a530033fe778a"
+            },
+            "ordered_product_id": {
+                "product": {
+                    "_id": "5e477572154727000432370b",
+                    "name": "Custom rotation",
+                    "small_image_src": "https://bottomless.imgix.net/products/AllRotating1.png?auto=compress&w=300",
+                    "vendor_name": "Bottomless"
+                },
+                "variant": "5e4775721547270004323711"
+            },
+            "cost": 0,
+            "roast_options": [],
+            "notes_deprecated": [],
+            "tracking_updates": [
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "user_id": 90847,
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "unknown",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-10T14:22:13Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": null,
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [],
+                    "carrier_detail": null,
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "user_id": 90847,
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "pre_transit",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-10T15:52:24Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": null,
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": null,
+                        "destination_tracking_location": null,
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": null
+                    },
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "user_id": "user_8971101171d74ad1b584e3325a2f61b3",
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "in_transit",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-11T02:01:16Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": "2020-06-13T00:00:00Z",
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "USPS IN POSSESSION OF ITEM",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T16:52:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DEPART POST OFFICE",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "departed_facility",
+                            "datetime": "2020-06-10T17:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": null,
+                        "destination_tracking_location": null,
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": null
+                    },
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "user_id": "user_8971101171d74ad1b584e3325a2f61b3",
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "in_transit",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-11T05:05:07Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": "2020-06-13T00:00:00Z",
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "USPS IN POSSESSION OF ITEM",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T16:52:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DEPART POST OFFICE",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "departed_facility",
+                            "datetime": "2020-06-10T17:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": null,
+                        "destination_tracking_location": null,
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": null
+                    },
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "in_transit",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-12T12:48:44Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": "2020-06-13T00:00:00Z",
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "USPS IN POSSESSION OF ITEM",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T16:52:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DEPART POST OFFICE",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "departed_facility",
+                            "datetime": "2020-06-10T17:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": null,
+                        "destination_tracking_location": null,
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": null
+                    },
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "out_for_delivery",
+                    "status_detail": "unknown",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-12T16:50:04Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": "2020-06-13T00:00:00Z",
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "USPS IN POSSESSION OF ITEM",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T16:52:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DEPART POST OFFICE",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "departed_facility",
+                            "datetime": "2020-06-10T17:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "ARRIVAL AT UNIT",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T08:15:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94124"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "OUT FOR DELIVERY",
+                            "description": null,
+                            "status": "out_for_delivery",
+                            "status_detail": "out_for_delivery",
+                            "datetime": "2020-06-12T08:26:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "12345"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": null,
+                        "destination_tracking_location": null,
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": null
+                    },
+                    "finalized": false,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                },
+                {
+                    "id": "trk_3156d44a17cc4ceeb5a6ffa312b5aed0",
+                    "object": "Tracker",
+                    "mode": "production",
+                    "tracking_code": "12345678901234567890123",
+                    "status": "delivered",
+                    "status_detail": "arrived_at_destination",
+                    "created_at": "2020-06-10T14:22:13Z",
+                    "updated_at": "2020-06-12T23:39:57Z",
+                    "signed_by": null,
+                    "weight": null,
+                    "est_delivery_date": "2020-06-13T00:00:00Z",
+                    "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+                    "carrier": "USPS",
+                    "tracking_details": [
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PRE-SHIPMENT INFO SENT USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T09:33:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "SHIPPING LBL CREATED USPS AWAITS ITEM",
+                            "description": null,
+                            "status": "pre_transit",
+                            "status_detail": "label_created",
+                            "datetime": "2020-06-10T14:22:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "USPS IN POSSESSION OF ITEM",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T16:52:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DEPART POST OFFICE",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "departed_facility",
+                            "datetime": "2020-06-10T17:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59102"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-10T20:55:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "BILLINGS",
+                                "state": "MT",
+                                "country": "US",
+                                "zip": "59101"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "PROCESSED THROUGH USPS FACILITY",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T02:06:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94188"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "ARRIVAL AT UNIT",
+                            "description": null,
+                            "status": "in_transit",
+                            "status_detail": "status_update",
+                            "datetime": "2020-06-12T08:15:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "94124"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "OUT FOR DELIVERY",
+                            "description": null,
+                            "status": "out_for_delivery",
+                            "status_detail": "out_for_delivery",
+                            "datetime": "2020-06-12T08:26:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "12345"
+                            }
+                        },
+                        {
+                            "object": "TrackingDetail",
+                            "message": "DELIVERED IN/AT MAILBOX",
+                            "description": null,
+                            "status": "delivered",
+                            "status_detail": "arrived_at_destination",
+                            "datetime": "2020-06-12T15:30:00Z",
+                            "source": "USPS",
+                            "carrier_code": null,
+                            "tracking_location": {
+                                "object": "TrackingLocation",
+                                "city": "ANY CITY",
+                                "state": "CA",
+                                "country": "US",
+                                "zip": "12345"
+                            }
+                        }
+                    ],
+                    "carrier_detail": {
+                        "object": "CarrierDetail",
+                        "service": null,
+                        "container_type": null,
+                        "est_delivery_date_local": null,
+                        "est_delivery_time_local": null,
+                        "origin_location": "BILLINGS MT, US, 59102",
+                        "origin_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "BILLINGS",
+                            "state": "MT",
+                            "country": "US",
+                            "zip": "59102"
+                        },
+                        "destination_location": "ANY CITY CA, US, 12345",
+                        "destination_tracking_location": {
+                            "object": "TrackingLocation",
+                            "city": "ANY CITY",
+                            "state": "CA",
+                            "country": "US",
+                            "zip": "12345"
+                        },
+                        "guaranteed_delivery_date": null,
+                        "alternate_identifier": null,
+                        "initial_delivery_attempt": "2020-06-12T15:30:00Z"
+                    },
+                    "finalized": true,
+                    "is_return": false,
+                    "public_url": "https://track.easypost.com/"
+                }
+            ],
+            "predictions": [],
+            "sentWithScale": true,
+            "user_id": "5edfe91e3c82b40045634650",
+            "vendor_id": "59f36419a8daaa120040df24",
+            "grind": {
+                "_id": "5eaa7fc066c17ce02128fa3a",
+                "name": "Whole Beans",
+                "default": true,
+                "__v": 0
+            },
+            "transaction_cost": "0.81",
+            "free_bag": false,
+            "stripe_charge_id": "ch_1GsDXMB2bgcCVso7eWwdgtbC",
+            "amount_paid": 1750,
+            "shipment_paid": 0,
+            "first_order": true,
+            "status": "fulfilled",
+            "source": "onboarding",
+            "date_paid": "2020-06-09T19:55:10.298Z",
+            "first_order_send": true,
+            "quantity": "1",
+            "date_initiated": "2020-06-09T19:55:10.298Z",
+            "user_generated": false,
+            "address": {
+                "street1": "123 easy street",
+                "street2": "",
+                "city": "Any Town",
+                "state": "CA",
+                "zip": "12345",
+                "country": "US",
+                "name": "Drew Volz"
+            },
+            "subproduct_name": "Ethiopia Yirgacheffe Yetagesu Bulebula",
+            "subvendor_id": {
+                "_id": "5ccff95f9115560016e5e968",
+                "name": "Revel Coffee"
+            },
+            "pricing_rule": "5e1db777bebda50004cff9e3",
+            "created_at": "2020-06-09T19:55:10.301Z",
+            "updated_at": "2020-06-12T23:42:33.677Z",
+            "__v": 7,
+            "date_fulfilled": "2020-06-10T11:15:06.484Z",
+            "shipment_id": "shp_00dc5bd6227541b388e43f6d8b59af92",
+            "actual_shipping_cost": 9.54,
+            "date_shipped": "2020-06-10T14:22:13.920Z",
+            "label_url": "https://easypost-files.s3-us-west-2.amazonaws.com/files/postage_label/20200610/foo.png",
+            "shipping_service": "USPS",
+            "tracked": true,
+            "tracking_number": "12345678901234567890123",
+            "tracking_url": "https://track.easypost.com/",
+            "fulfillmentErrors": {
+                "shipment": {
+                    "date": "2020-06-10T14:22:14.178Z",
+                    "error": null
+                }
+            },
+            "batch_id": "batch_91faca8b4b3f42bbb12c704151e71232",
+            "last_tracking_update": "2020-06-12T00:00:00.000Z",
+            "shipping_status": "delivered",
+            "usps_tracking": {
+                "id": "9bc7edf397a075a60d0b6014c0391e68b746686e",
+                "tracking_number": "12345678901234567890123",
+                "status": "delivered",
+                "description": "Your item was delivered in or at the mailbox at 3:30 pm on June 12, 2020 in ANY CITY, CA 12345.",
+                "date": "2020-06-12T22:41:54.760Z",
+                "summary": [
+                    {
+                        "id": "9bc7edf397a075a60d0b6014c0391e68b746686e",
+                        "status": "delivered",
+                        "description": "Your item was delivered in or at the mailbox at 3:30 pm on June 12, 2020 in ANY CITY, CA 12345.",
+                        "date": "2020-06-12T22:41:54.760Z"
+                    },
+                    {
+                        "id": "4342913c86cbb73621ea8d5338760078bf7927cd",
+                        "status": "out_for_delivery",
+                        "description": "Your item is out for delivery on June 12, 2020 at 8:26 am in ANY CITY, CA 12345.",
+                        "date": "2020-06-12T15:34:18.006Z"
+                    },
+                    {
+                        "id": "e7f77381a1eb4d709ef94005b42c2f420b57eff5",
+                        "status": "in_transit",
+                        "description": "Your item departed our ANY CITY CA DISTRIBUTION CENTER destination facility on June 12, 2020 at 2:06 am. The item is currently in transit to the destination.",
+                        "date": "2020-06-12T09:23:25.311Z"
+                    },
+                    {
+                        "id": "c54aac071e11d5c8b69248595bc948424f2a4892",
+                        "status": "in_transit",
+                        "description": "Your package is moving within the USPS network and is on track to be delivered the expected delivery date. It is currently in transit to the next facility.",
+                        "date": "2020-06-11T19:13:25.453Z"
+                    },
+                    {
+                        "id": "4f8379b5fe1a4ef437b591f95419a77d328dd67c",
+                        "status": "in_transit",
+                        "description": "Your item departed our BILLINGS MT DISTRIBUTION CENTER origin facility on June 10, 2020 at 8:55 pm. The item is currently in transit to the destination.",
+                        "date": "2020-06-11T03:13:32.280Z"
+                    },
+                    {
+                        "id": "3344086027e5c4a922687d4390db1246924ffc8f",
+                        "status": "in_transit",
+                        "description": "Your item arrived at our BILLINGS MT DISTRIBUTION CENTER origin facility on June 10, 2020 at 8:55 pm. The item is currently in transit to the destination.",
+                        "date": "2020-06-11T03:07:40.430Z"
+                    },
+                    {
+                        "id": "f191c59f4ab6c74616aa79bd27f62c9414ba42e5",
+                        "status": "in_transit",
+                        "description": "Your item has left our acceptance facility and is in transit to a sorting facility on June 10, 2020 at 5:55 pm in BILLINGS, MT 59102.",
+                        "date": "2020-06-11T00:14:07.513Z"
+                    },
+                    {
+                        "id": "9a6435cc3812ac8922c42fa48745611fb1891f48",
+                        "status": "in_transit",
+                        "description": "USPS is now in possession of your item as of 4:52 pm on June 10, 2020 in BILLINGS, MT 59102.",
+                        "date": "2020-06-11T00:06:13.612Z"
+                    },
+                    {
+                        "id": "ae94de7491ec8c222b135e8bc6fd587227ef5873",
+                        "status": "pre_transit",
+                        "description": "A shipping label has been prepared for your item at 2:22 pm on June 10, 2020 in BILLINGS, MT 59102. This does not indicate receipt by the USPS or the actual mailing date.",
+                        "date": "2020-06-10T14:33:45.606Z"
+                    }
+                ]
+            },
+            "pendingAlerts": {
+                "order_on_way": false,
+                "out_for_delivery": false,
+                "arrived": false
+            },
+            "date_arrived_tracker": "2020-06-10T14:22:13.000Z",
+            "arrival_details": null,
+            "date_arrived": "2020-06-12T15:30:00.000Z",
+            "rate": {
+                "token": "9319bbd25ba0a685b9ee57f4dc04f38450715162"
+            },
+            "product_feedback": null
+        }
+    ]
+}
