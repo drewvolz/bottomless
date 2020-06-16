@@ -11,7 +11,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         case paidUntil
         case stripeLastFour = "stripe_last_four"
         case stripeBrand = "stripe_brand"
-        case fee
+        case pricingRule = "pricing_rule"
         case feeFrequency = "fee_frequency"
         case referralID = "referral_id"
         case scaleLastConnected = "scale_last_connected"
@@ -27,16 +27,12 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     var paidUntil: String?
     var stripeLastFour: String?
     var stripeBrand: String?
-    var fee: Int?
+    var pricingRule: PricingRule?
     var feeFrequency: String?
     var referralID: String?
     var scaleLastConnected: String?
     var scaleLastWeight: Double?
     var scaleStatus: String?
-
-    struct Account: Decodable, Hashable {
-        var id, name: String?
-    }
 
     struct AlertSettings: Decodable, Hashable {
         var gifs: Bool?
@@ -49,7 +45,18 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     }
 
     struct VerifiedAddress: Decodable, Hashable {
-        var street1, street2, city, zip: String?
-        var state, zip4: String?
+        var street1, street2, city, zip, state: String?
+    }
+
+    struct PricingRule: Decodable, Hashable {
+        var id: String?
+        var freeShipping: Bool?
+        var monthlyFee: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case freeShipping = "free_shipping"
+            case monthlyFee = "monthly_fee"
+        }
     }
 }
