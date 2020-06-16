@@ -4,11 +4,17 @@ struct App {
     private struct Domains {
         struct Bottomless {
             static let Base = "https://app.bottomless.com"
+            static let ReferralBase = "https://www.bottomless.com"
         }
     }
 
     private struct Routes {
         static let Api = "/api"
+        static let Referral = "/referral"
+    }
+
+    static var Referral: String {
+        return Domains.Bottomless.ReferralBase + Routes.Referral
     }
 
     private static let ApiURL = Domains.Bottomless.Base + Routes.Api
