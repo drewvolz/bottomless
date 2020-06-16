@@ -21,11 +21,11 @@ struct App {
         static var orders: String {
             return ApiURL + "/orders"
         }
-        
+
         static var inTransition: String {
             return ApiURL + "/orders/in-transition"
         }
-        
+
         static var my: String {
             return ApiURL + "/products/my"
         }
