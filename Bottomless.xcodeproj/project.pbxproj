@@ -56,6 +56,7 @@
 		3AD9272424981A5A000AEFC8 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9272324981A5A000AEFC8 /* orders.json */; };
 		3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */; };
 		3AD927302498611F000AEFC8 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD9272F2498611F000AEFC8 /* SwiftUICharts */; };
+		3AD927322498ACB7000AEFC8 /* records.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD927312498ACB7000AEFC8 /* records.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		3AD92721249810E9000AEFC8 /* OrdersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersResponse.swift; sourceTree = "<group>"; };
 		3AD9272324981A5A000AEFC8 /* orders.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orders.json; sourceTree = "<group>"; };
 		3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		3AD927312498ACB7000AEFC8 /* records.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = records.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 				3AD9271E249801CD000AEFC8 /* up-next.json */,
 				3AD9270A24973EEC000AEFC8 /* in-transition.json */,
 				3AD9272324981A5A000AEFC8 /* orders.json */,
+				3AD927312498ACB7000AEFC8 /* records.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			files = (
 				3AD9272424981A5A000AEFC8 /* orders.json in Resources */,
 				3AD9269E2491547F000AEFC8 /* LaunchScreen.storyboard in Resources */,
+				3AD927322498ACB7000AEFC8 /* records.json in Resources */,
 				3AD9270B24973EEC000AEFC8 /* in-transition.json in Resources */,
 				3AD9269B2491547F000AEFC8 /* Preview Assets.xcassets in Resources */,
 				3AD926982491547F000AEFC8 /* Assets.xcassets in Resources */,

@@ -3,6 +3,7 @@ import Foundation
 var mockUpNext: UpNextResponse = load("up-next.json")
 var mockInTransition: InTransitionResponse = load("in-transition.json")
 var mockOrders: OrdersResponse = load("orders-response.json")
+var mockRecords: RecordsResultResponse = load("records.json")
 
 func load<T: Decodable>(_ filename: String, as _: T.Type = T.self) -> T {
     let data: Data
