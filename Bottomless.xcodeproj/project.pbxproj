@@ -55,6 +55,7 @@
 		3AD92722249810E9000AEFC8 /* OrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD92721249810E9000AEFC8 /* OrdersResponse.swift */; };
 		3AD9272424981A5A000AEFC8 /* orders.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9272324981A5A000AEFC8 /* orders.json */; };
 		3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */; };
+		3AD927302498611F000AEFC8 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD9272F2498611F000AEFC8 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD926CB2491CA7A000AEFC8 /* KeychainSwift in Frameworks */,
+				3AD927302498611F000AEFC8 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +357,7 @@
 			name = Bottomless;
 			packageProductDependencies = (
 				3AD926CA2491CA7A000AEFC8 /* KeychainSwift */,
+				3AD9272F2498611F000AEFC8 /* SwiftUICharts */,
 			);
 			productName = Bottomless;
 			productReference = 3AD9268E2491547E000AEFC8 /* Bottomless.app */;
@@ -386,6 +389,7 @@
 			mainGroup = 3AD926852491547D000AEFC8;
 			packageReferences = (
 				3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				3AD9272E2498611F000AEFC8 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 3AD9268F2491547E000AEFC8 /* Products */;
 			projectDirPath = "";
@@ -680,6 +684,14 @@
 				minimumVersion = 19.0.0;
 			};
 		};
+		3AD9272E2498611F000AEFC8 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -687,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		3AD9272F2498611F000AEFC8 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AD9272E2498611F000AEFC8 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
