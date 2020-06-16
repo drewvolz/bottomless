@@ -24,6 +24,16 @@ struct LoggedInTabsView: View {
                 }
                 .tag(1)
 
+            FreeBagView()
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "gift")
+                        Text("Free Bag")
+                    }
+                }
+                .tag(2)
+
             SearchView()
                 .font(.title)
                 .tabItem {
@@ -32,7 +42,7 @@ struct LoggedInTabsView: View {
                         Text("Search")
                     }
                 }
-                .tag(2)
+                .tag(3)
         }
         .navigationBarTitle("Bottomless")
     }
