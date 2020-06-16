@@ -52,21 +52,6 @@ struct DataView: View {
         .onAppear(perform: fetch)
     }
 
-    private func dateFormatted() -> String {
-        let relativeFormatter = RelativeDateTimeFormatter()
-        relativeFormatter.unitsStyle = .full
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
-
-        let someDateTime = formatter.date(from: scaleViewModel.scaleResponse?.scale_last_connected ?? "")
-        let relativeDate = relativeFormatter.localizedString(for: someDateTime ?? Date(), relativeTo: Date())
-
-        if relativeDate == "in 0 seconds" { return "…" }
-
-        return relativeDate
-    }
-
     private func fetch() {
         recordsViewModel.fetch()
         scaleViewModel.fetch()
