@@ -43,6 +43,16 @@ struct LoggedInTabsView: View {
                     }
                 }
                 .tag(3)
+
+            AccountView()
+                .font(.title)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                }
+                .tag(4)
         }
         .navigationBarTitle("Bottomless")
     }
