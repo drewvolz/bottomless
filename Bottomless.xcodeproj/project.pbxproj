@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		3A0458D624996F2400366F10 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458D524996F2400366F10 /* AccountResponse.swift */; };
 		3A0458D82499775300366F10 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458D72499775300366F10 /* AccountViewModel.swift */; };
+		3A0458DB249977CD00366F10 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458DA249977CD00366F10 /* AccountView.swift */; };
 		3A0458DD2499780100366F10 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458DC2499780100366F10 /* ShareSheet.swift */; };
+		3A0458DF2499862900366F10 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458DE2499862900366F10 /* DateHelpers.swift */; };
+		3A0458E324998A6E00366F10 /* CurrencyHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458E224998A6E00366F10 /* CurrencyHelpers.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -72,7 +75,10 @@
 /* Begin PBXFileReference section */
 		3A0458D524996F2400366F10 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
 		3A0458D72499775300366F10 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		3A0458DA249977CD00366F10 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		3A0458DC2499780100366F10 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		3A0458DE2499862900366F10 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		3A0458E224998A6E00366F10 /* CurrencyHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyHelpers.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +159,14 @@
 			path = "Account Response";
 			sourceTree = "<group>";
 		};
+		3A0458D9249977BA00366F10 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				3A0458DA249977CD00366F10 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		3AD926852491547D000AEFC8 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +233,8 @@
 				3AD9270324970DED000AEFC8 /* ImageLoader.swift */,
 				3AD9270524970E49000AEFC8 /* RemoteImage.swift */,
 				3A0458DC2499780100366F10 /* ShareSheet.swift */,
+				3A0458DE2499862900366F10 /* DateHelpers.swift */,
+				3A0458E224998A6E00366F10 /* CurrencyHelpers.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -239,6 +255,7 @@
 				3AD926ED24942C0E000AEFC8 /* ProfileView */,
 				3AD926EE24942C1F000AEFC8 /* DataView */,
 				3AD9273724995D15000AEFC8 /* Free Bag */,
+				3A0458D9249977BA00366F10 /* Account */,
 				3AD926EF24942C2D000AEFC8 /* SearchView */,
 			);
 			path = LoggedInTabs;
@@ -519,6 +536,7 @@
 				3AD926C82491C70A000AEFC8 /* LoginViewModel.swift in Sources */,
 				3AD92722249810E9000AEFC8 /* OrdersResponse.swift in Sources */,
 				3AD9270424970DED000AEFC8 /* ImageLoader.swift in Sources */,
+				3A0458DB249977CD00366F10 /* AccountView.swift in Sources */,
 				3AD9270D24973FE1000AEFC8 /* MockData.swift in Sources */,
 				3AD9272D24985DF7000AEFC8 /* RecordsResponse.swift in Sources */,
 				3AD926BA24915774000AEFC8 /* Store.swift in Sources */,
@@ -527,6 +545,7 @@
 				3AD9270224970C84000AEFC8 /* UIImage.swift in Sources */,
 				3AD926F324942D0B000AEFC8 /* DataView.swift in Sources */,
 				3AD927362498B954000AEFC8 /* ScaleViewModel.swift in Sources */,
+				3A0458DF2499862900366F10 /* DateHelpers.swift in Sources */,
 				3AD926E824935419000AEFC8 /* SharedTextField.swift in Sources */,
 				3AD926DB24932955000AEFC8 /* AuthenticationManager.swift in Sources */,
 				3AD9271D2497FCAA000AEFC8 /* UpNextViewModel.swift in Sources */,
@@ -542,6 +561,7 @@
 				3AD926AD24915621000AEFC8 /* TextModifiers.swift in Sources */,
 				3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */,
 				3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */,
+				3A0458E324998A6E00366F10 /* CurrencyHelpers.swift in Sources */,
 				3AD926FC2496BE87000AEFC8 /* InTransitionViewModel.swift in Sources */,
 				3AD927342498B8B4000AEFC8 /* ScaleResponse.swift in Sources */,
 				3AD926A824915576000AEFC8 /* LoginView.swift in Sources */,
