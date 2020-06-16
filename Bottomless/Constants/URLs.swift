@@ -44,12 +44,12 @@ struct App {
             return ApiURL + "/scales/status"
         }
 
-//        static var me: String {
-//            return ApiURL + "/users/me"
-//        }
-//
         static var credits: String {
             return ApiURL + "/credits"
+        }
+
+        static var me: String {
+            return ApiURL + "/users/me"
         }
 
 //        static var cleanData: String {
