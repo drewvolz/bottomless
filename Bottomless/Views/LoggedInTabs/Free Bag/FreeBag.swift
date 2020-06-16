@@ -1,5 +1,4 @@
 import SwiftUI
-import SwiftUICharts
 
 struct FreeBagView: View {
     @ObservedObject var creditsViewModel = CreditsViewModel()
