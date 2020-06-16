@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0458D624996F2400366F10 /* AccountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458D524996F2400366F10 /* AccountResponse.swift */; };
+		3A0458D82499775300366F10 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458D72499775300366F10 /* AccountViewModel.swift */; };
+		3A0458DD2499780100366F10 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458DC2499780100366F10 /* ShareSheet.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -61,9 +64,15 @@
 		3AD927322498ACB7000AEFC8 /* records.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD927312498ACB7000AEFC8 /* records.json */; };
 		3AD927342498B8B4000AEFC8 /* ScaleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */; };
 		3AD927362498B954000AEFC8 /* ScaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD927352498B954000AEFC8 /* ScaleViewModel.swift */; };
+		3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273824995D2E000AEFC8 /* FreeBag.swift */; };
+		3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273B24996010000AEFC8 /* CreditsResponse.swift */; };
+		3AD9273E24996059000AEFC8 /* CreditsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A0458D524996F2400366F10 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
+		3A0458D72499775300366F10 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		3A0458DC2499780100366F10 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +127,9 @@
 		3AD927312498ACB7000AEFC8 /* records.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = records.json; sourceTree = "<group>"; };
 		3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleResponse.swift; sourceTree = "<group>"; };
 		3AD927352498B954000AEFC8 /* ScaleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleViewModel.swift; sourceTree = "<group>"; };
+		3AD9273824995D2E000AEFC8 /* FreeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBag.swift; sourceTree = "<group>"; };
+		3AD9273B24996010000AEFC8 /* CreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsResponse.swift; sourceTree = "<group>"; };
+		3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A0458D424996F0E00366F10 /* Account Response */ = {
+			isa = PBXGroup;
+			children = (
+				3A0458D524996F2400366F10 /* AccountResponse.swift */,
+			);
+			path = "Account Response";
+			sourceTree = "<group>";
+		};
 		3AD926852491547D000AEFC8 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +218,7 @@
 				3AD926CC2491CCE1000AEFC8 /* PasswordField.swift */,
 				3AD9270324970DED000AEFC8 /* ImageLoader.swift */,
 				3AD9270524970E49000AEFC8 /* RemoteImage.swift */,
+				3A0458DC2499780100366F10 /* ShareSheet.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -217,6 +238,7 @@
 				3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */,
 				3AD926ED24942C0E000AEFC8 /* ProfileView */,
 				3AD926EE24942C1F000AEFC8 /* DataView */,
+				3AD9273724995D15000AEFC8 /* Free Bag */,
 				3AD926EF24942C2D000AEFC8 /* SearchView */,
 			);
 			path = LoggedInTabs;
@@ -242,6 +264,8 @@
 				3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */,
 				3AD9272924985D40000AEFC8 /* RecordsViewModel.swift */,
 				3AD927352498B954000AEFC8 /* ScaleViewModel.swift */,
+				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
+				3A0458D72499775300366F10 /* AccountViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -249,6 +273,8 @@
 		3AD926CE2491E366000AEFC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A0458D424996F0E00366F10 /* Account Response */,
+				3AD9273A24995FF4000AEFC8 /* Credits */,
 				3AD9272B24985DE1000AEFC8 /* Scale */,
 				3AD927192497F814000AEFC8 /* Orders */,
 				3AD927182497F7F2000AEFC8 /* Login */,
@@ -359,6 +385,22 @@
 				3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */,
 			);
 			path = Scale;
+			sourceTree = "<group>";
+		};
+		3AD9273724995D15000AEFC8 /* Free Bag */ = {
+			isa = PBXGroup;
+			children = (
+				3AD9273824995D2E000AEFC8 /* FreeBag.swift */,
+			);
+			path = "Free Bag";
+			sourceTree = "<group>";
+		};
+		3AD9273A24995FF4000AEFC8 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				3AD9273B24996010000AEFC8 /* CreditsResponse.swift */,
+			);
+			path = Credits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -472,6 +514,7 @@
 				3AD9272A24985D41000AEFC8 /* RecordsViewModel.swift in Sources */,
 				3AD926B5249156B0000AEFC8 /* KeyboardObserver.swift in Sources */,
 				3AD926C524917360000AEFC8 /* KeyboardResign.swift in Sources */,
+				3A0458D82499775300366F10 /* AccountViewModel.swift in Sources */,
 				3AD926AF24915649000AEFC8 /* ButtonViews.swift in Sources */,
 				3AD926C82491C70A000AEFC8 /* LoginViewModel.swift in Sources */,
 				3AD92722249810E9000AEFC8 /* OrdersResponse.swift in Sources */,
@@ -490,8 +533,12 @@
 				3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */,
 				3AD926B124915679000AEFC8 /* Colors.swift in Sources */,
 				3AD926CD2491CCE1000AEFC8 /* PasswordField.swift in Sources */,
+				3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */,
+				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
 				3AD926AA249155BF000AEFC8 /* RootView.swift in Sources */,
+				3AD9273E24996059000AEFC8 /* CreditsViewModel.swift in Sources */,
 				3AD926D22491E3B8000AEFC8 /* LoginResponse.swift in Sources */,
+				3A0458DD2499780100366F10 /* ShareSheet.swift in Sources */,
 				3AD926AD24915621000AEFC8 /* TextModifiers.swift in Sources */,
 				3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */,
 				3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */,
@@ -503,6 +550,7 @@
 				3AD926C32491714A000AEFC8 /* View.swift in Sources */,
 				3AD926E3249330F4000AEFC8 /* WelcomeView.swift in Sources */,
 				3AD926D6249311F1000AEFC8 /* URLs.swift in Sources */,
+				3A0458D624996F2400366F10 /* AccountResponse.swift in Sources */,
 				3AD926FA24943500000AEFC8 /* InTransitionResponse.swift in Sources */,
 				3AD926DD24932998000AEFC8 /* FormValidation.swift in Sources */,
 				3AD926FE2496FCE4000AEFC8 /* InProgressOrder.swift in Sources */,
