@@ -35,7 +35,6 @@ struct LoggedInTabsView: View {
                 .tag(2)
         }
         .navigationBarTitle("Bottomless")
-        .background(Color.red)
     }
 }
 
