@@ -18,23 +18,26 @@ struct FreeBagView: View {
                                     .font(.subheadline)
                             }
                     }) {
-                        HStack {
-                            Text("Granted")
-                            Spacer()
-                            Text("\(creditsViewModel.creditsResponse?.granted ?? 0)")
-                        }
+                        Group {
+                            HStack {
+                                Text("Granted")
+                                Spacer()
+                                Text("\(creditsViewModel.creditsResponse?.granted ?? 0)")
+                            }
 
-                        HStack {
-                            Text("Redeemed")
-                            Spacer()
-                            Text("\(creditsViewModel.creditsResponse?.redeemed ?? 0)")
-                        }
+                            HStack {
+                                Text("Redeemed")
+                                Spacer()
+                                Text("\(creditsViewModel.creditsResponse?.redeemed ?? 0)")
+                            }
 
-                        HStack {
-                            Text("Total Earned")
-                            Spacer()
-                            Text("\(creditsViewModel.creditsResponse?.id ?? 0)")
+                            HStack {
+                                Text("Total Earned")
+                                Spacer()
+                                Text("\(creditsViewModel.creditsResponse?.id ?? 0)")
+                            }
                         }
+                        .font(.body)
                     }
 
                     Section(header: Text("Share your invite link").font(.subheadline)) {
