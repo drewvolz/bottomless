@@ -23,23 +23,26 @@ struct DataView: View {
                     .padding(.bottom, 180)
 
                     Section(header: Text("Scale").font(.subheadline)) {
-                        HStack {
-                            Text("Last weight")
-                            Spacer()
-                            Text("\(String(format: "%.2f", scaleViewModel.scaleResponse?.scale_last_weight ?? 0))oz")
-                        }
+                        Group {
+                            HStack {
+                                Text("Last weight")
+                                Spacer()
+                                Text("\(String(format: "%.2f", scaleViewModel.scaleResponse?.scale_last_weight ?? 0))oz")
+                            }
 
-                        HStack {
-                            Text("Status")
-                            Spacer()
-                            Text("\(scaleViewModel.scaleResponse?.id?.uppercaseFirst() ?? "Unknown")")
-                        }
+                            HStack {
+                                Text("Status")
+                                Spacer()
+                                Text("\(scaleViewModel.scaleResponse?.id?.uppercaseFirst() ?? "Unknown")")
+                            }
 
-                        HStack {
-                            Text("Last connected")
-                            Spacer()
-                            Text("\(dateFormatted())")
+                            HStack {
+                                Text("Last connected")
+                                Spacer()
+                                Text("\(formatAsRelativeTime(string: scaleViewModel.scaleResponse?.scale_last_connected ?? ""))")
+                            }
                         }
+                        .font(.body)
                     }
                 }
             }
