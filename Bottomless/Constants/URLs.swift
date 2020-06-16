@@ -30,6 +30,14 @@ struct App {
             return ApiURL + "/products/my"
         }
 
+        static var records: String {
+            return ApiURL + "/stats/records"
+        }
+
+        static var scaleStatus: String {
+            return ApiURL + "/scales/status"
+        }
+
 //        static var me: String {
 //            return ApiURL + "/users/me"
 //        }
@@ -46,16 +54,8 @@ struct App {
 //            return ApiURL + "/users/credits"
 //        }
 //
-//        static var records: String {
-//            return ApiURL + "/stats/records"
-//        }
-//
 //        static var future: String {
 //            return ApiURL + "/orders/future"
-//        }
-//
-//        static var scaleStatus: String {
-//            return ApiURL + "/scales/status"
 //        }
 //
 //        static var openShop: String {
