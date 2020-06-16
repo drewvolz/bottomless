@@ -48,16 +48,16 @@ struct App {
 //            return ApiURL + "/users/me"
 //        }
 //
+        static var credits: String {
+            return ApiURL + "/credits"
+        }
+
 //        static var cleanData: String {
 //            return ApiURL + "/users/clean-data"
 //        }
 //
 //        static var referrals: String {
 //            return ApiURL + "/users/referrals"
-//        }
-//
-//        static var credits: String {
-//            return ApiURL + "/users/credits"
 //        }
 //
 //        static var future: String {
