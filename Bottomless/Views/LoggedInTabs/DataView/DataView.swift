@@ -22,29 +22,25 @@ struct DataView: View {
                     .padding(.top, 140)
                     .padding(.bottom, 180)
 
-                    Section(header: Text("Scale")) {
+                    Section(header: Text("Scale").font(.subheadline)) {
                         HStack {
                             Text("Last weight")
-                                .bold()
                             Spacer()
                             Text("\(String(format: "%.2f", scaleViewModel.scaleResponse?.scale_last_weight ?? 0))oz")
                         }
 
                         HStack {
                             Text("Status")
-                                .bold()
                             Spacer()
                             Text("\(scaleViewModel.scaleResponse?.id?.uppercaseFirst() ?? "Unknown")")
                         }
 
                         HStack {
                             Text("Last connected")
-                                .bold()
                             Spacer()
                             Text("\(dateFormatted())")
                         }
                     }
-                    .font(.body)
                 }
             }
             .listStyle(GroupedListStyle())

@@ -10,13 +10,13 @@ struct ProfileView: View {
             List {
                 Group {
                     if hasUpNextOrder(order: upNextViewModel.upNextResponse) {
-                        Section(header: Text("Up Next")) {
+                        Section(header: Text("Up Next").font(.subheadline)) {
                             UpNextOrder(order: upNextViewModel.upNextResponse!)
                         }
                     }
 
                     if hasInTransitionOrders(orders: inTransitionViewModel.inTransitionResponse) {
-                        Section(header: Text("Orders In Progress")) {
+                        Section(header: Text("Orders In Progress").font(.subheadline)) {
                             ForEach(inTransitionViewModel.inTransitionResponse ?? []) { order in
                                 InProgressOrder(order: order)
                             }
@@ -24,7 +24,7 @@ struct ProfileView: View {
                     }
 
                     if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
-                        Section(header: Text("Past Orders")) {
+                        Section(header: Text("Past Orders").font(.subheadline)) {
                             ForEach(pastOrdersViewModel.ordersResponse ?? []) { order in
                                 PastOrder(order: order)
                             }
