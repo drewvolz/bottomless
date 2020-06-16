@@ -6,7 +6,9 @@ An iOS app written in SwiftUI/Combine for viewing your [Bottomless](https://bott
 
 ## Screenshots
 
-![06-2020](./screenshots/2020-06.png)
+~ | ~
+--|--
+![profile](./screenshots/2020-06-profile.png) | ![scale](./screenshots/2020-06-scale.png)
 
 ## Contributing
 
