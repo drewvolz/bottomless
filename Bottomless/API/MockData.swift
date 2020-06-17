@@ -4,6 +4,7 @@ var mockUpNext: UpNextResponse = load("up-next.json")
 var mockInTransition: InTransitionResponse = load("in-transition.json")
 var mockOrders: OrdersResponse = load("orders.json")
 var mockRecords: RecordsResultResponse = load("records.json")
+var mockProducts: ProductResultResponse = load("products.json")
 
 func load<T: Decodable>(_ filename: String, as _: T.Type = T.self) -> T {
     let data: Data
