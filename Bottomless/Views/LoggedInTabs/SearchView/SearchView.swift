@@ -1,9 +1,32 @@
 import SwiftUI
 
 struct SearchView: View {
+    @ObservedObject var searchViewModel = SearchViewModel()
+
+    init() {
+        UITableView.appearance().tableFooterView = UIView()
+
+        searchViewModel.loadData()
+    }
+
     var body: some View {
-        Text("Search")
-            .font(.title)
+        VStack {
+            SearchBar(text: $searchViewModel.query,
+                      action: { self.searchViewModel.search() },
+                      placeholder: "Search")
+                .disableAutocorrection(true)
+
+            List(searchViewModel.products ?? []) { product in
+                NavigationLink(destination: SearchDetailView(
+                    searchViewModel: self.searchViewModel,
+                    product: product
+                )) {
+                    SearchRow(viewModel: self.searchViewModel, product: product)
+                }
+            }
+            .listStyle(DefaultListStyle())
+            .resignKeyboardOnDragGesture()
+        }
     }
 }
 
