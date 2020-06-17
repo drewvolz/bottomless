@@ -6,8 +6,8 @@ An iOS app written in SwiftUI/Combine for viewing your [Bottomless][1] coffee su
 
 ## Screenshots
 
-~ | ~
---|--
+~ | ~ | ~
+--|--|--
 ![profile][image-1] | ![scale][image-2] | ![referral][image-3]
 ![search][image-4] | ![search-detail][image-5] | ![settings][image-6]
 
