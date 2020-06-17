@@ -45,10 +45,12 @@ struct SearchDetailView: View {
                     }
                 }
 
-                Section(header: Text("Description").font(.subheadline)) {
-                    Text(verbatim: product.description ?? "")
-                        .font(.body)
-                        .padding(.vertical)
+                if product.description != "" {
+                    Section(header: Text("Description").font(.subheadline)) {
+                        Text(verbatim: product.description ?? "")
+                            .font(.body)
+                            .padding(.vertical)
+                    }
                 }
             }
             .listStyle(GroupedListStyle())
