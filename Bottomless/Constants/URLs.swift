@@ -17,7 +17,7 @@ struct App {
     static var Referral: String {
         return Domains.Bottomless.ReferralBase + Routes.Referral
     }
-    
+
     static var ShortReferral: String {
         return Domains.Bottomless.ShortReferralBase + Routes.Referral
     }
@@ -57,6 +57,10 @@ struct App {
             return ApiURL + "/users/me"
         }
 
+        static var products: String {
+            return ApiURL + "/products"
+        }
+
 //        static var cleanData: String {
 //            return ApiURL + "/users/clean-data"
 //        }
@@ -71,10 +75,6 @@ struct App {
 //
 //        static var openShop: String {
 //            return ApiURL + "/open-shop"
-//        }
-//
-//        static var products: String {
-//            return ApiURL + "/products"
 //        }
 //
 //        static var rotations: String {
