@@ -42,8 +42,8 @@ struct FreeBagView: View {
 
                     Section(header: Text("Share your invite link").font(.subheadline)) {
                         HStack {
-                            Text("\(App.Referral)/\(accountViewModel.accountResponse?.referralID ?? "")")
-                                .font(.caption)
+                            Text("\(App.ShortReferral)/\(accountViewModel.accountResponse?.referralID ?? "")")
+                                .font(.body)
 
                             Spacer()
 
@@ -59,7 +59,7 @@ struct FreeBagView: View {
 
                     Section(header: Text("Share Bottomless").font(.subheadline)) {
                         Text("Invite people you know to join Bottomless - for every person who signs up, you will get a free bag credit added to your account. Your friend will also get a free bag.")
-                            .font(.subheadline)
+                            .font(.body)
                             .padding(3)
                     }
                 }

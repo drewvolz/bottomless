@@ -5,6 +5,7 @@ struct App {
         struct Bottomless {
             static let Base = "https://app.bottomless.com"
             static let ReferralBase = "https://www.bottomless.com"
+            static let ShortReferralBase = "bottomless.com"
         }
     }
 
@@ -15,6 +16,10 @@ struct App {
 
     static var Referral: String {
         return Domains.Bottomless.ReferralBase + Routes.Referral
+    }
+    
+    static var ShortReferral: String {
+        return Domains.Bottomless.ShortReferralBase + Routes.Referral
     }
 
     private static let ApiURL = Domains.Bottomless.Base + Routes.Api
