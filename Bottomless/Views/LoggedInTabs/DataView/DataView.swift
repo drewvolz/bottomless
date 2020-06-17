@@ -6,8 +6,8 @@ struct DataView: View {
     @ObservedObject var scaleViewModel = ScaleViewModel()
 
     var weights: [Double]? {
-        recordsViewModel.recordsResponse.flatMap { record in
-            record.compactMap { $0.adjusted_weight }
+        recordsViewModel.recordsResponse?.compactMap {
+            record in record.adjusted_weight
         }
     }
 
