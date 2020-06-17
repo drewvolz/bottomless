@@ -30,7 +30,10 @@ struct RemoteImage: View {
                     .frame(width: 64, height: 64)
             )
         } else {
-            return AnyView(Image(systemName: "questionmark.square"))
+            return AnyView(
+                Image(systemName: "photo")
+                    .frame(width: 64, height: 64)
+            )
         }
     }
 }
