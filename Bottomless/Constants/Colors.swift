@@ -7,6 +7,7 @@ extension Color {
     static let pastelBlue = Color(.pastelBlue)
     static let pastelYellow = Color(.pastelYellow)
     static let pastelOrange = Color(.pastelOrange)
+    static let darkerRed = Color(.darkerRed)
 }
 
 extension UIColor {
@@ -14,4 +15,5 @@ extension UIColor {
     static let pastelBlue = UIColor(red: 0.518, green: 0.639, blue: 0.925, alpha: 1)
     static let pastelYellow = UIColor(red: 0.976, green: 0.933, blue: 0.000, alpha: 1)
     static let pastelOrange = UIColor(red: 0.973, green: 0.345, blue: 0.243, alpha: 1)
+    static let darkerRed = UIColor(red: 0.86, green: 0.21, blue: 0.27, alpha: 1.00)
 }
