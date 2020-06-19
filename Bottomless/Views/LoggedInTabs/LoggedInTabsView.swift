@@ -8,8 +8,8 @@ struct LoggedInTabsView: View {
             OrdersView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "person")
-                        Text("Profile")
+                        Image(systemName: "heart")
+                        Text("Orders")
                     }
                 }
                 .tag(0)
@@ -19,7 +19,7 @@ struct LoggedInTabsView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "chart.bar")
-                        Text("Data")
+                        Text("Scale")
                     }
                 }
                 .tag(1)
@@ -48,7 +48,7 @@ struct LoggedInTabsView: View {
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image(systemName: "gear")
+                        Image(systemName: "wrench")
                         Text("Settings")
                     }
                 }
