@@ -10,18 +10,18 @@ struct PreferencesSegmentView: View {
     var alertSetting: Bool { accountViewModel.accountResponse?.alertSettings?.gifs ?? false }
     var alertSettingIndex: Int { [true, false].firstIndex(of: alertSetting) ?? 0 }
 
-    struct GifInEmailsPreferencePicker: View {
+    struct GifSettingsPicker: View {
+        @State var title: String
         @State var gifIndex: Int
         var gifOptions = ["Yes", "No"]
 
         var body: some View {
-            Picker(selection: $gifIndex, label: Text("")) {
+            Picker(title, selection: $gifIndex) {
                 ForEach(0 ..< gifOptions.count) { index in
                     Text(self.gifOptions[index]).tag(index)
                 }
+                .navigationBarTitle(title)
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .frame(width: 160)
         }
     }
 
@@ -41,75 +41,44 @@ struct PreferencesSegmentView: View {
     var orderArrivedIndex: Int { contactOptions.firstIndex(of: orderArrived) ?? 0 }
     var scaleNotificationsIndex: Int { contactOptions.firstIndex(of: scaleNotifications) ?? 0 }
 
-    struct ContactPreferencePicker: View {
+    struct SettingsPicker: View {
+        @State var title: String
         @State var contactIndex: Int
         var contactOptionsLabels = ["Email", "Text", "None"]
 
         var body: some View {
-            Picker(selection: $contactIndex, label: Text("")) {
+            Picker(title, selection: $contactIndex) {
                 ForEach(0 ..< contactOptionsLabels.count) { index in
                     Text(self.contactOptionsLabels[index]).tag(index)
                 }
+                .navigationBarTitle(title)
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .frame(width: 170)
         }
     }
 
     var body: some View {
         Group {
-            List {
+            Form {
                 Group {
-                    Section(header: Text("Order Alert Settings").font(.subheadline)) {
+                    Section(header: Text("Order Alerts").font(.subheadline)) {
                         Group {
-                            HStack {
-                                Text("Gif alerts")
-                                Spacer()
-                                GifInEmailsPreferencePicker(gifIndex: alertSettingIndex)
-                            }
-
-                            HStack {
-                                Text("Ordering soon")
-                                Spacer()
-                                ContactPreferencePicker(contactIndex: orderingSoonIndex)
-                            }
-
-                            HStack {
-                                Text("Order on the way")
-                                Spacer()
-                                ContactPreferencePicker(contactIndex: orderOnTheWayIndex)
-                            }
-
-                            HStack {
-                                Text("Out for delivery")
-                                Spacer()
-                                ContactPreferencePicker(contactIndex: outForDeliveryIndex)
-                            }
-
-                            HStack {
-                                Text("Order arrived")
-                                Spacer()
-                                ContactPreferencePicker(contactIndex: orderArrivedIndex)
-                            }
+                            GifSettingsPicker(title: "Gif alerts", gifIndex: alertSettingIndex)
+                            SettingsPicker(title: "Ordering soon", contactIndex: orderingSoonIndex)
+                            SettingsPicker(title: "Order on the way", contactIndex: orderOnTheWayIndex)
+                            SettingsPicker(title: "Out for delivery", contactIndex: outForDeliveryIndex)
+                            SettingsPicker(title: "Order arrived", contactIndex: orderArrivedIndex)
                         }
                         .font(.body)
-                        .padding(.vertical)
                     }
 
-                    Section(header: Text("Scale Alert Settings").font(.subheadline)) {
+                    Section(header: Text("Scale Alerts").font(.subheadline)) {
                         Group {
-                            HStack {
-                                Text("Scale notifications")
-                                Spacer()
-                                ContactPreferencePicker(contactIndex: scaleNotificationsIndex)
-                            }
+                            SettingsPicker(title: "Scale notifications", contactIndex: scaleNotificationsIndex)
                         }
                         .font(.body)
-                        .padding(.vertical)
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
         }
     }
