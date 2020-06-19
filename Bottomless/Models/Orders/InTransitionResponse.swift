@@ -11,6 +11,8 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         case subproductID = "subproduct_id"
         case originalProductID = "original_product_id"
         case status
+        case shippingStatus = "shipping_status"
+        case trackingNumber = "tracking_number"
         case grind
     }
 
@@ -39,9 +41,16 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         var name: String
     }
 
+    enum Status: String, Decodable, Hashable {
+        case inTransit = "in_transit"
+        case preTransit = "pre_transit"
+    }
+
     var id: String
     var subproductID: ProductID
     var originalProductID: OriginalProductID
     var status: String
+    var shippingStatus: Status?
+    var trackingNumber: String?
     var grind: Grind
 }
