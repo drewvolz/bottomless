@@ -8,19 +8,14 @@ struct PreferencesSegmentView: View {
     // MARK: gif alert settings
 
     var alertSetting: Bool { accountViewModel.accountResponse?.alertSettings?.gifs ?? false }
-    var alertSettingIndex: Int { [true, false].firstIndex(of: alertSetting) ?? 0 }
 
     struct GifSettingsPicker: View {
         @State var title: String
-        @State var gifIndex: Int
-        var gifOptions = ["Yes", "No"]
+        @State var value: Bool
 
         var body: some View {
-            Picker(title, selection: $gifIndex) {
-                ForEach(0 ..< gifOptions.count) { index in
-                    Text(self.gifOptions[index]).tag(index)
-                }
-                .navigationBarTitle(title)
+            Toggle(isOn: $value) {
+                Text("Gif alerts")
             }
         }
     }
@@ -62,7 +57,7 @@ struct PreferencesSegmentView: View {
                 Group {
                     Section(header: Text("Order Alerts").font(.subheadline)) {
                         Group {
-                            GifSettingsPicker(title: "Gif alerts", gifIndex: alertSettingIndex)
+                            GifSettingsPicker(title: "Gif alerts", value: alertSetting)
                             SettingsPicker(title: "Ordering soon", contactIndex: orderingSoonIndex)
                             SettingsPicker(title: "Order on the way", contactIndex: orderOnTheWayIndex)
                             SettingsPicker(title: "Out for delivery", contactIndex: outForDeliveryIndex)
