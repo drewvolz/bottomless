@@ -6,7 +6,7 @@ struct UpNextOrder: View {
     var body: some View {
         VStack {
             HStack {
-                RemoteImage(url: URL(string: self.order.product.small_image_src)!)
+                UrlImageView(urlString: self.order.product.small_image_src)
 
                 VStack(alignment: .leading) {
                     Text(verbatim: self.order.product.vendor_name)

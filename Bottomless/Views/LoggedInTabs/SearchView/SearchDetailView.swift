@@ -14,7 +14,7 @@ struct SearchDetailView: View {
             List {
                 Section {
                     HStack {
-                        RemoteImage(url: URL(string: self.product.smallImageSrc ?? "")!)
+                        UrlImageView(urlString: self.product.smallImageSrc)
 
                         VStack(alignment: .leading) {
                             Text(verbatim: product.name ?? "")

@@ -6,7 +6,7 @@ struct PastOrder: View {
     var body: some View {
         VStack {
             HStack {
-                RemoteImage(url: URL(string: self.order.subproduct_id.product.small_image_src)!)
+                UrlImageView(urlString: self.order.subproduct_id.product.small_image_src)
 
                 VStack(alignment: .leading) {
                     Text(verbatim: self.order.subproduct_id.product.vendor_name)

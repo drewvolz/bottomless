@@ -11,7 +11,7 @@ struct SearchRow: View {
     var body: some View {
         VStack {
             HStack {
-                RemoteImage(url: URL(string: self.product.smallImageSrc ?? "")!)
+                UrlImageView(urlString: self.product.smallImageSrc)
 
                 VStack(alignment: .leading) {
                     Text(verbatim: self.product.vendorName ?? "")

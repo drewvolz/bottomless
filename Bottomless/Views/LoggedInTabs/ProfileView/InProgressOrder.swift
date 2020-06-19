@@ -6,7 +6,7 @@ struct InProgressOrder: View {
     var body: some View {
         VStack {
             HStack {
-                RemoteImage(url: URL(string: self.order.subproductID.product.small_image_src)!)
+                UrlImageView(urlString: self.order.subproductID.product.small_image_src)
 
                 VStack(alignment: .leading) {
                     Text(verbatim: self.order.subproductID.product.vendor_name)
