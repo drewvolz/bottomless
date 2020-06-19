@@ -61,11 +61,13 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         var id: String?
         var freeShipping: Bool?
         var monthlyFee: Int?
+        var batchSize: Int?
 
         enum CodingKeys: String, CodingKey {
             case id = "_id"
             case freeShipping = "free_shipping"
             case monthlyFee = "monthly_fee"
+            case batchSize = "batch_size"
         }
     }
 }

@@ -27,7 +27,8 @@ struct AccountSegmentView: View {
                             HStack {
                                 Text("Billing frequency")
                                 Spacer()
-                                Text("\(accountViewModel.accountResponse?.feeFrequency?.uppercaseFirst() ?? "")")
+
+                                Text(chargeFrequency(batchSize: accountViewModel.accountResponse?.pricingRule?.batchSize ?? 0))
                             }
 
                             HStack {
@@ -107,6 +108,15 @@ struct AccountSegmentView: View {
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
         }
+    }
+
+    private func chargeFrequency(batchSize: Int?) -> String {
+        let frequencies = [
+            1: "Monthly",
+            12: "Yearly",
+        ]
+
+        return frequencies[batchSize ?? 0] ?? "Once per \(batchSize ?? 0) months"
     }
 }
 
