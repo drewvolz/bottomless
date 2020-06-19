@@ -6,15 +6,15 @@ struct InProgressOrder: View {
     var body: some View {
         VStack {
             HStack {
-                RemoteImage(url: URL(string: self.order.productID.product.small_image_src)!)
+                RemoteImage(url: URL(string: self.order.subproductID.product.small_image_src)!)
 
                 VStack(alignment: .leading) {
-                    Text(verbatim: self.order.productID.product.vendor_name)
+                    Text(verbatim: self.order.subproductID.product.vendor_name)
                         .font(.caption)
                         .lineLimit(1)
                         .foregroundColor(Color.gray)
 
-                    Text(verbatim: self.order.productID.product.name)
+                    Text(verbatim: self.order.subproductID.product.name)
                         .font(.headline)
                         .lineLimit(1)
                         .padding(.vertical, 3)

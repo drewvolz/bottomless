@@ -8,6 +8,7 @@ struct InTransitionResultResponse: Decodable {
 struct InTransitionResponse: Hashable, Identifiable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
+        case subproductID = "subproduct_id"
         case originalProductID = "original_product_id"
         case status
         case grind
@@ -39,6 +40,7 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
     }
 
     var id: String
+    var subproductID: ProductID
     var originalProductID: OriginalProductID
     var status: String
     var grind: Grind
