@@ -34,7 +34,8 @@ struct AccountSegmentView: View {
                             HStack {
                                 Text("Fee")
                                 Spacer()
-                                Text(verbatim: asCurrency(number: accountViewModel.accountResponse?.pricingRule?.monthlyFee))
+                                Text("\(asCurrency(number: accountViewModel.accountResponse?.pricingRule?.monthlyFee))")
+                                Text("(\(accountViewModel.accountResponse?.feeFrequency ?? ""))")
                             }
 
                             HStack {
