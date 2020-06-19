@@ -17,6 +17,15 @@
         },
         "variant": "5e13bc739ed7a70033ef3fb1"
     },
+    "subproduct_id": {
+        "product": {
+            "_id": "5ebc7c6e9f340500045d8ad0",
+            "name": "Nano Genji Lot 2",
+            "vendor_name": "Olympia Coffee Roasting Co",
+            "small_image_src": "https://bottomless.imgix.net/products/Olympia/generic-nobg.png?auto=compress&w=300"
+        },
+        "variant": "5ebd122cc8b8ab00345d408e"
+    },
     "original_product_id": {
         "product": "5e13a054476ef30004a41e0f",
         "variant": "5e13bc739ed7a70033ef3fb1"
