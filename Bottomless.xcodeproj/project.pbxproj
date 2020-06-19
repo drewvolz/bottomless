@@ -22,6 +22,8 @@
 		3A0458F2249C9B0400366F10 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F1249C9B0400366F10 /* ImageLoader.swift */; };
 		3A0458F4249CA37F00366F10 /* PreferencesSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F3249CA37F00366F10 /* PreferencesSegmentView.swift */; };
 		3A0458F6249CA3B100366F10 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F5249CA3B100366F10 /* AccountView.swift */; };
+		3A0458F8249D5E7C00366F10 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F7249D5E7C00366F10 /* Binding.swift */; };
+		3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F9249D634400366F10 /* AlertsViewModel.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -94,6 +96,8 @@
 		3A0458F1249C9B0400366F10 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		3A0458F3249CA37F00366F10 /* PreferencesSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSegmentView.swift; sourceTree = "<group>"; };
 		3A0458F5249CA3B100366F10 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		3A0458F7249D5E7C00366F10 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		3A0458F9249D634400366F10 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 				3AD926C024917121000AEFC8 /* UIApplication.swift */,
 				3AD926C22491714A000AEFC8 /* View.swift */,
 				3AD9270724972CB1000AEFC8 /* String.swift */,
+				3A0458F7249D5E7C00366F10 /* Binding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				3AD927352498B954000AEFC8 /* ScaleViewModel.swift */,
 				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
 				3A0458D72499775300366F10 /* AccountViewModel.swift */,
+				3A0458F9249D634400366F10 /* AlertsViewModel.swift */,
 				3A0458E62499C24E00366F10 /* SearchViewModel.swift */,
 			);
 			path = "View Models";
@@ -571,6 +577,7 @@
 				3AD926F324942D0B000AEFC8 /* DataView.swift in Sources */,
 				3AD927362498B954000AEFC8 /* ScaleViewModel.swift in Sources */,
 				3A0458DF2499862900366F10 /* DateHelpers.swift in Sources */,
+				3A0458F8249D5E7C00366F10 /* Binding.swift in Sources */,
 				3AD926E824935419000AEFC8 /* SharedTextField.swift in Sources */,
 				3AD926DB24932955000AEFC8 /* AuthenticationManager.swift in Sources */,
 				3AD9271D2497FCAA000AEFC8 /* UpNextViewModel.swift in Sources */,
@@ -583,6 +590,7 @@
 				3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */,
 				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
 				3AD926AA249155BF000AEFC8 /* RootView.swift in Sources */,
+				3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */,
 				3AD9273E24996059000AEFC8 /* CreditsViewModel.swift in Sources */,
 				3AD926D22491E3B8000AEFC8 /* LoginResponse.swift in Sources */,
 				3A0458EE2499CEBE00366F10 /* SearchRow.swift in Sources */,

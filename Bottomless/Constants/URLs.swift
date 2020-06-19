@@ -57,6 +57,10 @@ struct App {
             return ApiURL + "/users/me"
         }
 
+        static var alerts: String {
+            return ApiURL + "/users/text-alerts"
+        }
+
         static var products: String {
             return ApiURL + "/products"
         }
