@@ -11,18 +11,22 @@ struct PreferencesSegmentView: View {
 
     struct GifSettingsPicker: View {
         @State var title: String
+        @State var jsonKey: String
         @State var value: Bool
 
         var body: some View {
-            Toggle(isOn: $value) {
+            Toggle(isOn: $value.onChange(onSettingsChange)) {
                 Text("Gif alerts")
             }
+        }
+
+        func onSettingsChange(_: Bool) {
         }
     }
 
     // MARK: order alert settings
 
-    var contactOptions = ["email", "text", "none"]
+    var contactOptions = ["text", "email", "none"]
 
     var orderingSoon: String { accountViewModel.accountResponse?.alertSettings?.orderingSoon ?? "" }
     var orderOnTheWay: String { accountViewModel.accountResponse?.alertSettings?.onTheWay ?? "" }
@@ -38,16 +42,22 @@ struct PreferencesSegmentView: View {
 
     struct SettingsPicker: View {
         @State var title: String
+        @State var jsonKey: String
         @State var contactIndex: Int
-        var contactOptionsLabels = ["Email", "Text", "None"]
+        var contactOptionsLabels = ["Text", "Email", "None"]
+        var contactOptions = ["text", "email", "none"]
 
         var body: some View {
-            Picker(title, selection: $contactIndex) {
+            Picker(title, selection: $contactIndex.onChange(onSettingsChange)) {
                 ForEach(0 ..< contactOptionsLabels.count) { index in
                     Text(self.contactOptionsLabels[index]).tag(index)
                 }
                 .navigationBarTitle(title)
             }
+            .navigationBarTitle("")
+        }
+
+        func onSettingsChange(_: Int) {
         }
     }
 
@@ -57,18 +67,30 @@ struct PreferencesSegmentView: View {
                 Group {
                     Section(header: Text("Order Alerts").font(.subheadline)) {
                         Group {
-                            GifSettingsPicker(title: "Gif alerts", value: alertSetting)
-                            SettingsPicker(title: "Ordering soon", contactIndex: orderingSoonIndex)
-                            SettingsPicker(title: "Order on the way", contactIndex: orderOnTheWayIndex)
-                            SettingsPicker(title: "Out for delivery", contactIndex: outForDeliveryIndex)
-                            SettingsPicker(title: "Order arrived", contactIndex: orderArrivedIndex)
+                            GifSettingsPicker(title: "Gif alerts",
+                                              jsonKey: "gifs",
+                                              value: alertSetting)
+                            SettingsPicker(title: "Ordering soon",
+                                           jsonKey: "ordering_soon",
+                                           contactIndex: orderingSoonIndex)
+                            SettingsPicker(title: "Order on the way",
+                                           jsonKey: "on_the_way",
+                                           contactIndex: orderOnTheWayIndex)
+                            SettingsPicker(title: "Out for delivery",
+                                           jsonKey: "out_for_delivery",
+                                           contactIndex: outForDeliveryIndex)
+                            SettingsPicker(title: "Order arrived",
+                                           jsonKey: "arrived",
+                                           contactIndex: orderArrivedIndex)
                         }
                         .font(.body)
                     }
 
                     Section(header: Text("Scale Alerts").font(.subheadline)) {
                         Group {
-                            SettingsPicker(title: "Scale notifications", contactIndex: scaleNotificationsIndex)
+                            SettingsPicker(title: "Scale notifications",
+                                           jsonKey: "scale_notifications",
+                                           contactIndex: scaleNotificationsIndex)
                         }
                         .font(.body)
                     }
