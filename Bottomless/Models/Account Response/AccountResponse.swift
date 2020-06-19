@@ -38,6 +38,15 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         var gifs: Bool?
         var orderingSoon, outForDelivery, onTheWay, arrived: String?
         var scaleNotifications: String?
+
+        enum CodingKeys: String, CodingKey {
+            case gifs
+            case orderingSoon = "ordering_soon"
+            case outForDelivery = "out_for_delivery"
+            case onTheWay = "on_the_way"
+            case arrived
+            case scaleNotifications = "scale_notifications"
+        }
     }
 
     struct Local: Decodable, Hashable {
