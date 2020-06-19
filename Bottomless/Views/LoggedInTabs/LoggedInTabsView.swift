@@ -5,7 +5,7 @@ struct LoggedInTabsView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            ProfileView()
+            OrdersView()
                 .tabItem {
                     VStack {
                         Image(systemName: "person")

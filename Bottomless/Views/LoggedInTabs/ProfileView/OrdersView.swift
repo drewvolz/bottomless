@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ProfileView: View {
+struct OrdersView: View {
     @ObservedObject var upNextViewModel = UpNextViewModel()
     @ObservedObject var inTransitionViewModel = InTransitionViewModel()
     @ObservedObject var pastOrdersViewModel = OrdersViewModel()
@@ -58,11 +58,11 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct OrdersView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                ProfileView()
+                OrdersView()
             }
         }
     }
