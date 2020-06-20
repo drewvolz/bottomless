@@ -65,6 +65,10 @@ struct App {
             return ApiURL + "/users/ordering-aggression"
         }
 
+        static var pauseAccount: String {
+            return ApiURL + "/users/pause-account"
+        }
+
         static var products: String {
             return ApiURL + "/products"
         }
