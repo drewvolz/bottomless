@@ -13,6 +13,7 @@ struct AlertsSegmentView: View {
     // MARK: order alert settings
 
     var contactOptions = ["text", "email", "none"]
+    var contactLabels = ["Text", "Email", "None"]
 
     var orderingSoon: String { accountViewModel.accountResponse?.alertSettings?.orderingSoon ?? "" }
     var orderOnTheWay: String { accountViewModel.accountResponse?.alertSettings?.onTheWay ?? "" }
@@ -44,23 +45,28 @@ struct AlertsSegmentView: View {
 
                             ListSettingsPicker(title: "Ordering soon",
                                                indexedValue: orderingSoonIndex,
-                                               callback: onChangeOrderSoon)
+                                               callback: onChangeOrderSoon,
+                                               labels: contactLabels)
 
                             ListSettingsPicker(title: "Order on the way",
                                                indexedValue: orderOnTheWayIndex,
-                                               callback: onChangeOrderOnTheWay)
+                                               callback: onChangeOrderOnTheWay,
+                                               labels: contactLabels)
 
                             ListSettingsPicker(title: "Out for delivery",
                                                indexedValue: outForDeliveryIndex,
-                                               callback: onChangeOutForDelivery)
+                                               callback: onChangeOutForDelivery,
+                                               labels: contactLabels)
 
                             ListSettingsPicker(title: "Order arrived",
                                                indexedValue: orderArrivedIndex,
-                                               callback: onChangeOrderArrived)
+                                               callback: onChangeOrderArrived,
+                                               labels: contactLabels)
 
                             ListSettingsPicker(title: "Scale notifications",
                                                indexedValue: scaleNotificationsIndex,
-                                               callback: onChangeScaleNotifications)
+                                               callback: onChangeScaleNotifications,
+                                               labels: contactLabels)
                         }
                         .font(.body)
                     }
