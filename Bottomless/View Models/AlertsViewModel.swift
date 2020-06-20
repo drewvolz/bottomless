@@ -28,8 +28,9 @@ final class AlertsViewModel: ObservableObject {
         request.httpMethod = "POST"
         request.httpBody = httpBody
 
-        URLSession.shared.dataTaskPublisher(for: request)
+        let publisher = URLSession.shared.dataTaskPublisher(for: request)
 
+        // TODO: Show errors (especially for when phone number isn't set and we choose "text")
         alertsCancellable = publisher
             .map { $0.data }
             .decode(type: AccountResponse.self, decoder: JSONDecoder())

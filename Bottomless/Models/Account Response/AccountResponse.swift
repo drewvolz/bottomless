@@ -34,7 +34,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     var scaleLastWeight: Double?
     var scaleStatus: String?
 
-    struct AlertSettings: Decodable, Hashable {
+    struct AlertSettings: Codable, Hashable {
         var gifs: Bool?
         var orderingSoon, outForDelivery, onTheWay, arrived: String?
         var scaleNotifications: String?
