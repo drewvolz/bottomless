@@ -2,7 +2,7 @@ import SwiftUI
 
 var alertSettings: [String: Any] = [:]
 
-struct AlertsSegmentView: View {
+struct SettingsSegmentView: View {
     @ObservedObject var accountViewModel = AccountViewModel()
     @ObservedObject var alertsViewModel = AlertsViewModel()
 
@@ -37,7 +37,13 @@ struct AlertsSegmentView: View {
         Group {
             Form {
                 Group {
-                    Section(header: Text("Alert settings")) {
+                    Section(header: Text("Ordering")) {
+                        AutomaticOrderingView(accountViewModel: accountViewModel)
+
+                        OrderingStrategyView(accountViewModel: accountViewModel)
+                    }
+
+                    Section(header: Text("Alerts")) {
                         Group {
                             ToggleSettingsPicker(title: "Gif alerts",
                                                  value: gifs,
@@ -109,11 +115,11 @@ struct AlertsSegmentView: View {
     }
 }
 
-struct AlertsSegmentView_Previews: PreviewProvider {
+struct SettingsSegmentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                AlertsSegmentView(accountViewModel: AccountViewModel())
+                SettingsSegmentView(accountViewModel: AccountViewModel())
             }
         }
     }
