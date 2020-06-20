@@ -10,18 +10,6 @@ struct AlertsSegmentView: View {
 
     var gifs: Bool { accountViewModel.accountResponse?.alertSettings?.gifs ?? false }
 
-    struct ToggleSettingsPicker: View {
-        @State var title: String
-        @State var value: Bool
-        @State var callback: (Bool) -> Void
-
-        var body: some View {
-            Toggle(isOn: $value.onChange(callback)) {
-                Text("Gif alerts")
-            }
-        }
-    }
-
     // MARK: order alert settings
 
     var contactOptions = ["text", "email", "none"]
@@ -37,25 +25,6 @@ struct AlertsSegmentView: View {
     var outForDeliveryIndex: Int { contactOptions.firstIndex(of: outForDelivery) ?? 0 }
     var orderArrivedIndex: Int { contactOptions.firstIndex(of: orderArrived) ?? 0 }
     var scaleNotificationsIndex: Int { contactOptions.firstIndex(of: scaleNotifications) ?? 0 }
-
-    struct ListSettingsPicker: View {
-        @State var title: String
-        @State var indexedValue: Int
-        @State var callback: (Int) -> Void
-
-        var contactOptionsLabels = ["Text", "Email", "None"]
-        var contactOptions = ["text", "email", "none"]
-
-        var body: some View {
-            Picker(title, selection: $indexedValue.onChange(callback)) {
-                ForEach(0 ..< contactOptionsLabels.count) { index in
-                    Text(self.contactOptionsLabels[index]).tag(index)
-                }
-                .navigationBarTitle(title)
-            }
-            .navigationBarTitle("")
-        }
-    }
 
     init(accountViewModel: AccountViewModel) {
         self.accountViewModel = accountViewModel
