@@ -7,7 +7,7 @@ struct ToggleSettingsPicker: View {
 
     var body: some View {
         Toggle(isOn: $value.onChange(callback)) {
-            Text("Gif alerts")
+            Text(title)
         }
     }
 }
