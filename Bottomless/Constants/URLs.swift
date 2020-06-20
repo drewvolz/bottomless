@@ -61,6 +61,10 @@ struct App {
             return ApiURL + "/users/text-alerts"
         }
 
+        static var orderingStrategy: String {
+            return ApiURL + "/users/ordering-aggression"
+        }
+
         static var products: String {
             return ApiURL + "/products"
         }

@@ -25,6 +25,8 @@
 		3A0458F8249D5E7C00366F10 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F7249D5E7C00366F10 /* Binding.swift */; };
 		3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F9249D634400366F10 /* AlertsViewModel.swift */; };
 		3A0458FC249DC8E300366F10 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FB249DC8E300366F10 /* Encodable.swift */; };
+		3A0458FE249E11BC00366F10 /* OrderingSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FD249E11BC00366F10 /* OrderingSegmentView.swift */; };
+		3A045900249E13DE00366F10 /* OrderingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -79,6 +81,8 @@
 		3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273824995D2E000AEFC8 /* FreeBag.swift */; };
 		3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273B24996010000AEFC8 /* CreditsResponse.swift */; };
 		3AD9273E24996059000AEFC8 /* CreditsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */; };
+		3AF296B2249E17D2004BADE8 /* ListSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B1249E17D2004BADE8 /* ListSettingsPicker.swift */; };
+		3AF296B4249E17E1004BADE8 /* ToggleSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,8 @@
 		3A0458F7249D5E7C00366F10 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		3A0458F9249D634400366F10 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
 		3A0458FB249DC8E300366F10 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		3A0458FD249E11BC00366F10 /* OrderingSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingSegmentView.swift; sourceTree = "<group>"; };
+		3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategy.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +160,8 @@
 		3AD9273824995D2E000AEFC8 /* FreeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBag.swift; sourceTree = "<group>"; };
 		3AD9273B24996010000AEFC8 /* CreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsResponse.swift; sourceTree = "<group>"; };
 		3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewModel.swift; sourceTree = "<group>"; };
+		3AF296B1249E17D2004BADE8 /* ListSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingsPicker.swift; sourceTree = "<group>"; };
+		3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingsPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,7 @@
 			children = (
 				3A0458F5249CA3B100366F10 /* AccountView.swift */,
 				3A0458DA249977CD00366F10 /* AccountSegmentView.swift */,
+				3A0458FD249E11BC00366F10 /* OrderingSegmentView.swift */,
 				3A0458F3249CA37F00366F10 /* AlertsSegmentView.swift */,
 			);
 			path = Account;
@@ -252,6 +261,7 @@
 		3AD926AB24915612000AEFC8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3AF296B0249E17B2004BADE8 /* Pickers */,
 				3AD926E524933570000AEFC8 /* Auth */,
 				3AD926E62493357C000AEFC8 /* Keyboard */,
 				3AD926AE24915649000AEFC8 /* ButtonViews.swift */,
@@ -310,6 +320,7 @@
 				3AD927352498B954000AEFC8 /* ScaleViewModel.swift */,
 				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
 				3A0458D72499775300366F10 /* AccountViewModel.swift */,
+				3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */,
 				3A0458F9249D634400366F10 /* AlertsViewModel.swift */,
 				3A0458E62499C24E00366F10 /* SearchViewModel.swift */,
 			);
@@ -455,6 +466,15 @@
 			path = Credits;
 			sourceTree = "<group>";
 		};
+		3AF296B0249E17B2004BADE8 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				3AF296B1249E17D2004BADE8 /* ListSettingsPicker.swift */,
+				3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -571,6 +591,7 @@
 				3AD926C82491C70A000AEFC8 /* LoginViewModel.swift in Sources */,
 				3AD92722249810E9000AEFC8 /* OrdersResponse.swift in Sources */,
 				3A0458DB249977CD00366F10 /* AccountSegmentView.swift in Sources */,
+				3A0458FE249E11BC00366F10 /* OrderingSegmentView.swift in Sources */,
 				3AD9270D24973FE1000AEFC8 /* MockData.swift in Sources */,
 				3AD9272D24985DF7000AEFC8 /* RecordsResponse.swift in Sources */,
 				3AD926BA24915774000AEFC8 /* Store.swift in Sources */,
@@ -594,6 +615,7 @@
 				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
 				3AD926AA249155BF000AEFC8 /* RootView.swift in Sources */,
 				3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */,
+				3AF296B2249E17D2004BADE8 /* ListSettingsPicker.swift in Sources */,
 				3AD9273E24996059000AEFC8 /* CreditsViewModel.swift in Sources */,
 				3AD926D22491E3B8000AEFC8 /* LoginResponse.swift in Sources */,
 				3A0458FC249DC8E300366F10 /* Encodable.swift in Sources */,
@@ -613,6 +635,7 @@
 				3AD926C32491714A000AEFC8 /* View.swift in Sources */,
 				3AD926E3249330F4000AEFC8 /* WelcomeView.swift in Sources */,
 				3AD926D6249311F1000AEFC8 /* URLs.swift in Sources */,
+				3AF296B4249E17E1004BADE8 /* ToggleSettingsPicker.swift in Sources */,
 				3A0458D624996F2400366F10 /* AccountResponse.swift in Sources */,
 				3AD926FA24943500000AEFC8 /* InTransitionResponse.swift in Sources */,
 				3AD926DD24932998000AEFC8 /* FormValidation.swift in Sources */,
@@ -622,6 +645,7 @@
 				3AD926EC24942009000AEFC8 /* ErrorLoginResponse.swift in Sources */,
 				3AD9270824972CB1000AEFC8 /* String.swift in Sources */,
 				3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */,
+				3A045900249E13DE00366F10 /* OrderingStrategy.swift in Sources */,
 				3AD926DF249329CD000AEFC8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

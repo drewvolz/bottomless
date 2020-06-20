@@ -17,6 +17,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         case scaleLastConnected = "scale_last_connected"
         case scaleLastWeight = "scale_last_weight"
         case scaleStatus = "scale_status"
+        case orderingAggression = "ordering_aggression"
     }
 
     var id: String?
@@ -33,6 +34,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     var scaleLastConnected: String?
     var scaleLastWeight: Double?
     var scaleStatus: String?
+    var orderingAggression: Int?
 
     struct AlertSettings: Codable, Hashable {
         var gifs: Bool?

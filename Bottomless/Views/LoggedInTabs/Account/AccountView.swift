@@ -6,7 +6,7 @@ struct AccountView: View {
 
     @State var segmentIndex = 0
 
-    var views = ["Account", "Alerts"]
+    var views = ["Account", "Ordering", "Alerts"]
 
     var body: some View {
         Section {
@@ -35,7 +35,8 @@ struct AccountView: View {
     private func containedView() -> AnyView {
         switch segmentIndex {
         case 0: return AnyView(AccountSegmentView(accountViewModel: accountViewModel))
-        case 1: return AnyView(AlertsSegmentView(accountViewModel: accountViewModel))
+        case 1: return AnyView(OrderingSegmentView(accountViewModel: accountViewModel))
+        case 2: return AnyView(AlertsSegmentView(accountViewModel: accountViewModel))
         default: return AnyView(Text("Invalid index passed into the account view"))
         }
     }
