@@ -16,3 +16,14 @@ struct ListSettingsPicker: View {
         .navigationBarTitle("")
     }
 }
+
+struct ListSettingsPicker_Previews: PreviewProvider {
+    static var previews: some View {
+        Form {
+            ListSettingsPicker(title: "Choose something",
+                               indexedValue: 0,
+                               callback: { _ in print("Chosen!") },
+                               labels: ["1", "2"])
+        }
+    }
+}

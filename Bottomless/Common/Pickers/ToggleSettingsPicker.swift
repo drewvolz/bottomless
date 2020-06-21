@@ -11,3 +11,13 @@ struct ToggleSettingsPicker: View {
         }
     }
 }
+
+struct ToggleSettingsPicker_Previews: PreviewProvider {
+    static var previews: some View {
+        Form {
+            ToggleSettingsPicker(title: "Toggle me",
+                                 value: true,
+                                 callback: { _ in print("Toggled!") })
+        }
+    }
+}
