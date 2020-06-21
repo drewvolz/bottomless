@@ -804,6 +804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bottomless/Preview Content\"";
+				DEVELOPMENT_TEAM = NFMTHAZVS9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bottomless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -823,6 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bottomless/Preview Content\"";
+				DEVELOPMENT_TEAM = NFMTHAZVS9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Bottomless/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
