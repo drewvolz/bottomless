@@ -19,6 +19,7 @@ struct SettingsSegmentView: View {
                         AlertsView(accountViewModel: accountViewModel)
                     }
                 }
+                .navigationBarTitle("Settings")
             }
             .environment(\.horizontalSizeClass, .regular)
         }
