@@ -6,15 +6,15 @@ struct PastOrder: View {
     var body: some View {
         VStack {
             HStack {
-                UrlImageView(urlString: self.order.subproduct_id.product.small_image_src)
+                UrlImageView(urlString: self.order.subproductID.product.small_image_src)
 
                 VStack(alignment: .leading) {
-                    Text(verbatim: self.order.subproduct_id.product.vendor_name)
+                    Text(verbatim: self.order.subproductID.product.vendor_name)
                         .font(.caption)
                         .lineLimit(1)
                         .foregroundColor(Color.gray)
 
-                    Text(verbatim: self.order.subproduct_id.product.name)
+                    Text(verbatim: self.order.subproductID.product.name)
                         .font(.headline)
                         .lineLimit(1)
                         .padding(.vertical, 3)
