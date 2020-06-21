@@ -8,7 +8,7 @@ struct DataView: View {
     var weights: [Double]? {
         recordsViewModel.recordsResponse?.compactMap {
             record in record.adjusted_weight
-        }
+        } /* .filter { $0 > 0 } */
     }
 
     var body: some View {
