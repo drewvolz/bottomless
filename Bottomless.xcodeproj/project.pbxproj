@@ -85,6 +85,7 @@
 		3AF296B4249E17E1004BADE8 /* ToggleSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */; };
 		3AF296B6249E27E2004BADE8 /* AutomaticOrderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */; };
 		3AF296BA249EDEA6004BADE8 /* PauseAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */; };
+		3AF296BC249F69E7004BADE8 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296BB249F69E7004BADE8 /* AlertsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingsPicker.swift; sourceTree = "<group>"; };
 		3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingView.swift; sourceTree = "<group>"; };
 		3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAccountViewModel.swift; sourceTree = "<group>"; };
+		3AF296BB249F69E7004BADE8 /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,11 +194,9 @@
 		3A0458D9249977BA00366F10 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				3AF296BD249F69F3004BADE8 /* Preferences */,
 				3A0458F5249CA3B100366F10 /* AccountView.swift */,
 				3A0458DA249977CD00366F10 /* AccountSegmentView.swift */,
-				3A0458F3249CA37F00366F10 /* SettingsSegmentView.swift */,
-				3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */,
-				3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -481,6 +481,17 @@
 			path = Pickers;
 			sourceTree = "<group>";
 		};
+		3AF296BD249F69F3004BADE8 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				3A0458F3249CA37F00366F10 /* SettingsSegmentView.swift */,
+				3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */,
+				3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */,
+				3AF296BB249F69E7004BADE8 /* AlertsView.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -610,6 +621,7 @@
 				3AD927362498B954000AEFC8 /* ScaleViewModel.swift in Sources */,
 				3A0458DF2499862900366F10 /* DateHelpers.swift in Sources */,
 				3A0458F8249D5E7C00366F10 /* Binding.swift in Sources */,
+				3AF296BC249F69E7004BADE8 /* AlertsView.swift in Sources */,
 				3AD926E824935419000AEFC8 /* SharedTextField.swift in Sources */,
 				3AD926DB24932955000AEFC8 /* AuthenticationManager.swift in Sources */,
 				3AD9271D2497FCAA000AEFC8 /* UpNextViewModel.swift in Sources */,
