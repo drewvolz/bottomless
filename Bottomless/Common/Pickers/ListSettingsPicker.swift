@@ -8,7 +8,7 @@ struct ListSettingsPicker: View {
 
     var body: some View {
         Picker(title, selection: $indexedValue.onChange(callback)) {
-            ForEach(0 ..< labels.count) { index in
+            ForEach(0 ..< labels.count, id: \.self) { index in
                 Text(self.labels[index]).tag(index)
             }
             .navigationBarTitle(title)

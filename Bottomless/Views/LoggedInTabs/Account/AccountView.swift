@@ -13,7 +13,7 @@ struct AccountView: View {
             Group {
                 VStack {
                     Picker(selection: $segmentIndex, label: Text("")) {
-                        ForEach(0 ..< views.count) { index in
+                        ForEach(0 ..< views.count, id: \.self) { index in
                             Text(self.views[index]).tag(index)
                         }
                     }
