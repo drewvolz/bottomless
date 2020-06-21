@@ -1,7 +1,7 @@
 import Combine
 import SwiftUI
 
-final class OrderingStrategy: ObservableObject {
+final class OrderingStrategyViewModel: ObservableObject {
     @Published private(set) var strategyResponse: AccountResponse?
 
     private var strategyCancellable: Cancellable? {
@@ -30,7 +30,6 @@ final class OrderingStrategy: ObservableObject {
 
         let publisher = URLSession.shared.dataTaskPublisher(for: request)
 
-        // TODO: Show errors (especially for when phone number isn't set and we choose "text")
         strategyCancellable = publisher
             .map { $0.data }
             .decode(type: AccountResponse.self, decoder: JSONDecoder())

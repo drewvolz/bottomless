@@ -26,7 +26,7 @@
 		3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F9249D634400366F10 /* AlertsViewModel.swift */; };
 		3A0458FC249DC8E300366F10 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FB249DC8E300366F10 /* Encodable.swift */; };
 		3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */; };
-		3A045900249E13DE00366F10 /* OrderingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */; };
+		3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -106,7 +106,7 @@
 		3A0458F9249D634400366F10 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
 		3A0458FB249DC8E300366F10 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyView.swift; sourceTree = "<group>"; };
-		3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategy.swift; sourceTree = "<group>"; };
+		3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyViewModel.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 				3AD927352498B954000AEFC8 /* ScaleViewModel.swift */,
 				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
 				3A0458D72499775300366F10 /* AccountViewModel.swift */,
-				3A0458FF249E13DE00366F10 /* OrderingStrategy.swift */,
+				3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */,
 				3A0458F9249D634400366F10 /* AlertsViewModel.swift */,
 				3A0458E62499C24E00366F10 /* SearchViewModel.swift */,
 			);
@@ -649,7 +649,7 @@
 				3AD926EC24942009000AEFC8 /* ErrorLoginResponse.swift in Sources */,
 				3AD9270824972CB1000AEFC8 /* String.swift in Sources */,
 				3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */,
-				3A045900249E13DE00366F10 /* OrderingStrategy.swift in Sources */,
+				3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */,
 				3AD926DF249329CD000AEFC8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OrderingStrategyView: View {
     @ObservedObject var accountViewModel: AccountViewModel
-    @ObservedObject var orderingStrategyViewModel = OrderingStrategy()
+    @ObservedObject var orderingStrategyViewModel = OrderingStrategyViewModel()
 
     var optionTitles = ["Never run out", "Just right", "As fresh as possible"]
     var orderingAggression: Int { accountViewModel.accountResponse?.orderingAggression ?? 2 }
@@ -31,7 +31,9 @@ struct OrderingStrategyView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                OrderingStrategyView(accountViewModel: AccountViewModel())
+                Form {
+                    OrderingStrategyView(accountViewModel: AccountViewModel())
+                }
             }
         }
     }
