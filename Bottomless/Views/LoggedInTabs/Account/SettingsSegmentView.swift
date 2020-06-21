@@ -37,10 +37,12 @@ struct SettingsSegmentView: View {
         Group {
             Form {
                 Group {
-                    Section(header: Text("Ordering")) {
-                        AutomaticOrderingView(accountViewModel: accountViewModel)
-
+                    Section(header: Text("Strategy")) {
                         OrderingStrategyView(accountViewModel: accountViewModel)
+                    }
+
+                    Section(header: Text("Pausing")) {
+                        AutomaticOrderingView(accountViewModel: accountViewModel)
                     }
 
                     Section(header: Text("Alerts")) {
