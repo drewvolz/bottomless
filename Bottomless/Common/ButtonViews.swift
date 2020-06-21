@@ -62,6 +62,20 @@ struct _SecondaryButton: View {
     }
 }
 
+struct SecondaryTextButton: View {
+    let title: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .fontWeight(.bold)
+                .foregroundColor(.accentColor)
+                .frame(maxWidth: .infinity)
+        }
+    }
+}
+
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
         Group {

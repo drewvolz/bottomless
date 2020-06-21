@@ -84,6 +84,7 @@
 		3AF296B2249E17D2004BADE8 /* ListSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B1249E17D2004BADE8 /* ListSettingsPicker.swift */; };
 		3AF296B4249E17E1004BADE8 /* ToggleSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */; };
 		3AF296B6249E27E2004BADE8 /* AutomaticOrderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */; };
+		3AF296BA249EDEA6004BADE8 /* PauseAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		3AF296B1249E17D2004BADE8 /* ListSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSettingsPicker.swift; sourceTree = "<group>"; };
 		3AF296B3249E17E1004BADE8 /* ToggleSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSettingsPicker.swift; sourceTree = "<group>"; };
 		3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingView.swift; sourceTree = "<group>"; };
+		3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAccountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
 				3A0458D72499775300366F10 /* AccountViewModel.swift */,
 				3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */,
+				3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */,
 				3A0458F9249D634400366F10 /* AlertsViewModel.swift */,
 				3A0458E62499C24E00366F10 /* SearchViewModel.swift */,
 			);
@@ -593,6 +596,7 @@
 				3AD926AF24915649000AEFC8 /* ButtonViews.swift in Sources */,
 				3AD926C82491C70A000AEFC8 /* LoginViewModel.swift in Sources */,
 				3AD92722249810E9000AEFC8 /* OrdersResponse.swift in Sources */,
+				3AF296BA249EDEA6004BADE8 /* PauseAccountViewModel.swift in Sources */,
 				3AF296B6249E27E2004BADE8 /* AutomaticOrderingView.swift in Sources */,
 				3A0458DB249977CD00366F10 /* AccountSegmentView.swift in Sources */,
 				3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */,

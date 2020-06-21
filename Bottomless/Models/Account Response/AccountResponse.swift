@@ -19,6 +19,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         case scaleStatus = "scale_status"
         case orderingAggression = "ordering_aggression"
         case paused
+        case pausedUntil
     }
 
     var id: String?
@@ -37,6 +38,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     var scaleStatus: String?
     var orderingAggression: Int?
     var paused: Bool?
+    var pausedUntil: String?
 
     struct AlertSettings: Codable, Hashable {
         var gifs: Bool?
