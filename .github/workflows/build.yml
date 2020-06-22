@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches: [trunk]
+  pull_request:
+    branches: [trunk]
+    paths:
+      - ".github/workflows/build.yml"
+      - "Bottomless/**"
+      - "Bottomless.xcodeproj/**"
+
+jobs:
+  build:
+    name: Build
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: set -o pipefail && xcodebuild clean build -project Bottomless.xcodeproj -scheme Bottomless -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcpretty --simple
