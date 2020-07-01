@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RecordsResultResponse: Decodable {
-    var data: [RecordsResponse]
+    var data: [RecordsResponse?]
 }
 
 struct RecordsResponse: Hashable, Identifiable, Decodable {

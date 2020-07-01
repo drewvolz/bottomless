@@ -2,7 +2,7 @@ import Combine
 import SwiftUI
 
 final class OrdersViewModel: ObservableObject {
-    @Published private(set) var ordersResponse: [OrdersResponse]? = nil
+    @Published private(set) var ordersResponse: [OrdersResponse]? = []
 
     private var ordersCancellable: Cancellable? {
         didSet { oldValue?.cancel() }
@@ -24,7 +24,7 @@ final class OrdersViewModel: ObservableObject {
         ordersCancellable = publisher
             .map { $0.data }
             .decode(type: OrdersResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data }
+            .map { $0.data as? [OrdersResponse] }
             .replaceError(with: nil)
             .receive(on: RunLoop.main)
             .assign(to: \.ordersResponse, on: self)

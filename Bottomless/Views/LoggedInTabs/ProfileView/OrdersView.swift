@@ -9,25 +9,31 @@ struct OrdersView: View {
         Group {
             List {
                 Group {
-                    if hasUpNextOrder(order: upNextViewModel.upNextResponse) {
-                        Section(header: Text("Up Next").font(.subheadline)) {
+                    Section(header: Text("Up Next").font(.subheadline)) {
+                        if hasUpNextOrder(order: upNextViewModel.upNextResponse) {
                             UpNextOrder(order: upNextViewModel.upNextResponse!)
+                        } else {
+                            NoOrders(message: "No upcoming orders")
                         }
                     }
 
-                    if hasInTransitionOrders(orders: inTransitionViewModel.inTransitionResponse) {
-                        Section(header: Text("Orders In Progress").font(.subheadline)) {
-                            ForEach(inTransitionViewModel.inTransitionResponse ?? []) { order in
+                    Section(header: Text("Orders In Progress").font(.subheadline)) {
+                        if hasInTransitionOrders(orders: inTransitionViewModel.inTransitionResponse) {
+                            ForEach(inTransitionViewModel.inTransitionResponse!) { order in
                                 InProgressOrder(order: order)
                             }
+                        } else {
+                            NoOrders(message: "No orders in progress")
                         }
                     }
 
-                    if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
-                        Section(header: Text("Past Orders").font(.subheadline)) {
-                            ForEach(pastOrdersViewModel.ordersResponse ?? []) { order in
+                    Section(header: Text("Past Orders").font(.subheadline)) {
+                        if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
+                            ForEach(pastOrdersViewModel.ordersResponse!) { order in
                                 PastOrder(order: order)
                             }
+                        } else {
+                            NoOrders(message: "No past orders")
                         }
                     }
                 }
@@ -45,11 +51,11 @@ struct OrdersView: View {
     }
 
     private func hasInTransitionOrders(orders: [InTransitionResponse]?) -> Bool {
-        return Array(arrayLiteral: orders).count > 0
+        return orders!.count > 0
     }
 
     private func hasPastOrders(orders: [OrdersResponse]?) -> Bool {
-        return Array(arrayLiteral: orders).count > 0
+        return orders!.count > 0
     }
 
     private func hasUpNextOrder(order: UpNextResponse?) -> Bool {

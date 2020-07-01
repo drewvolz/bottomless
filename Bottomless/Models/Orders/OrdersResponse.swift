@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct OrdersResultResponse: Decodable {
-    var data: [OrdersResponse]
+    var data: [OrdersResponse?]
 }
 
 struct OrdersResponse: Hashable, Identifiable, Decodable {
