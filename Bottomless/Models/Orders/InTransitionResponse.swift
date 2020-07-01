@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct InTransitionResultResponse: Decodable {
-    var data: [InTransitionResponse]
+    var data: [InTransitionResponse?]
 }
 
 struct InTransitionResponse: Hashable, Identifiable, Decodable {

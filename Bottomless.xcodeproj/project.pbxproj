@@ -27,6 +27,7 @@
 		3A0458FC249DC8E300366F10 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FB249DC8E300366F10 /* Encodable.swift */; };
 		3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */; };
 		3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */; };
+		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
@@ -109,6 +110,7 @@
 		3A0458FB249DC8E300366F10 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyView.swift; sourceTree = "<group>"; };
 		3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyViewModel.swift; sourceTree = "<group>"; };
+		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD926932491547E000AEFC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				3AD927162497F6F9000AEFC8 /* UpNextOrder.swift */,
 				3AD926FD2496FCE4000AEFC8 /* InProgressOrder.swift */,
 				3AD927142497F629000AEFC8 /* PastOrder.swift */,
+				3A858C9524AD05B900F535D2 /* NoOrdersView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				3A0458F2249C9B0400366F10 /* ImageLoader.swift in Sources */,
 				3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */,
 				3A0458F4249CA37F00366F10 /* SettingsSegmentView.swift in Sources */,
+				3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */,
 				3AD926B124915679000AEFC8 /* Colors.swift in Sources */,
 				3A0458F02499D07200366F10 /* SearchDetailView.swift in Sources */,
 				3AD926CD2491CCE1000AEFC8 /* PasswordField.swift in Sources */,

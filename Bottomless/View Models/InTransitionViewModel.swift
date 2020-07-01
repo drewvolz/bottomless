@@ -2,7 +2,7 @@ import Combine
 import SwiftUI
 
 final class InTransitionViewModel: ObservableObject {
-    @Published private(set) var inTransitionResponse: [InTransitionResponse]? = nil
+    @Published private(set) var inTransitionResponse: [InTransitionResponse]? = []
 
     private var inTransitionCancellable: Cancellable? {
         didSet { oldValue?.cancel() }
@@ -24,7 +24,7 @@ final class InTransitionViewModel: ObservableObject {
         inTransitionCancellable = publisher
             .map { $0.data }
             .decode(type: InTransitionResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data }
+            .map { $0.data as? [InTransitionResponse] }
             .replaceError(with: nil)
             .receive(on: RunLoop.main)
             .assign(to: \.inTransitionResponse, on: self)

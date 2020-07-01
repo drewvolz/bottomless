@@ -2,7 +2,7 @@ import Combine
 import SwiftUI
 
 final class RecordsViewModel: ObservableObject {
-    @Published private(set) var recordsResponse: [RecordsResponse]?
+    @Published private(set) var recordsResponse: [RecordsResponse]? = []
 
     private var recordsCancellable: Cancellable? {
         didSet { oldValue?.cancel() }
@@ -24,7 +24,7 @@ final class RecordsViewModel: ObservableObject {
         recordsCancellable = publisher
             .map { $0.data }
             .decode(type: RecordsResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data }
+            .map { $0.data as? [RecordsResponse] }
             .replaceError(with: nil)
             .receive(on: RunLoop.main)
             .assign(to: \.recordsResponse, on: self)
