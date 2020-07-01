@@ -1,5 +1,4 @@
 import SwiftUI
-import SwiftUICharts
 
 struct DataView: View {
     @ObservedObject var recordsViewModel = RecordsViewModel()
@@ -8,7 +7,7 @@ struct DataView: View {
     var weights: [Double]? {
         recordsViewModel.recordsResponse?.compactMap {
             record in record.adjusted_weight
-        } /* .filter { $0 > 0 } */
+        }.filter { $0 > 0 }
     }
 
     var body: some View {
@@ -16,33 +15,15 @@ struct DataView: View {
             List {
                 Group {
                     Section {
-                        LineView(data: weights?.reversed() ?? [], title: "Scale readings")
+                        ScaleView(viewModel: scaleViewModel)
                     }
-                    // TODO: play with these paddings and make sure they work for all ranges
-                    .padding(.top, 140)
-                    .padding(.bottom, 180)
 
-                    Section(header: Text("Scale").font(.subheadline)) {
-                        Group {
-                            HStack {
-                                Text("Last weight")
-                                Spacer()
-                                Text("\(String(format: "%.2f", scaleViewModel.scaleResponse?.scale_last_weight ?? 0))oz")
-                            }
-
-                            HStack {
-                                Text("Status")
-                                Spacer()
-                                Text("\(scaleViewModel.scaleResponse?.id?.uppercaseFirst() ?? "Unknown")")
-                            }
-
-                            HStack {
-                                Text("Last connected")
-                                Spacer()
-                                Text("\(formatAsRelativeTime(string: scaleViewModel.scaleResponse?.scale_last_connected ?? ""))")
-                            }
+                    Group {
+                        Section {
+                            LineView(data: weights?.reversed() ?? [], title: "")
                         }
-                        .font(.body)
+                        .padding(.top, 150)
+                        .frame(height: 200)
                     }
                 }
             }

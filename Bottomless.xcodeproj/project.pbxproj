@@ -27,6 +27,8 @@
 		3A0458FC249DC8E300366F10 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FB249DC8E300366F10 /* Encodable.swift */; };
 		3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */; };
 		3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */; };
+		3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478924AD1CE500B9D4B5 /* ScaleView.swift */; };
+		3A46478C24AD1CF500B9D4B5 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478B24AD1CF500B9D4B5 /* LineView.swift */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
@@ -75,7 +77,6 @@
 		3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */; };
 		3AD9272A24985D41000AEFC8 /* RecordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9272924985D40000AEFC8 /* RecordsViewModel.swift */; };
 		3AD9272D24985DF7000AEFC8 /* RecordsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9272C24985DF7000AEFC8 /* RecordsResponse.swift */; };
-		3AD927302498611F000AEFC8 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD9272F2498611F000AEFC8 /* SwiftUICharts */; };
 		3AD927322498ACB7000AEFC8 /* records.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD927312498ACB7000AEFC8 /* records.json */; };
 		3AD927342498B8B4000AEFC8 /* ScaleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */; };
 		3AD927362498B954000AEFC8 /* ScaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD927352498B954000AEFC8 /* ScaleViewModel.swift */; };
@@ -110,6 +111,8 @@
 		3A0458FB249DC8E300366F10 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyView.swift; sourceTree = "<group>"; };
 		3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyViewModel.swift; sourceTree = "<group>"; };
+		3A46478924AD1CE500B9D4B5 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
+		3A46478B24AD1CF500B9D4B5 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD926CB2491CA7A000AEFC8 /* KeychainSwift in Frameworks */,
-				3AD927302498611F000AEFC8 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				3AD926F224942D0B000AEFC8 /* DataView.swift */,
+				3A46478B24AD1CF500B9D4B5 /* LineView.swift */,
+				3A46478924AD1CE500B9D4B5 /* ScaleView.swift */,
 			);
 			path = DataView;
 			sourceTree = "<group>";
@@ -514,7 +518,6 @@
 			name = Bottomless;
 			packageProductDependencies = (
 				3AD926CA2491CA7A000AEFC8 /* KeychainSwift */,
-				3AD9272F2498611F000AEFC8 /* SwiftUICharts */,
 			);
 			productName = Bottomless;
 			productReference = 3AD9268E2491547E000AEFC8 /* Bottomless.app */;
@@ -636,6 +639,7 @@
 				3A0458F02499D07200366F10 /* SearchDetailView.swift in Sources */,
 				3AD926CD2491CCE1000AEFC8 /* PasswordField.swift in Sources */,
 				3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */,
+				3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */,
 				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
 				3AD926AA249155BF000AEFC8 /* RootView.swift in Sources */,
 				3A0458FA249D634400366F10 /* AlertsViewModel.swift in Sources */,
@@ -668,6 +672,7 @@
 				3AD927152497F629000AEFC8 /* PastOrder.swift in Sources */,
 				3AD926EC24942009000AEFC8 /* ErrorLoginResponse.swift in Sources */,
 				3AD9270824972CB1000AEFC8 /* String.swift in Sources */,
+				3A46478C24AD1CF500B9D4B5 /* LineView.swift in Sources */,
 				3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */,
 				3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */,
 				3AD926DF249329CD000AEFC8 /* User.swift in Sources */,
@@ -889,11 +894,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		3AD9272F2498611F000AEFC8 /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AD9272E2498611F000AEFC8 /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
