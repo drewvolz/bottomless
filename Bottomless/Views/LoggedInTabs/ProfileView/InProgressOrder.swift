@@ -6,15 +6,15 @@ struct InProgressOrder: View {
     var body: some View {
         VStack {
             HStack {
-                UrlImageView(urlString: self.order.subproductID.product.small_image_src)
+                UrlImageView(urlString: parseProduct(order: order).small_image_src)
 
                 VStack(alignment: .leading) {
-                    Text(verbatim: self.order.subproductID.product.vendor_name)
+                    Text(verbatim: parseProduct(order: order).vendor_name)
                         .font(.caption)
                         .lineLimit(1)
                         .foregroundColor(Color.gray)
 
-                    Text(verbatim: self.order.subproductID.product.name)
+                    Text(verbatim: parseProduct(order: order).name)
                         .font(.headline)
                         .lineLimit(1)
                         .padding(.vertical, 3)
@@ -39,6 +39,18 @@ struct InProgressOrder: View {
             }
         }
     }
+}
+
+private func parseProduct(order: InTransitionResponse) -> InTransitionResponse.Product {
+    var parsedProduct = InTransitionResponse.Product(_id: "", name: "", vendor_name: "", small_image_src: "")
+
+    if order.subproductID != nil {
+        parsedProduct = order.subproductID!.product
+    } else if order.productID != nil {
+        parsedProduct = order.productID!.product
+    }
+
+    return parsedProduct
 }
 
 private func statusName(order: InTransitionResponse) -> String {

@@ -9,6 +9,7 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case subproductID = "subproduct_id"
+        case productID = "product_id"
         case originalProductID = "original_product_id"
         case status
         case shippingStatus = "shipping_status"
@@ -47,7 +48,8 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
     }
 
     var id: String
-    var subproductID: ProductID
+    var subproductID: ProductID?
+    var productID: ProductID?
     var originalProductID: OriginalProductID
     var status: String
     var shippingStatus: Status?
