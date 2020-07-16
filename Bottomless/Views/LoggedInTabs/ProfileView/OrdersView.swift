@@ -51,15 +51,24 @@ struct OrdersView: View {
     }
 
     private func hasInTransitionOrders(orders: [InTransitionResponse]?) -> Bool {
-        return orders!.count > 0
+        var hasOrders = false
+        if let count = orders?.count {
+            hasOrders = count > 0
+        }
+
+        return hasOrders
     }
 
     private func hasPastOrders(orders: [OrdersResponse]?) -> Bool {
-        return orders!.count > 0
+        var hasOrders = false
+        if let count = orders?.count {
+            hasOrders = count > 0
+        }
+
+        return hasOrders
     }
 
     private func hasUpNextOrder(order: UpNextResponse?) -> Bool {
-        // TODO: this is not yet the correct check
         return order != nil
     }
 }
