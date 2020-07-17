@@ -64,8 +64,7 @@ struct FreeBagView: View {
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
+            .safeGroupedStyle()
         }
         .onAppear(perform: fetch)
     }

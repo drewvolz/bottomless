@@ -29,6 +29,7 @@
 		3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */; };
 		3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478924AD1CE500B9D4B5 /* ScaleView.swift */; };
 		3A6A950224C131330053DF8C /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A950124C131330053DF8C /* SwiftUICharts */; };
+		3A6A950424C13F410053DF8C /* ListModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A950324C13F410053DF8C /* ListModifiers.swift */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
@@ -112,6 +113,7 @@
 		3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyView.swift; sourceTree = "<group>"; };
 		3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyViewModel.swift; sourceTree = "<group>"; };
 		3A46478924AD1CE500B9D4B5 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
+		3A6A950324C13F410053DF8C /* ListModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifiers.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				3AD926E62493357C000AEFC8 /* Keyboard */,
 				3AD926AE24915649000AEFC8 /* ButtonViews.swift */,
 				3AD926AC24915621000AEFC8 /* TextModifiers.swift */,
+				3A6A950324C13F410053DF8C /* ListModifiers.swift */,
 				3AD926E724935419000AEFC8 /* SharedTextField.swift */,
 				3AD926CC2491CCE1000AEFC8 /* PasswordField.swift */,
 				3A0458DC2499780100366F10 /* ShareSheet.swift */,
@@ -629,6 +632,7 @@
 				3AD9272D24985DF7000AEFC8 /* RecordsResponse.swift in Sources */,
 				3AD926BA24915774000AEFC8 /* Store.swift in Sources */,
 				3AD926D924932904000AEFC8 /* AuthKeys.swift in Sources */,
+				3A6A950424C13F410053DF8C /* ListModifiers.swift in Sources */,
 				3A0458F6249CA3B100366F10 /* AccountView.swift in Sources */,
 				3AD926F124942C4A000AEFC8 /* OrdersView.swift in Sources */,
 				3AD926F324942D0B000AEFC8 /* DataView.swift in Sources */,

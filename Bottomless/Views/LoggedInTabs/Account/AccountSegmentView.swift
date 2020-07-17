@@ -106,8 +106,7 @@ struct AccountSegmentView: View {
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
+            .safeGroupedStyle()
         }
     }
 

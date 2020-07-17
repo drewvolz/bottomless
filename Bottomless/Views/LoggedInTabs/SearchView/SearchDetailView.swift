@@ -53,8 +53,7 @@ struct SearchDetailView: View {
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
+            .safeGroupedStyle()
         }
     }
 }
