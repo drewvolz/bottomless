@@ -20,11 +20,9 @@ struct DataView: View {
                     }
 
                     Section {
-                        LineView(data: weights?.reversed() ?? [], title: "")
-                            .padding(.top, -25)
+                        LineView(data: weights?.reversed() ?? [], title: "Scale readings")
                     }
-                    .padding(.top, -40)
-                    .frame(height: 260)
+                    .frame(height: 360)
                 }
             }
             .safeGroupedStyle()
