@@ -36,7 +36,7 @@ final class SearchViewModel: ObservableObject {
     }
 
     func loadData() {
-        let url = URL(string: App.api.products)!
+        let url = URL(string: Urls.api.products)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

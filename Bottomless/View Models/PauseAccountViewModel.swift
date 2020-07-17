@@ -13,7 +13,7 @@ final class PauseAccountViewModel: ObservableObject {
     }
 
     func pauseAccount(pausedStatus: Bool, pausedUntil: String) {
-        let url = URL(string: App.api.pauseAccount)!
+        let url = URL(string: Urls.api.pauseAccount)!
 
         let parameterDictionary = [
             "paused": pausedStatus,

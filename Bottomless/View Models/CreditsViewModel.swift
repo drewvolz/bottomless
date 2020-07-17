@@ -13,7 +13,7 @@ final class CreditsViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.credits)!
+        let url = URL(string: Urls.api.credits)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

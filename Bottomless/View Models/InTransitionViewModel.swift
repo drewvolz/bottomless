@@ -13,7 +13,7 @@ final class InTransitionViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.inTransition)!
+        let url = URL(string: Urls.api.inTransition)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -13,7 +13,7 @@ final class AccountViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.me)!
+        let url = URL(string: Urls.api.me)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

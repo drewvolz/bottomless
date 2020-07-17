@@ -20,7 +20,7 @@ final class LoginViewModel: ObservableObject {
             return
         }
 
-        let url = URL(string: App.api.auth)!
+        let url = URL(string: Urls.api.auth)!
 
         let parameterDictionary = [
             "email": authManager.email,

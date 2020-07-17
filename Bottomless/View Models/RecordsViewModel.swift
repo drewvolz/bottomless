@@ -13,7 +13,7 @@ final class RecordsViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.records)!
+        let url = URL(string: Urls.api.records)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
