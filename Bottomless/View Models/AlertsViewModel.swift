@@ -13,7 +13,7 @@ final class AlertsViewModel: ObservableObject {
     }
 
     func post(settings: [String: Any]) {
-        let url = URL(string: App.api.alerts)!
+        let url = URL(string: Urls.api.alerts)!
 
         let parameterDictionary = [
             "alertSettings": settings,

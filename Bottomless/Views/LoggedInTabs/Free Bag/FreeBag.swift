@@ -42,7 +42,7 @@ struct FreeBagView: View {
 
                     Section(header: Text("Share your invite link").font(.subheadline)) {
                         HStack {
-                            Text("\(App.ShortReferral)/\(accountViewModel.accountResponse?.referralID ?? "")")
+                            Text("\(Urls.ShortReferral)/\(accountViewModel.accountResponse?.referralID ?? "")")
                                 .font(.body)
 
                             Spacer()
@@ -53,7 +53,7 @@ struct FreeBagView: View {
                         }
                         .sheet(isPresented: $showShareSheet,
                                content: {
-                                   ActivityView(activityItems: [NSURL(string: "\(App.Referral)/\(self.accountViewModel.accountResponse?.referralID ?? "")")!] as [Any], applicationActivities: nil)
+                                   ActivityView(activityItems: [NSURL(string: "\(Urls.Referral)/\(self.accountViewModel.accountResponse?.referralID ?? "")")!] as [Any], applicationActivities: nil)
                         })
                     }
 

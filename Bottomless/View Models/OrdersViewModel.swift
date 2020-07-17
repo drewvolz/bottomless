@@ -13,7 +13,7 @@ final class OrdersViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.orders)!
+        let url = URL(string: Urls.api.orders)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -13,7 +13,7 @@ final class UpNextViewModel: ObservableObject {
     }
 
     func fetch() {
-        let url = URL(string: App.api.my)!
+        let url = URL(string: Urls.api.my)!
 
         var request = URLRequest(url: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

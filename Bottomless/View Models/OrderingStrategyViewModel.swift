@@ -13,7 +13,7 @@ final class OrderingStrategyViewModel: ObservableObject {
     }
 
     func post(level: Int) {
-        let url = URL(string: App.api.orderingStrategy)!
+        let url = URL(string: Urls.api.orderingStrategy)!
 
         let parameterDictionary = [
             "ordering_aggression": String(level),

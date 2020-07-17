@@ -1,6 +1,6 @@
 import Foundation
 
-struct App {
+struct Urls {
     private struct Domains {
         struct Bottomless {
             static let Base = "https://app.bottomless.com"
