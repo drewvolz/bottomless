@@ -18,5 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Switch version of Xcode
+        run: sudo xcode-select --switch "/Applications/Xcode_12.app/Contents/Developer"
+
       - name: Build
         run: set -o pipefail && xcodebuild clean build -project Bottomless.xcodeproj -scheme Bottomless -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcpretty --simple
