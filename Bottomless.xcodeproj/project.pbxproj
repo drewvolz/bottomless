@@ -28,7 +28,7 @@
 		3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */; };
 		3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */; };
 		3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478924AD1CE500B9D4B5 /* ScaleView.swift */; };
-		3A46478C24AD1CF500B9D4B5 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478B24AD1CF500B9D4B5 /* LineView.swift */; };
+		3A6A950224C131330053DF8C /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A950124C131330053DF8C /* SwiftUICharts */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AD926922491547E000AEFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926912491547E000AEFC8 /* AppDelegate.swift */; };
 		3AD926942491547E000AEFC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926932491547E000AEFC8 /* SceneDelegate.swift */; };
@@ -112,7 +112,6 @@
 		3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyView.swift; sourceTree = "<group>"; };
 		3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingStrategyViewModel.swift; sourceTree = "<group>"; };
 		3A46478924AD1CE500B9D4B5 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
-		3A46478B24AD1CF500B9D4B5 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926912491547E000AEFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD926CB2491CA7A000AEFC8 /* KeychainSwift in Frameworks */,
+				3A6A950224C131330053DF8C /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,11 +213,19 @@
 			path = Shop;
 			sourceTree = "<group>";
 		};
+		3A6A950024C131330053DF8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3AD926852491547D000AEFC8 = {
 			isa = PBXGroup;
 			children = (
 				3AD926902491547E000AEFC8 /* Bottomless */,
 				3AD9268F2491547E000AEFC8 /* Products */,
+				3A6A950024C131330053DF8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,7 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				3AD926F224942D0B000AEFC8 /* DataView.swift */,
-				3A46478B24AD1CF500B9D4B5 /* LineView.swift */,
 				3A46478924AD1CE500B9D4B5 /* ScaleView.swift */,
 			);
 			path = DataView;
@@ -518,6 +525,7 @@
 			name = Bottomless;
 			packageProductDependencies = (
 				3AD926CA2491CA7A000AEFC8 /* KeychainSwift */,
+				3A6A950124C131330053DF8C /* SwiftUICharts */,
 			);
 			productName = Bottomless;
 			productReference = 3AD9268E2491547E000AEFC8 /* Bottomless.app */;
@@ -672,7 +680,6 @@
 				3AD927152497F629000AEFC8 /* PastOrder.swift in Sources */,
 				3AD926EC24942009000AEFC8 /* ErrorLoginResponse.swift in Sources */,
 				3AD9270824972CB1000AEFC8 /* String.swift in Sources */,
-				3A46478C24AD1CF500B9D4B5 /* LineView.swift in Sources */,
 				3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */,
 				3A045900249E13DE00366F10 /* OrderingStrategyViewModel.swift in Sources */,
 				3AD926DF249329CD000AEFC8 /* User.swift in Sources */,
@@ -890,6 +897,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A6A950124C131330053DF8C /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AD9272E2498611F000AEFC8 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		3AD926CA2491CA7A000AEFC8 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */;

@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUICharts
 
 struct DataView: View {
     @ObservedObject var recordsViewModel = RecordsViewModel()
@@ -18,13 +19,12 @@ struct DataView: View {
                         ScaleView(viewModel: scaleViewModel)
                     }
 
-                    Group {
-                        Section {
-                            LineView(data: weights?.reversed() ?? [], title: "")
-                        }
-                        .padding(.top, 150)
-                        .frame(height: 200)
+                    Section {
+                        LineView(data: weights?.reversed() ?? [], title: "")
+                            .padding(.top, -25)
                     }
+                    .padding(.top, -40)
+                    .frame(height: 260)
                 }
             }
             .listStyle(GroupedListStyle())
