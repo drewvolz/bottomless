@@ -27,8 +27,7 @@ struct DataView: View {
                     .frame(height: 260)
                 }
             }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
+            .safeGroupedStyle()
         }
         .onAppear(perform: fetch)
     }
