@@ -64,7 +64,7 @@ struct FreeBagView: View {
                     }
                 }
             }
-            .safeGroupedStyle()
+            .groupedStyle()
         }
         .onAppear(perform: fetch)
     }

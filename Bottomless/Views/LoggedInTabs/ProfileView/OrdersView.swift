@@ -38,7 +38,7 @@ struct OrdersView: View {
                     }
                 }
             }
-            .safeGroupedStyle()
+            .groupedStyle()
         }
         .onAppear(perform: fetch)
     }

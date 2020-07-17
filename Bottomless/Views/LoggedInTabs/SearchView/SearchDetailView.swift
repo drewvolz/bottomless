@@ -53,7 +53,7 @@ struct SearchDetailView: View {
                     }
                 }
             }
-            .safeGroupedStyle()
+            .groupedStyle()
         }
     }
 }

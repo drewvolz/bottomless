@@ -106,7 +106,7 @@ struct AccountSegmentView: View {
                     }
                 }
             }
-            .safeGroupedStyle()
+            .groupedStyle()
         }
     }
 

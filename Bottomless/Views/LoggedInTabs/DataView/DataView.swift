@@ -25,7 +25,7 @@ struct DataView: View {
                     .frame(height: 360)
                 }
             }
-            .safeGroupedStyle()
+            .groupedStyle()
         }
         .onAppear(perform: fetch)
     }
