@@ -13,16 +13,19 @@ struct Bottomless: App {
     @StateObject private var store = Store()
     @StateObject private var authManager = AuthenticationManager()
 
+    init() {
+        configure()
+    }
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(authManager)
                 .environmentObject(store)
-                .onAppear(perform: initialLaunch)
         }
     }
 
-    private func initialLaunch() {
+    private func configure() {
         if !UserDefaults.standard.bool(forKey: AuthKeys.initialLaunchKey) {
             authManager.deleteAccount()
             UserDefaults.standard.set(true, forKey: AuthKeys.initialLaunchKey)
