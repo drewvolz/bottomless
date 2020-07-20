@@ -15,7 +15,8 @@ struct SettingsSegmentView: View {
                         AutomaticOrderingView(accountViewModel: accountViewModel)
                     }
 
-                    Section(header: Text("Alerts")) {
+                    Section(header: Text("Alerts"),
+                            footer: Text("⚠️ The app currently is not checking if you've linked a phone number to your account, so this may not be working if you select \"Text\".")) {
                         AlertsView(accountViewModel: accountViewModel)
                     }
                 }
