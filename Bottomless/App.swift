@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct Bottomless: App {
+struct BottomlessApp: App {
     @StateObject private var store = Store()
     @StateObject private var authManager = AuthenticationManager()
 
