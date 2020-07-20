@@ -27,6 +27,7 @@ struct AlertsView: View {
 
     init(accountViewModel: AccountViewModel) {
         self.accountViewModel = accountViewModel
+        alertSettings = initialAlertSettings
     }
 
     var body: some View {
