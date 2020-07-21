@@ -1,4 +1,3 @@
-import ContactsUI
 import SwiftUI
 
 struct SearchDetailView: View {
