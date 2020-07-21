@@ -22,7 +22,6 @@ struct SharedTextfield: View {
         VStack(alignment: .leading, spacing: 0) {
             Text(header.uppercased())
                 .font(.footnote)
-                .foregroundColor(Color.black)
 
             HStack {
                 TextField(placeholder, text: self.$value, onEditingChanged: { flag in
@@ -52,7 +51,6 @@ struct SharedTextfield: View {
                     .transition(AnyTransition.opacity.animation(.easeIn))
             }
         }
-        .background(Color.white)
     }
 }
 
