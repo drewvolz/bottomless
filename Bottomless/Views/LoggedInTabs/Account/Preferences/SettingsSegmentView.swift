@@ -16,7 +16,7 @@ struct SettingsSegmentView: View {
                     }
 
                     Section(header: Text("Alerts"),
-                            footer: Text("⚠️ The app currently is not checking if you've linked a phone number to your account, so this may not be working if you select \"Text\".")) {
+                            footer: Text("⚠️ There's a bug updating these toggles, leaving the view, and coming back. The state you see may not be correct.") + Text("\n\n") + Text("⚠️ There's a bug if you've not yet linked a phone number to your account, so this may not work if you select \"Text\".")) {
                         AlertsView(accountViewModel: accountViewModel)
                     }
                 }
