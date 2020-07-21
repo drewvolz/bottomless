@@ -18,7 +18,6 @@ struct PasswordField: View {
         VStack(alignment: .leading, spacing: 0) {
             Text(header.uppercased())
                 .font(.footnote)
-                .foregroundColor(Color.black)
 
             HStack {
                 ZStack {
@@ -71,7 +70,6 @@ struct PasswordField: View {
                     .transition(AnyTransition.opacity.animation(.easeIn))
             }
         }
-        .background(Color.white)
     }
 }
 
