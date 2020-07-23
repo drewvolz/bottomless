@@ -87,6 +87,8 @@
 		3AF296B6249E27E2004BADE8 /* AutomaticOrderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */; };
 		3AF296BA249EDEA6004BADE8 /* PauseAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */; };
 		3AF296BC249F69E7004BADE8 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF296BB249F69E7004BADE8 /* AlertsView.swift */; };
+		3AF4FC6624C8E65700A61940 /* LoggedInSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4FC6524C8E65700A61940 /* LoggedInSidebar.swift */; };
+		3AF4FC6824C9150E00A61940 /* NavItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4FC6724C9150E00A61940 /* NavItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,8 @@
 		3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingView.swift; sourceTree = "<group>"; };
 		3AF296B9249EDEA6004BADE8 /* PauseAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseAccountViewModel.swift; sourceTree = "<group>"; };
 		3AF296BB249F69E7004BADE8 /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
+		3AF4FC6524C8E65700A61940 /* LoggedInSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInSidebar.swift; sourceTree = "<group>"; };
+		3AF4FC6724C9150E00A61940 /* NavItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,7 +305,7 @@
 		3AD926BD24915908000AEFC8 /* LoggedInTabs */ = {
 			isa = PBXGroup;
 			children = (
-				3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */,
+				3AF4FC6924C926A100A61940 /* Navigation */,
 				3AD926ED24942C0E000AEFC8 /* ProfileView */,
 				3AD926EE24942C1F000AEFC8 /* DataView */,
 				3AD9273724995D15000AEFC8 /* Free Bag */,
@@ -503,6 +507,16 @@
 			path = Preferences;
 			sourceTree = "<group>";
 		};
+		3AF4FC6924C926A100A61940 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3AF4FC6724C9150E00A61940 /* NavItems.swift */,
+				3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */,
+				3AF4FC6524C8E65700A61940 /* LoggedInSidebar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD926C124917121000AEFC8 /* UIApplication.swift in Sources */,
+				3AF4FC6824C9150E00A61940 /* NavItems.swift in Sources */,
 				3AD927172497F6F9000AEFC8 /* UpNextOrder.swift in Sources */,
 				3AD9272A24985D41000AEFC8 /* RecordsViewModel.swift in Sources */,
 				3AD926B5249156B0000AEFC8 /* KeyboardObserver.swift in Sources */,
@@ -643,6 +658,7 @@
 				3AD926B124915679000AEFC8 /* Colors.swift in Sources */,
 				3A0458F02499D07200366F10 /* SearchDetailView.swift in Sources */,
 				3AD926CD2491CCE1000AEFC8 /* PasswordField.swift in Sources */,
+				3AF4FC6624C8E65700A61940 /* LoggedInSidebar.swift in Sources */,
 				3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */,
 				3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */,
 				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
