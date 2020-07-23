@@ -16,3 +16,9 @@ struct BodyText: ViewModifier {
             .foregroundColor(.body)
     }
 }
+
+struct NavbarIcon: ViewModifier {
+    func body(content: Content) -> some View {
+        content.frame(minWidth: 30)
+    }
+}
