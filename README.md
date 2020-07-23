@@ -2,7 +2,7 @@
 
 ## About
 
-An iOS app written in SwiftUI/Combine for viewing your [Bottomless][1] coffee subscription account information.
+An iOS/iPadOS app written in SwiftUI/Combine for viewing your [Bottomless][1] coffee subscription account information.
 
 <details>
 <summary>📸 Screenshots</summary>
