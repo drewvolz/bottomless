@@ -4,12 +4,20 @@
 
 An iOS app written in SwiftUI/Combine for viewing your [Bottomless][1] coffee subscription account information.
 
-## Screenshots
+<details>
+<summary>📸 Screenshots</summary>
 
+### iOS
 ~ | ~ | ~
 --|--|--
 ![profile][image-1] | ![scale][image-2] | ![referral][image-3]
 ![search][image-4] | ![search-detail][image-5] | ![settings][image-6]
+
+### iPadOS
+
+![profile-ipad][image-7]
+
+</details>
 
 ## Contributing
 
@@ -23,4 +31,4 @@ Thank you for your interest in contributing to this project. Contributions are w
 [image-4]: ./screenshots/2020-06-search.png
 [image-5]: ./screenshots/2020-06-search-detail.png
 [image-6]: ./screenshots/2020-07-settings.png
-
+[image-7]: ./screenshots/2020-07-profile-ipad.png
