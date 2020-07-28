@@ -56,8 +56,10 @@ class UrlImageModel: ObservableObject {
             return
         }
 
-        let url = URL(string: urlString)!
-        let task = URLSession.shared.dataTask(with: url, completionHandler: getImageFromResponse(data:response:error:))
+        let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        let url = URL(string: encodedUrlString)
+
+        let task = URLSession.shared.dataTask(with: url!, completionHandler: getImageFromResponse(data:response:error:))
         task.resume()
     }
 
