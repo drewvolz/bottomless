@@ -14,34 +14,50 @@ struct SearchRow: View {
                 UrlImageView(urlString: self.product.smallImageSrc)
 
                 VStack(alignment: .leading) {
-                    Text(verbatim: self.product.vendorName ?? "")
-                        .font(.caption)
-                        .bold()
-                        .lineLimit(1)
-                        .foregroundColor(Color.gray)
-
-                    Text(verbatim: self.product.name ?? "")
-                        .font(.headline)
-                        .lineLimit(1)
-                        .padding(.vertical, 3)
+                    Vendor()
+                    Product()
 
                     HStack {
-                        Text(verbatim: self.product.roast?.name ?? "")
-                            .font(.caption)
-                            .foregroundColor(Color.darkerRed)
-                            .padding(5)
-                            .overlay(Rectangle().stroke(Color.darkerRed, lineWidth: 1))
-
-                        Text(verbatim: self.product.origin?.name ?? "")
-                            .font(.caption)
-                            .foregroundColor(Color.darkerRed)
-                            .padding(5)
-                            .overlay(Rectangle().stroke(Color.darkerRed, lineWidth: 1))
+                        Roast()
+                        Origin()
                     }
                 }
             }
             .frame(height: 100)
         }
+    }
+}
+
+private extension SearchRow {
+    @ViewBuilder func Vendor() -> some View {
+        Text(verbatim: product.vendorName ?? "")
+            .font(.caption)
+            .bold()
+            .lineLimit(1)
+            .foregroundColor(Color.gray)
+    }
+
+    @ViewBuilder func Product() -> some View {
+        Text(verbatim: product.name ?? "")
+            .font(.headline)
+            .lineLimit(1)
+            .padding(.vertical, 3)
+    }
+
+    @ViewBuilder func Roast() -> some View {
+        Text(verbatim: product.roast?.name ?? "")
+            .font(.caption)
+            .foregroundColor(Color.darkerRed)
+            .padding(5)
+            .overlay(Rectangle().stroke(Color.darkerRed, lineWidth: 1))
+    }
+
+    @ViewBuilder func Origin() -> some View {
+        Text(verbatim: product.origin?.name ?? "")
+            .font(.caption)
+            .foregroundColor(Color.darkerRed)
+            .padding(5)
+            .overlay(Rectangle().stroke(Color.darkerRed, lineWidth: 1))
     }
 }
 

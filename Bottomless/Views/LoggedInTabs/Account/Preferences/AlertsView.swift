@@ -63,7 +63,9 @@ struct AlertsView: View {
         }
         .font(.body)
     }
+}
 
+private extension AlertsView {
     func onGifAlertsChange(value: Bool) {
         updateSettings(key: "gifs", value: value)
     }

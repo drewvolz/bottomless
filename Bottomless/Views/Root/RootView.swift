@@ -6,39 +6,51 @@ struct RootView: View {
     var body: some View {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
-            return AnyView(
-                NavigationView {
-                    iPhoneView()
-                }
-                .navigationViewStyle(StackNavigationViewStyle())
-            )
+            iPhoneNavigation()
         case .pad:
-            return AnyView(
-                NavigationView {
-                    iPadView()
-                }
-            )
+            iPadNavigation()
         default:
-            return AnyView(EmptyView())
+            EmptyView()
         }
     }
+}
 
-    private func iPhoneView() -> AnyView {
+// MARK: iPhone navigation
+
+private extension RootView {
+    @ViewBuilder func iPhoneNavigation() -> some View {
+        NavigationView {
+            iPhoneView()
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+
+    @ViewBuilder func iPhoneView() -> some View {
         if authManager.hasAccount() {
-            return AnyView(LoggedInTabsView())
+            LoggedInTabsView()
         } else {
-            return AnyView(WelcomeView())
+            WelcomeView()
+        }
+    }
+}
+
+// MARK: iPad navigation
+
+private extension RootView {
+    @ViewBuilder func iPadNavigation() -> some View {
+        NavigationView {
+            iPadView()
         }
     }
 
-    private func iPadView() -> AnyView {
+    @ViewBuilder func iPadView() -> some View {
         if authManager.hasAccount() {
-            return AnyView(Group {
+            Group {
                 LoggedInSidebarView(selectedId: 0)
                 EmptyView()
-            })
+            }
         } else {
-            return AnyView(WelcomeView())
+            WelcomeView()
         }
     }
 }

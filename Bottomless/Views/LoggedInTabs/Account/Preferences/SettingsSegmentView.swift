@@ -25,8 +25,10 @@ struct SettingsSegmentView: View {
             .environment(\.horizontalSizeClass, .regular)
         }
     }
+}
 
-    private func fetch() {
+private extension SettingsSegmentView {
+    func fetch() {
         accountViewModel.fetch()
     }
 }
