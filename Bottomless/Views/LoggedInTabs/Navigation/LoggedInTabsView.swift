@@ -11,19 +11,19 @@ struct LoggedInTabsView: View {
         }
         .navigationBarTitle("Bottomless")
     }
+}
 
-    func buildTab(index: Int) -> AnyView {
-        return AnyView(
-            navigationItems[index].destination
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image(systemName: navigationItems[index].icon)
-                        Text(navigationItems[index].name)
-                    }
+private extension LoggedInTabsView {
+    @ViewBuilder func buildTab(index: Int) -> some View {
+        navigationItems[index].destination
+            .font(.title)
+            .tabItem {
+                VStack {
+                    Image(systemName: navigationItems[index].icon)
+                    Text(navigationItems[index].name)
                 }
-                .tag(index)
-        )
+            }
+            .tag(index)
     }
 }
 

@@ -27,17 +27,33 @@ struct AccountView: View {
         }
         .onAppear(perform: fetch)
     }
+}
 
-    private func fetch() {
-        accountViewModel.fetch()
+// MARK: views
+
+private extension AccountView {
+    @ViewBuilder private func containedView() -> some View {
+        if let tab = Tabs(rawValue: segmentIndex) {
+            switch tab {
+            case .account:
+                AccountSegmentView(accountViewModel: accountViewModel)
+            case .settings:
+                SettingsSegmentView(accountViewModel: accountViewModel)
+            }
+        }
+    }
+}
+
+// MARK: functions
+
+private extension AccountView {
+    enum Tabs: Int {
+        case account
+        case settings
     }
 
-    private func containedView() -> AnyView {
-        switch segmentIndex {
-        case 0: return AnyView(AccountSegmentView(accountViewModel: accountViewModel))
-        case 1: return AnyView(SettingsSegmentView(accountViewModel: accountViewModel))
-        default: return AnyView(Text("Invalid index passed into the account view"))
-        }
+    func fetch() {
+        accountViewModel.fetch()
     }
 }
 

@@ -7,74 +7,87 @@ struct InProgressOrder: View {
         VStack {
             HStack {
                 UrlImageView(urlString: parseProduct(order: order).small_image_src)
-
-                VStack(alignment: .leading) {
-                    Text(verbatim: parseProduct(order: order).vendor_name)
-                        .font(.caption)
-                        .lineLimit(1)
-                        .foregroundColor(Color.gray)
-
-                    Text(verbatim: parseProduct(order: order).name)
-                        .font(.headline)
-                        .lineLimit(1)
-                        .padding(.vertical, 3)
-
-                    Text(verbatim: self.order.grind.name)
-                        .font(.caption)
-                        .lineLimit(1)
-                        .foregroundColor(Color.gray)
-                }
-
+                ProductDetails()
                 Spacer()
-
-                Text(statusName(order: order))
-                    .font(.caption)
-                    .bold()
-                    .padding(3)
-                    .lineLimit(1)
-                    .foregroundColor(Color.darkerRed)
-                    .overlay(
-                        Rectangle()
-                            .stroke(Color.darkerRed, lineWidth: 1))
+                Status()
             }
         }
     }
 }
 
-private func parseProduct(order: InTransitionResponse) -> InTransitionResponse.Product {
-    var parsedProduct = InTransitionResponse.Product(_id: "", name: "", vendor_name: "", small_image_src: "")
+// MARK: views
 
-    if order.subproductID != nil {
-        parsedProduct = order.subproductID!.product
-    } else if order.productID != nil {
-        parsedProduct = order.productID!.product
+private extension InProgressOrder {
+    @ViewBuilder func ProductDetails() -> some View {
+        VStack(alignment: .leading) {
+            Text(verbatim: parseProduct(order: order).vendor_name)
+                .font(.caption)
+                .lineLimit(1)
+                .foregroundColor(Color.gray)
+
+            Text(verbatim: parseProduct(order: order).name)
+                .font(.headline)
+                .lineLimit(1)
+                .padding(.vertical, 3)
+
+            Text(verbatim: self.order.grind.name)
+                .font(.caption)
+                .lineLimit(1)
+                .foregroundColor(Color.gray)
+        }
     }
 
-    return parsedProduct
+    @ViewBuilder func Status() -> some View {
+        Text(statusName(order: order))
+            .font(.caption)
+            .bold()
+            .padding(3)
+            .lineLimit(1)
+            .foregroundColor(Color.darkerRed)
+            .overlay(
+                Rectangle()
+                    .stroke(Color.darkerRed, lineWidth: 1))
+    }
 }
 
-private func statusName(order: InTransitionResponse) -> String {
-    let availableStatuses = [
-        "Scheduled": "scheduled",
-        "Roasting": "roasting",
-        "InTransit": "in_transit",
-        "OutOfDelivery": "out_for_delivery",
-        "Delivered": "delivered",
-    ]
+// MARK: functions
 
-    if let val = availableStatuses[order.shippingStatus?.rawValue ?? ""] {
-        return val
+private extension InProgressOrder {
+    private func parseProduct(order: InTransitionResponse) -> InTransitionResponse.Product {
+        var parsedProduct = InTransitionResponse.Product(_id: "", name: "", vendor_name: "", small_image_src: "")
+
+        if order.subproductID != nil {
+            parsedProduct = order.subproductID!.product
+        } else if order.productID != nil {
+            parsedProduct = order.productID!.product
+        }
+
+        return parsedProduct
     }
 
-    if (order.status == "sent_to_roaster") || order.status == "fulfilled" && order.trackingNumber?.count ?? 0 < 1 {
-        return "Roasting"
-    }
+    private func statusName(order: InTransitionResponse) -> String {
+        let availableStatuses = [
+            "Scheduled": "scheduled",
+            "Roasting": "roasting",
+            "InTransit": "in_transit",
+            "OutOfDelivery": "out_for_delivery",
+            "Delivered": "delivered",
+        ]
 
-    if order.status == "fulfilled", order.trackingNumber?.count ?? 0 > 0 {
-        return "In Transit"
-    }
+        if let val = availableStatuses[order.shippingStatus?.rawValue ?? ""] {
+            return val
+        }
 
-    return "Scheduled"
+        if (order.status == "sent_to_roaster") || order.status == "fulfilled" && order.trackingNumber?.count ?? 0 < 1 {
+            return "Roasting"
+        }
+
+        if order.status == "fulfilled", order.trackingNumber?.count ?? 0 > 0 {
+            return "In Transit"
+        }
+
+        return "Scheduled"
+    }
 }
 
 struct InProgressOrder_Previews: PreviewProvider {

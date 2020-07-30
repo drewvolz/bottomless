@@ -15,39 +15,10 @@ struct LoginView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 26) {
-            SharedTextfield(
-                value: self.$authManager.email,
-                header: "Email",
-                placeholder: "Your email",
-                errorMessage: authManager.emailValidation.message
-            )
-
-            PasswordField(
-                value: self.$authManager.password,
-                header: "Password",
-                placeholder: "Your password",
-                errorMessage: authManager.passwordValidation.message,
-                isSecure: true
-            )
-
+            Email()
+            Password()
             Spacer()
-
-            Button(action: login) {
-                PrimaryButton(title: "Log In")
-            }
-            .disabled(!self.authManager.canLogin)
-            .alert(isPresented: self.$showAlert) {
-                if self.authManager.hasAccount() {
-                    return Alert(title: Text("Error"),
-                                 message: Text("Incorrect email or password."),
-                                 dismissButton: Alert.Button.default(Text("Ok")))
-                }
-
-                return Alert(title: Text("Error"),
-                             message: Text("No account found."),
-                             dismissButton: Alert.Button.default(Text("Ok")))
-            }
-
+            Submit()
             NavigationLink(destination: LoggedInTabsView(), isActive: $showProfile) {
                 EmptyView()
             }
@@ -56,7 +27,52 @@ struct LoginView: View {
         .navigationBarTitle("Log In")
         .environmentObject(authManager)
     }
+}
 
+// MARK: views
+
+private extension LoginView {
+    @ViewBuilder func Email() -> some View {
+        SharedTextfield(
+            value: $authManager.email,
+            header: "Email",
+            placeholder: "Your email",
+            errorMessage: authManager.emailValidation.message
+        )
+    }
+
+    @ViewBuilder func Password() -> some View {
+        PasswordField(
+            value: $authManager.password,
+            header: "Password",
+            placeholder: "Your password",
+            errorMessage: authManager.passwordValidation.message,
+            isSecure: true
+        )
+    }
+
+    @ViewBuilder func Submit() -> some View {
+        Button(action: login) {
+            PrimaryButton(title: "Log In")
+        }
+        .disabled(!authManager.canLogin)
+        .alert(isPresented: $showAlert) {
+            if self.authManager.hasAccount() {
+                return Alert(title: Text("Error"),
+                             message: Text("Incorrect email or password."),
+                             dismissButton: Alert.Button.default(Text("Ok")))
+            }
+
+            return Alert(title: Text("Error"),
+                         message: Text("No account found."),
+                         dismissButton: Alert.Button.default(Text("Ok")))
+        }
+    }
+}
+
+// MARK: functions
+
+private extension LoginView {
     func login() {
         // showAlert = !authManager.authenticate()  // TODO: handle this
 

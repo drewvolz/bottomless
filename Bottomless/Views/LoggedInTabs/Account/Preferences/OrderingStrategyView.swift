@@ -20,8 +20,10 @@ struct OrderingStrategyView: View {
         }
         .font(.body)
     }
+}
 
-    private func updateOrderingAgression(value: Int) {
+private extension OrderingStrategyView {
+    func updateOrderingAgression(value: Int) {
         let adjustedValue = value + 1
         orderingStrategyViewModel.post(level: adjustedValue)
     }

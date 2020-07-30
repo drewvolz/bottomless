@@ -10,31 +10,15 @@ struct OrdersView: View {
             List {
                 Group {
                     Section(header: Text("Up Next").font(.subheadline)) {
-                        if hasUpNextOrder(order: upNextViewModel.upNextResponse) {
-                            UpNextOrder(order: upNextViewModel.upNextResponse!)
-                        } else {
-                            NoOrders(message: "No upcoming orders")
-                        }
+                        UpNextSection()
                     }
 
                     Section(header: Text("Orders In Progress").font(.subheadline)) {
-                        if hasInTransitionOrders(orders: inTransitionViewModel.inTransitionResponse) {
-                            ForEach(inTransitionViewModel.inTransitionResponse!) { order in
-                                InProgressOrder(order: order)
-                            }
-                        } else {
-                            NoOrders(message: "No orders in progress")
-                        }
+                        InProgressSection()
                     }
 
                     Section(header: Text("Past Orders").font(.subheadline)) {
-                        if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
-                            ForEach(pastOrdersViewModel.ordersResponse!) { order in
-                                PastOrder(order: order)
-                            }
-                        } else {
-                            NoOrders(message: "No past orders")
-                        }
+                        PastSection()
                     }
                 }
             }
@@ -42,14 +26,50 @@ struct OrdersView: View {
         }
         .onAppear(perform: fetch)
     }
+}
 
-    private func fetch() {
+// MARK: views
+
+private extension OrdersView {
+    @ViewBuilder func UpNextSection() -> some View {
+        if hasUpNextOrder(order: upNextViewModel.upNextResponse) {
+            UpNextOrder(order: upNextViewModel.upNextResponse!)
+        } else {
+            NoOrders(message: "No upcoming orders")
+        }
+    }
+
+    @ViewBuilder func InProgressSection() -> some View {
+        if hasInTransitionOrders(orders: inTransitionViewModel.inTransitionResponse) {
+            ForEach(inTransitionViewModel.inTransitionResponse!) { order in
+                InProgressOrder(order: order)
+            }
+        } else {
+            NoOrders(message: "No orders in progress")
+        }
+    }
+
+    @ViewBuilder func PastSection() -> some View {
+        if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
+            ForEach(pastOrdersViewModel.ordersResponse!) { order in
+                PastOrder(order: order)
+            }
+        } else {
+            NoOrders(message: "No past orders")
+        }
+    }
+}
+
+// MARK: functions
+
+private extension OrdersView {
+    func fetch() {
         upNextViewModel.fetch()
         inTransitionViewModel.fetch()
         pastOrdersViewModel.fetch()
     }
 
-    private func hasInTransitionOrders(orders: [InTransitionResponse]?) -> Bool {
+    func hasInTransitionOrders(orders: [InTransitionResponse]?) -> Bool {
         var hasOrders = false
         if let count = orders?.count {
             hasOrders = count > 0
@@ -58,7 +78,7 @@ struct OrdersView: View {
         return hasOrders
     }
 
-    private func hasPastOrders(orders: [OrdersResponse]?) -> Bool {
+    func hasPastOrders(orders: [OrdersResponse]?) -> Bool {
         var hasOrders = false
         if let count = orders?.count {
             hasOrders = count > 0
@@ -67,7 +87,7 @@ struct OrdersView: View {
         return hasOrders
     }
 
-    private func hasUpNextOrder(order: UpNextResponse?) -> Bool {
+    func hasUpNextOrder(order: UpNextResponse?) -> Bool {
         return order != nil
     }
 }
