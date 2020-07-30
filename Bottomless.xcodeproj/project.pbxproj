@@ -31,6 +31,7 @@
 		3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46478924AD1CE500B9D4B5 /* ScaleView.swift */; };
 		3A6A950224C131330053DF8C /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A950124C131330053DF8C /* SwiftUICharts */; };
 		3A6A950424C13F410053DF8C /* ListModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A950324C13F410053DF8C /* ListModifiers.swift */; };
+		3A73055B24D36DC700E71882 /* AutomaticOrderingToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
 		3AD926982491547F000AEFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD926972491547F000AEFC8 /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 		3A1C333624C20E9300411A5E /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = info.plist; path = ../info.plist; sourceTree = "<group>"; };
 		3A46478924AD1CE500B9D4B5 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
 		3A6A950324C13F410053DF8C /* ListModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifiers.swift; sourceTree = "<group>"; };
+		3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingToggle.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInTabsView.swift; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 				3A0458F3249CA37F00366F10 /* SettingsSegmentView.swift */,
 				3A0458FD249E11BC00366F10 /* OrderingStrategyView.swift */,
 				3AF296B5249E27E2004BADE8 /* AutomaticOrderingView.swift */,
+				3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */,
 				3AF296BB249F69E7004BADE8 /* AlertsView.swift */,
 			);
 			path = Preferences;
@@ -623,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD926C124917121000AEFC8 /* UIApplication.swift in Sources */,
+				3A73055B24D36DC700E71882 /* AutomaticOrderingToggle.swift in Sources */,
 				3AF4FC6824C9150E00A61940 /* NavItems.swift in Sources */,
 				3AD927172497F6F9000AEFC8 /* UpNextOrder.swift in Sources */,
 				3AD9272A24985D41000AEFC8 /* RecordsViewModel.swift in Sources */,
