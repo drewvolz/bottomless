@@ -191,14 +191,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A0458D424996F0E00366F10 /* Account Response */ = {
-			isa = PBXGroup;
-			children = (
-				3A0458D524996F2400366F10 /* AccountResponse.swift */,
-			);
-			path = "Account Response";
-			sourceTree = "<group>";
-		};
 		3A0458D9249977BA00366F10 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,14 +199,6 @@
 				3A0458DA249977CD00366F10 /* AccountSegmentView.swift */,
 			);
 			path = Account;
-			sourceTree = "<group>";
-		};
-		3A0458E82499C35F00366F10 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				3A0458E92499C37400366F10 /* ProductResponse.swift */,
-			);
-			path = Shop;
 			sourceTree = "<group>";
 		};
 		3A6A950024C131330053DF8C /* Frameworks */ = {
@@ -351,12 +335,18 @@
 		3AD926CE2491E366000AEFC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A0458E82499C35F00366F10 /* Shop */,
-				3A0458D424996F0E00366F10 /* Account Response */,
-				3AD9273A24995FF4000AEFC8 /* Credits */,
-				3AD9272B24985DE1000AEFC8 /* Scale */,
-				3AD927192497F814000AEFC8 /* Orders */,
-				3AD927182497F7F2000AEFC8 /* Login */,
+				3A0458E92499C37400366F10 /* ProductResponse.swift */,
+				3A0458D524996F2400366F10 /* AccountResponse.swift */,
+				3AD9273B24996010000AEFC8 /* CreditsResponse.swift */,
+				3AD9272C24985DF7000AEFC8 /* RecordsResponse.swift */,
+				3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */,
+				3AD9271A2497F84F000AEFC8 /* UpNextResponse.swift */,
+				3AD926F924943500000AEFC8 /* InTransitionResponse.swift */,
+				3AD92721249810E9000AEFC8 /* OrdersResponse.swift */,
+				3AD926D12491E3B8000AEFC8 /* LoginResponse.swift */,
+				3AD926EB24942009000AEFC8 /* ErrorLoginResponse.swift */,
+				3AD926DC24932998000AEFC8 /* FormValidation.swift */,
+				3AD926DE249329CD000AEFC8 /* User.swift */,
 				3A0458F1249C9B0400366F10 /* ImageLoader.swift */,
 			);
 			path = Models;
@@ -443,50 +433,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		3AD927182497F7F2000AEFC8 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				3AD926D12491E3B8000AEFC8 /* LoginResponse.swift */,
-				3AD926EB24942009000AEFC8 /* ErrorLoginResponse.swift */,
-				3AD926DC24932998000AEFC8 /* FormValidation.swift */,
-				3AD926DE249329CD000AEFC8 /* User.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		3AD927192497F814000AEFC8 /* Orders */ = {
-			isa = PBXGroup;
-			children = (
-				3AD9271A2497F84F000AEFC8 /* UpNextResponse.swift */,
-				3AD926F924943500000AEFC8 /* InTransitionResponse.swift */,
-				3AD92721249810E9000AEFC8 /* OrdersResponse.swift */,
-			);
-			path = Orders;
-			sourceTree = "<group>";
-		};
-		3AD9272B24985DE1000AEFC8 /* Scale */ = {
-			isa = PBXGroup;
-			children = (
-				3AD9272C24985DF7000AEFC8 /* RecordsResponse.swift */,
-				3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */,
-			);
-			path = Scale;
-			sourceTree = "<group>";
-		};
 		3AD9273724995D15000AEFC8 /* Free Bag */ = {
 			isa = PBXGroup;
 			children = (
 				3AD9273824995D2E000AEFC8 /* FreeBag.swift */,
 			);
 			path = "Free Bag";
-			sourceTree = "<group>";
-		};
-		3AD9273A24995FF4000AEFC8 /* Credits */ = {
-			isa = PBXGroup;
-			children = (
-				3AD9273B24996010000AEFC8 /* CreditsResponse.swift */,
-			);
-			path = Credits;
 			sourceTree = "<group>";
 		};
 		3AF296B0249E17B2004BADE8 /* Pickers */ = {

@@ -21,8 +21,10 @@ struct LoggedInSidebarView: View {
         .navigationBarTitle("Bottomless")
         .onAppear(perform: handleSelection)
     }
+}
 
-    private func handleSelection() {
+private extension LoggedInSidebarView {
+    func handleSelection() {
         if let initialSelection = self.initialSelection {
             selectedItemId = initialSelection
         } else {

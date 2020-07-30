@@ -24,18 +24,8 @@ struct SharedTextfield: View {
                 .font(.footnote)
 
             HStack {
-                TextField(placeholder, text: self.$value, onEditingChanged: { flag in
-                    self.onEditingChanged(flag)
-                }, onCommit: {
-                    self.onCommit()
-                })
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding(.vertical, 15)
-
-                if !self.trailingIconName.isEmpty {
-                    Image(systemName: self.trailingIconName).foregroundColor(Color.gray)
-                }
+                TextFieldView()
+                Icon()
             }
             .frame(height: 45)
 
@@ -43,13 +33,36 @@ struct SharedTextfield: View {
                 Rectangle().frame(height: 1).foregroundColor(Color.gray)
             }
 
-            if !errorMessage.isEmpty {
-                Text(errorMessage)
-                    .lineLimit(nil)
-                    .font(.footnote)
-                    .foregroundColor(Color.red)
-                    .transition(AnyTransition.opacity.animation(.easeIn))
-            }
+            ErrorMessage()
+        }
+    }
+}
+
+private extension SharedTextfield {
+    @ViewBuilder func TextFieldView() -> some View {
+        TextField(placeholder, text: $value, onEditingChanged: { flag in
+            self.onEditingChanged(flag)
+        }, onCommit: {
+            self.onCommit()
+        })
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
+            .padding(.vertical, 15)
+    }
+
+    @ViewBuilder func Icon() -> some View {
+        if !trailingIconName.isEmpty {
+            Image(systemName: trailingIconName).foregroundColor(Color.gray)
+        }
+    }
+
+    @ViewBuilder func ErrorMessage() -> some View {
+        if !errorMessage.isEmpty {
+            Text(errorMessage)
+                .lineLimit(nil)
+                .font(.footnote)
+                .foregroundColor(Color.red)
+                .transition(AnyTransition.opacity.animation(.easeIn))
         }
     }
 }

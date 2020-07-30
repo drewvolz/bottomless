@@ -21,39 +21,16 @@ struct PasswordField: View {
 
             HStack {
                 ZStack {
-                    SecureField(placeholder, text: self.$value, onCommit: {
-                        self.onEditingChanged(false)
-                    })
-                        .padding(.vertical, 15)
-                        .opacity(isSecure ? 1 : 0)
-
-                    TextField(placeholder, text: self.$value, onEditingChanged: { flag in
-                        self.onEditingChanged(flag)
-                    })
-                        .padding(.vertical, 15)
-                        .opacity(isSecure ? 0 : 1)
+                    SecurePasswordView()
+                    PlainPasswordView()
                 }
 
                 HStack {
                     if isSecure {
-                        Image(systemName: "eye.slash").foregroundColor(Color.gray).onTapGesture {
-                            withAnimation {
-                                self.isSecure.toggle()
-                            }
-                        }
+                        ViewInsecureIcon()
                     } else {
-                        Image(systemName: "doc.on.doc")
-                            .foregroundColor(Color.gray)
-                            .transition(.opacity)
-                            .onTapGesture {
-                                self.pasteboard.string = self.value
-                            }
-
-                        Image(systemName: "eye").foregroundColor(Color.gray).onTapGesture {
-                            withAnimation {
-                                self.isSecure.toggle()
-                            }
-                        }
+                        CopyIcon()
+                        ViewSecureIcon()
                     }
                 }
             }.frame(height: 45)
@@ -62,13 +39,60 @@ struct PasswordField: View {
                 .frame(height: 1)
                 .foregroundColor(Color.gray)
 
-            if !errorMessage.isEmpty {
-                Text(errorMessage)
-                    .lineLimit(nil)
-                    .font(.footnote)
-                    .foregroundColor(Color.red)
-                    .transition(AnyTransition.opacity.animation(.easeIn))
+            ErrorMessage()
+        }
+    }
+}
+
+private extension PasswordField {
+    @ViewBuilder func SecurePasswordView() -> some View {
+        SecureField(placeholder, text: $value, onCommit: {
+            self.onEditingChanged(false)
+        })
+            .padding(.vertical, 15)
+            .opacity(isSecure ? 1 : 0)
+    }
+
+    @ViewBuilder func PlainPasswordView() -> some View {
+        TextField(placeholder, text: $value, onEditingChanged: { flag in
+            self.onEditingChanged(flag)
+        })
+            .padding(.vertical, 15)
+            .opacity(isSecure ? 0 : 1)
+    }
+
+    @ViewBuilder func ViewInsecureIcon() -> some View {
+        Image(systemName: "eye.slash").foregroundColor(Color.gray).onTapGesture {
+            withAnimation {
+                self.isSecure.toggle()
             }
+        }
+    }
+
+    @ViewBuilder func CopyIcon() -> some View {
+        Image(systemName: "doc.on.doc")
+            .foregroundColor(Color.gray)
+            .transition(.opacity)
+            .onTapGesture {
+                self.pasteboard.string = self.value
+            }
+    }
+
+    @ViewBuilder func ViewSecureIcon() -> some View {
+        Image(systemName: "eye").foregroundColor(Color.gray).onTapGesture {
+            withAnimation {
+                self.isSecure.toggle()
+            }
+        }
+    }
+
+    @ViewBuilder func ErrorMessage() -> some View {
+        if !errorMessage.isEmpty {
+            Text(errorMessage)
+                .lineLimit(nil)
+                .font(.footnote)
+                .foregroundColor(Color.red)
+                .transition(AnyTransition.opacity.animation(.easeIn))
         }
     }
 }

@@ -29,8 +29,10 @@ struct DataView: View {
         }
         .onAppear(perform: fetch)
     }
+}
 
-    private func fetch() {
+private extension DataView {
+    func fetch() {
         recordsViewModel.fetch()
         scaleViewModel.fetch()
     }
