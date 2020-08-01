@@ -20,13 +20,15 @@ struct SearchView: View {
 private extension SearchView {
     @ViewBuilder func SearchBarView() -> some View {
         SearchBar(text: $searchViewModel.query,
-                  action: { self.searchViewModel.search() },
+                  action: {},
                   placeholder: "Search")
             .disableAutocorrection(true)
     }
 
     @ViewBuilder func ListView() -> some View {
-        List(searchViewModel.products ?? []) { product in
+        List(searchViewModel.products?.filter { product in
+            searchViewModel.search(product: product)
+        } ?? []) { product in
             NavigationLink(destination: SearchDetailView(
                 searchViewModel: self.searchViewModel,
                 product: product
