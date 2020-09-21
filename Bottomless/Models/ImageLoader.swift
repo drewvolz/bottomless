@@ -56,10 +56,17 @@ class UrlImageModel: ObservableObject {
             return
         }
 
-        let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-        let url = URL(string: encodedUrlString)
+        let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            // hack to fix "4&20 French Roast" image loading
+            // ...escaping of % => %25 modifies the url
+            // ...so we're going to remove the 25 and leave the %
+            // ...I can't wait for this to bite me next time.
+            // ...I'm so sorry.
+            .replacingOccurrences(of: "%25", with: "%")
 
-        let task = URLSession.shared.dataTask(with: url!, completionHandler: getImageFromResponse(data:response:error:))
+        let url = URL(string: encodedUrlString)!
+
+        let task = URLSession.shared.dataTask(with: url, completionHandler: getImageFromResponse(data:response:error:))
         task.resume()
     }
 
