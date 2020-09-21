@@ -13,6 +13,11 @@ struct SearchDetailView: View {
             List {
                 ImageAndProductInfo()
                 RoastAndOrigin()
+
+                if product.likes > 0 {
+                    Likes()
+                }
+
                 Tags()
                 Description()
             }
@@ -45,6 +50,17 @@ private extension SearchDetailView {
                 .font(.body)
             Text(verbatim: self.product.origin?.name ?? "")
                 .font(.body)
+        }
+    }
+
+    @ViewBuilder func Likes() -> some View {
+        Section(header: Text("Likes").font(.subheadline)) {
+            HStack {
+                Image(systemName: "heart.fill")
+                    .foregroundColor(Color.darkerRed)
+                Text(verbatim: String(product.likes))
+            }
+            .font(.body)
         }
     }
 
