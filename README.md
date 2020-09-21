@@ -28,7 +28,7 @@ Thank you for your interest in contributing to this project. Contributions are w
 [image-1]: ./screenshots/2020-07-profile.png
 [image-2]: ./screenshots/2020-06-scale.png
 [image-3]: ./screenshots/2020-06-referral.png
-[image-4]: ./screenshots/2020-06-search.png
-[image-5]: ./screenshots/2020-06-search-detail.png
+[image-4]: ./screenshots/2020-09-search.png
+[image-5]: ./screenshots/2020-09-search-detail.png
 [image-6]: ./screenshots/2020-07-settings.png
 [image-7]: ./screenshots/2020-07-profile-ipad.png
