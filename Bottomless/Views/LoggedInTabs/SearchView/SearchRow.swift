@@ -20,6 +20,10 @@ struct SearchRow: View {
                     HStack {
                         Roast()
                         Origin()
+
+                        if product.likes > 0 {
+                            Likes()
+                        }
                     }
                 }
             }
@@ -58,6 +62,22 @@ private extension SearchRow {
             .foregroundColor(Color.darkerRed)
             .padding(5)
             .overlay(Rectangle().stroke(Color.darkerRed, lineWidth: 1))
+    }
+
+    @ViewBuilder func Likes() -> some View {
+        HStack {
+            Image(systemName: "heart.fill")
+                .foregroundColor(Color.darkerRed)
+            Text(verbatim: String(product.likes))
+                .foregroundColor(.gray)
+        }
+        .font(.caption)
+        .padding(5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10.0)
+                .stroke(Color.gray)
+        )
+        .fixedSize()
     }
 }
 
