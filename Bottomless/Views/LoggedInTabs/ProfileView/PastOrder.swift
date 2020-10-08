@@ -8,7 +8,7 @@ struct PastOrder: View {
             HStack {
                 UrlImageView(urlString: self.order.subproductID.product.small_image_src)
 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 0) {
                     Text(verbatim: self.order.subproductID.product.vendor_name)
                         .font(.caption)
                         .lineLimit(1)

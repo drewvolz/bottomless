@@ -19,7 +19,7 @@ struct InProgressOrder: View {
 
 private extension InProgressOrder {
     @ViewBuilder func ProductDetails() -> some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             Text(verbatim: parseProduct(order: order).vendor_name)
                 .font(.caption)
                 .lineLimit(1)

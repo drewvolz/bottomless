@@ -14,8 +14,10 @@ struct SearchRow: View {
                 UrlImageView(urlString: self.product.smallImageSrc)
 
                 VStack(alignment: .leading) {
-                    Vendor()
-                    Product()
+                    VStack(alignment: .leading, spacing: 0) {
+                        Vendor()
+                        Product()
+                    }
 
                     HStack {
                         Roast()
