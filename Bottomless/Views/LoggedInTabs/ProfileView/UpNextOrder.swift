@@ -8,7 +8,7 @@ struct UpNextOrder: View {
             HStack {
                 UrlImageView(urlString: self.order.product.small_image_src)
 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 0) {
                     Text(verbatim: self.order.product.vendor_name)
                         .font(.caption)
                         .lineLimit(1)
