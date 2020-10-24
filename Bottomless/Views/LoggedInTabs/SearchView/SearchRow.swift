@@ -4,10 +4,6 @@ struct SearchRow: View {
     @ObservedObject var viewModel: SearchViewModel
     @State var product: ProductResponse
 
-    var tags: [String]? {
-        product.tags?.compactMap { tag in tag.name }
-    }
-
     var body: some View {
         VStack {
             HStack {
@@ -67,7 +63,7 @@ private extension SearchRow {
     }
 
     @ViewBuilder func Likes() -> some View {
-        HStack {
+        HStack(spacing: 3) {
             Image(systemName: "heart.fill")
                 .foregroundColor(Color.darkerRed)
             Text(verbatim: String(product.likes))
