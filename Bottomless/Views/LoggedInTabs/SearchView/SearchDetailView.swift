@@ -12,12 +12,12 @@ struct SearchDetailView: View {
         Group {
             List {
                 ImageAndProductInfo()
-                RoastAndOrigin()
 
                 if product.likes > 0 {
                     Likes()
                 }
 
+                RoastAndOrigin()
                 Tags()
                 Description()
             }
