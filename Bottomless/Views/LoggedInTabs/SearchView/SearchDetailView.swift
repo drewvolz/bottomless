@@ -13,6 +13,11 @@ struct SearchDetailView: View {
         return product.tastingNotes?.compactMap { note in note.name }
     }
 
+    var variants: [ProductResponse.Variant]? {
+        product.variants?.sorted(by: { $0.size! < $1.size! })
+            .filter { ($0.available ?? false) }
+    }
+
     var body: some View {
         Group {
             List {
@@ -25,6 +30,7 @@ struct SearchDetailView: View {
                 RoastAndOrigin()
                 Tags()
                 TastingNotes()
+                Variants()
                 Description()
             }
             .groupedStyle()
@@ -90,6 +96,31 @@ private extension SearchDetailView {
                     ForEach(tastingNotes ?? [], id: \.self) { note in
                         Text(note)
                             .font(.body)
+                    }
+                }
+            }
+        }
+    }
+
+    @ViewBuilder func Variants() -> some View {
+        Group {
+            if product.variants?.count ?? 0 > 0 {
+                Section(header: Text("Variants").font(.subheadline)) {
+                    ForEach(variants ?? [], id: \.self) { variant in
+                        HStack(alignment: .firstTextBaseline) {
+                            if let size = variant.size {
+                                Text(String(size) + "oz")
+                                    .font(.body)
+
+                                Spacer()
+
+                                if let price = variant.price {
+                                    Text("$\(String(format: "%.2f", price)) ($\(String(format: "%.2f", price / Double(size)))/oz)")
+                                        .font(.body)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
                     }
                 }
             }
