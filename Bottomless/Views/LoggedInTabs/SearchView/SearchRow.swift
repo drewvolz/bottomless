@@ -67,7 +67,7 @@ private extension SearchRow {
     }
 
     @ViewBuilder func Likes() -> some View {
-        HStack {
+        HStack(spacing: 3) {
             Image(systemName: "heart.fill")
                 .foregroundColor(Color.darkerRed)
             Text(verbatim: String(product.likes))
