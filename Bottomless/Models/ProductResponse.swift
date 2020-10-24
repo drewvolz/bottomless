@@ -36,7 +36,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
     var variants: [Variant]?
 
     struct VendorId: Decodable, Hashable {
-        var likes: Int
+        var likes: Int?
     }
 
     struct Origin: Decodable, Hashable {
