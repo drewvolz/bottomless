@@ -17,6 +17,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
         case roast
         case tags
         case likes
+        case tastingNotes = "tasting_notes"
     }
 
     var id: String?
@@ -30,6 +31,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
     var roast: Roast?
     var tags: [Tags]?
     var likes: Int
+    var tastingNotes: [TastingNote]?
 
     struct VendorId: Decodable, Hashable {
         var likes: Int
@@ -52,4 +54,15 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
         var id: String?
         var name: String?
     }
+
+    struct TastingNote: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case name
+        }
+
+        var id: String?
+        var name: String?
+    }
+
 }

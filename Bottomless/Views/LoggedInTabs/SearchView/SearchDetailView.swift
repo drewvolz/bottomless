@@ -8,6 +8,11 @@ struct SearchDetailView: View {
         product.tags?.compactMap { tag in tag.name }
     }
 
+    var tastingNotes: [String]? {
+        print(product)
+        return product.tastingNotes?.compactMap { note in note.name }
+    }
+
     var body: some View {
         Group {
             List {
@@ -19,6 +24,7 @@ struct SearchDetailView: View {
 
                 RoastAndOrigin()
                 Tags()
+                TastingNotes()
                 Description()
             }
             .groupedStyle()
@@ -70,6 +76,19 @@ private extension SearchDetailView {
                 Section(header: Text("Tags").font(.subheadline)) {
                     ForEach(tags ?? [], id: \.self) { tag in
                         Text(tag)
+                            .font(.body)
+                    }
+                }
+            }
+        }
+    }
+
+    @ViewBuilder func TastingNotes() -> some View {
+        Group {
+            if product.tastingNotes?.count ?? 0 > 0 {
+                Section(header: Text("Tasting Notes").font(.subheadline)) {
+                    ForEach(tastingNotes ?? [], id: \.self) { note in
+                        Text(note)
                             .font(.body)
                     }
                 }
