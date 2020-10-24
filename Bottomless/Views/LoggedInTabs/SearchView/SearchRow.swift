@@ -4,10 +4,6 @@ struct SearchRow: View {
     @ObservedObject var viewModel: SearchViewModel
     @State var product: ProductResponse
 
-    var tags: [String]? {
-        product.tags?.compactMap { tag in tag.name }
-    }
-
     var body: some View {
         VStack {
             HStack {
