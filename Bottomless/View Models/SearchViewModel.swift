@@ -14,11 +14,16 @@ final class SearchViewModel: ObservableObject {
     }
 
     func search(product: ProductResponse) -> Bool {
+        let notes = product.tastingNotes?
+            .map { $0.name?.lowercased() ?? "" }
+            .joined(separator: " ")
+
         return query.isEmpty ||
             product.name?.lowercased().contains(query.lowercased()) ?? false ||
             product.vendorName?.lowercased().contains(query.lowercased()) ?? false ||
             product.roast?.name?.lowercased().contains(query.lowercased()) ?? false ||
-            product.origin?.name?.lowercased().contains(query.lowercased()) ?? false
+            product.origin?.name?.lowercased().contains(query.lowercased()) ?? false ||
+            notes?.contains(query.lowercased()) ?? false
     }
 
     func loadData() {
