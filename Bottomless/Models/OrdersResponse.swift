@@ -11,6 +11,7 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         case productID = "product_id"
         case subproductID = "subproduct_id"
         case grind
+        case trackingUpdates = "tracking_updates"
     }
 
     struct Grind: Decodable, Hashable {
@@ -33,8 +34,36 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         var vendor_name: String
     }
 
+    struct TrackingUpdate: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case trackingDetails = "tracking_details"
+            case publicUrl = "public_url"
+        }
+
+        var trackingDetails: [TrackingDetail]?
+        var publicUrl: String?
+    }
+
+    struct TrackingDetail: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case trackingLocation = "tracking_location"
+            case message
+            case datetime
+        }
+
+        var trackingLocation: TrackingLocation?
+        var message: String
+        var datetime: String
+    }
+
+    struct TrackingLocation: Decodable, Hashable {
+        var city: String
+        var state: String
+    }
+
     var id: String
     var productID: OriginalProductIDClass
     var subproductID: OrderedProductIDClass
     var grind: Grind
+    var trackingUpdates: [TrackingUpdate]?
 }
