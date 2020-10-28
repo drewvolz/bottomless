@@ -62,7 +62,5 @@ func formatStringAsDate(dateString: String) -> Date? {
     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
 
     let shortFormatter = DateFormatter()
-    shortFormatter.dateFormat = "MM/dd/yyyy"
 
-    return formatter.date(from: dateString)
 }
