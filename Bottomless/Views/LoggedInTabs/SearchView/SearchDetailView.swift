@@ -9,8 +9,7 @@ struct SearchDetailView: View {
     }
 
     var tastingNotes: [String]? {
-        print(product)
-        return product.tastingNotes?.compactMap { note in note.name }
+        product.tastingNotes?.compactMap { note in note.name }
     }
 
     var variants: [ProductResponse.Variant]? {
