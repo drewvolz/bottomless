@@ -61,6 +61,34 @@ func formatStringAsDate(dateString: String) -> Date? {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
 
-    let shortFormatter = DateFormatter()
+    return formatter.date(from: dateString)
+}
 
+func formatAsLongDate(dateString: String) -> String {
+    guard dateString.count > 0 else { return "" }
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
+    let shortFormatter = DateFormatter()
+    shortFormatter.dateFormat = "MMMM d, YYYY"
+
+    let firstDateTime = formatter.date(from: dateString) ?? Date()
+
+    return shortFormatter.string(from: firstDateTime)
+}
+
+func formatAsTime(string: String) -> String {
+    guard string.count > 0 else { return "" }
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
+    let someDateTime = formatter.date(from: string) ?? Date()
+
+    let components = Calendar.current.dateComponents([.hour, .minute], from: someDateTime)
+    let hour: String = String(components.hour ?? 0)
+    let minute: String = String(components.minute!).count == 1 ? "0\(components.minute ?? 0)" : String(components.minute ?? 0)
+
+    return "\(hour):\(minute)"
 }
