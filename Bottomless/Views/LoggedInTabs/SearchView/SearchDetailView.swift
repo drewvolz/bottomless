@@ -20,14 +20,9 @@ struct SearchDetailView: View {
     var body: some View {
         Group {
             List {
-                ImageAndProductInfo()
-
-                if product.likes > 0 {
-                    Likes()
-                }
-
-                RoastAndOrigin()
-                Tags()
+                SearchRow(viewModel: searchViewModel,
+                          product: product,
+                          titleLineLimit: nil)
                 TastingNotes()
                 Variants()
                 Description()
@@ -38,56 +33,6 @@ struct SearchDetailView: View {
 }
 
 private extension SearchDetailView {
-    @ViewBuilder func ImageAndProductInfo() -> some View {
-        Section {
-            HStack {
-                UrlImageView(urlString: self.product.smallImageSrc)
-
-                VStack(alignment: .leading) {
-                    Text(verbatim: product.name ?? "")
-                        .font(.title)
-                        .bold()
-
-                    Text(verbatim: product.vendorName ?? "")
-                        .font(.subheadline)
-                }
-            }.padding(.vertical, 12)
-        }
-    }
-
-    @ViewBuilder func RoastAndOrigin() -> some View {
-        Section(header: Text("Roast and Origin").font(.subheadline)) {
-            Text(verbatim: self.product.roast?.name ?? "")
-                .font(.body)
-            Text(verbatim: self.product.origin?.name ?? "")
-                .font(.body)
-        }
-    }
-
-    @ViewBuilder func Likes() -> some View {
-        Section(header: Text("Likes").font(.subheadline)) {
-            HStack {
-                Image(systemName: "heart.fill")
-                    .foregroundColor(Color.darkerRed)
-                Text(verbatim: String(product.likes))
-            }
-            .font(.body)
-        }
-    }
-
-    @ViewBuilder func Tags() -> some View {
-        Group {
-            if product.tags?.count ?? 0 > 0 {
-                Section(header: Text("Tags").font(.subheadline)) {
-                    ForEach(tags ?? [], id: \.self) { tag in
-                        Text(tag)
-                            .font(.body)
-                    }
-                }
-            }
-        }
-    }
-
     @ViewBuilder func TastingNotes() -> some View {
         Group {
             if product.tastingNotes?.count ?? 0 > 0 {

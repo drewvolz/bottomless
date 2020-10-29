@@ -3,6 +3,7 @@ import SwiftUI
 struct SearchRow: View {
     @ObservedObject var viewModel: SearchViewModel
     @State var product: ProductResponse
+    @State var titleLineLimit: Int?
 
     var body: some View {
         VStack {
@@ -42,7 +43,7 @@ private extension SearchRow {
     @ViewBuilder func Product() -> some View {
         Text(verbatim: product.name ?? "")
             .font(.headline)
-            .lineLimit(1)
+            .lineLimit(titleLineLimit)
             .padding(.vertical, 3)
     }
 
