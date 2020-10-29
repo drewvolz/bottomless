@@ -34,7 +34,7 @@ struct OrderDetailView: View {
 
     var body: some View {
         List {
-            ImageAndProductInfo()
+            PastOrder(order: order, shouldLink: false)
             Tracking()
         }
         .groupedStyle()
@@ -42,23 +42,6 @@ struct OrderDetailView: View {
 }
 
 private extension OrderDetailView {
-    @ViewBuilder func ImageAndProductInfo() -> some View {
-        Section {
-            HStack {
-                UrlImageView(urlString: order.subproductID.product.small_image_src)
-
-                VStack(alignment: .leading) {
-                    Text(verbatim: order.subproductID.product.name)
-                        .font(.title)
-                        .bold()
-
-                    Text(verbatim: order.subproductID.product.vendor_name)
-                        .font(.subheadline)
-                }
-            }.padding(.vertical, 12)
-        }
-    }
-
     @ViewBuilder func Tracking() -> some View {
         ForEach(groupedItems ?? [], id: \.key) { day in
             Section(header: Text(day.key)) {
