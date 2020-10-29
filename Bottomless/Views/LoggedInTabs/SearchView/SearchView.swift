@@ -33,7 +33,9 @@ private extension SearchView {
                 searchViewModel: self.searchViewModel,
                 product: product
             )) {
-                SearchRow(viewModel: self.searchViewModel, product: product)
+                SearchRow(viewModel: searchViewModel,
+                          product: product,
+                          titleLineLimit: 1)
             }
         }
         .listStyle(DefaultListStyle())

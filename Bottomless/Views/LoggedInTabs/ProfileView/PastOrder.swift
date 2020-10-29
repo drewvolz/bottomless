@@ -2,29 +2,40 @@ import SwiftUI
 
 struct PastOrder: View {
     @State var order: OrdersResponse
+    @State var shouldLink = true
 
     var body: some View {
-        NavigationLink(destination: OrderDetailView(order: order)) {
-            VStack {
-                HStack {
-                    UrlImageView(urlString: self.order.subproductID.product.small_image_src)
+        if shouldLink {
+            NavigationLink(destination: OrderDetailView(order: order)) {
+                PastOrderRow()
+            }
+        } else {
+            PastOrderRow()
+        }
+    }
+}
 
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(verbatim: self.order.subproductID.product.vendor_name)
-                            .font(.caption)
-                            .lineLimit(1)
-                            .foregroundColor(Color.gray)
+private extension PastOrder {
+    func PastOrderRow() -> some View {
+        VStack {
+            HStack {
+                UrlImageView(urlString: self.order.subproductID.product.small_image_src)
 
-                        Text(verbatim: self.order.subproductID.product.name)
-                            .font(.headline)
-                            .lineLimit(1)
-                            .padding(.vertical, 3)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(verbatim: self.order.subproductID.product.vendor_name)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .foregroundColor(Color.gray)
 
-                        Text("\(self.order.grind.name)")
-                            .font(.caption)
-                            .lineLimit(1)
-                            .foregroundColor(Color.gray)
-                    }
+                    Text(verbatim: self.order.subproductID.product.name)
+                        .font(.headline)
+                        .lineLimit(1)
+                        .padding(.vertical, 3)
+
+                    Text("\(self.order.grind.name)")
+                        .font(.caption)
+                        .lineLimit(1)
+                        .foregroundColor(Color.gray)
                 }
             }
         }
