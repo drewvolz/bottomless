@@ -2,15 +2,15 @@ import SwiftUI
 
 struct InProgressOrder: View {
     @State var order: InTransitionResponse
+    @State var shouldLink = true
 
     var body: some View {
-        VStack {
-            HStack {
-                UrlImageView(urlString: parseProduct(order: order).small_image_src)
-                ProductDetails()
-                Spacer()
-                Status()
+        if shouldLink {
+            NavigationLink(destination: InTransitionDetailView(order: order)) {
+                InProgressOrderRow()
             }
+        } else {
+            InProgressOrderRow()
         }
     }
 }
@@ -18,35 +18,29 @@ struct InProgressOrder: View {
 // MARK: views
 
 private extension InProgressOrder {
-    @ViewBuilder func ProductDetails() -> some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(verbatim: parseProduct(order: order).vendor_name)
-                .font(.caption)
-                .lineLimit(1)
-                .foregroundColor(Color.gray)
+    func InProgressOrderRow() -> some View {
+        VStack {
+            HStack {
+                UrlImageView(urlString: self.order.subproductID?.product.small_image_src)
 
-            Text(verbatim: parseProduct(order: order).name)
-                .font(.headline)
-                .lineLimit(1)
-                .padding(.vertical, 3)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(verbatim: self.order.subproductID?.product.vendor_name ?? "")
+                        .font(.caption)
+                        .lineLimit(1)
+                        .foregroundColor(Color.gray)
 
-            Text(verbatim: self.order.grind.name)
-                .font(.caption)
-                .lineLimit(1)
-                .foregroundColor(Color.gray)
+                    Text(verbatim: self.order.subproductID?.product.name ?? "")
+                        .font(.headline)
+                        .lineLimit(1)
+                        .padding(.vertical, 3)
+
+                    Text("\(self.order.grind.name)")
+                        .font(.caption)
+                        .lineLimit(1)
+                        .foregroundColor(Color.gray)
+                }
+            }
         }
-    }
-
-    @ViewBuilder func Status() -> some View {
-        Text(statusName(order: order))
-            .font(.caption)
-            .bold()
-            .padding(3)
-            .lineLimit(1)
-            .foregroundColor(Color.darkerRed)
-            .overlay(
-                Rectangle()
-                    .stroke(Color.darkerRed, lineWidth: 1))
     }
 }
 

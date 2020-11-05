@@ -15,6 +15,7 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         case shippingStatus = "shipping_status"
         case trackingNumber = "tracking_number"
         case grind
+        case trackingUpdates = "tracking_updates"
     }
 
     struct Grind: Decodable, Hashable {
@@ -47,6 +48,33 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         case preTransit = "pre_transit"
     }
 
+    struct TrackingUpdate: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case trackingDetails = "tracking_details"
+            case publicUrl = "public_url"
+        }
+
+        var trackingDetails: [TrackingDetail]?
+        var publicUrl: String?
+    }
+
+    struct TrackingDetail: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case trackingLocation = "tracking_location"
+            case message
+            case datetime
+        }
+
+        var trackingLocation: TrackingLocation?
+        var message: String
+        var datetime: String
+    }
+
+    struct TrackingLocation: Decodable, Hashable {
+        var city: String
+        var state: String
+    }
+
     var id: String
     var subproductID: ProductID?
     var productID: ProductID?
@@ -55,4 +83,5 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
     var shippingStatus: Status?
     var trackingNumber: String?
     var grind: Grind
+    var trackingUpdates: [TrackingUpdate]?
 }
