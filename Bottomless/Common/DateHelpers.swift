@@ -90,5 +90,17 @@ func formatAsTime(string: String) -> String {
     let hour: String = String(components.hour ?? 0)
     let minute: String = String(components.minute!).count == 1 ? "0\(components.minute ?? 0)" : String(components.minute ?? 0)
 
-    return "\(hour):\(minute)"
+    return "\(hour):\(minute)".normalizeTime()
+}
+
+extension String {
+    func normalizeTime() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+
+        let date = dateFormatter.date(from: self)
+
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter.string(from: date!)
+    }
 }
