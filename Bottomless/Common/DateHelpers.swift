@@ -71,7 +71,7 @@ func formatAsLongDate(dateString: String) -> String {
     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 
     let shortFormatter = DateFormatter()
-    shortFormatter.dateFormat = "MMMM d, YYYY"
+    shortFormatter.dateFormat = "MMMM dd, YYYY"
 
     let firstDateTime = formatter.date(from: dateString) ?? Date()
 
