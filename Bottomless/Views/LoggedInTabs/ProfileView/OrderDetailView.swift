@@ -50,7 +50,7 @@ private extension OrderDetailView {
                         HStack {
                             Text(formatAsTime(string: item.datetime))
                                 .font(.caption)
-                                .frame(width: 40)
+                                .frame(width: 60)
 
                             Text(item.message)
                                 .font(.caption)
