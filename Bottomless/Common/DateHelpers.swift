@@ -78,6 +78,13 @@ func formatAsLongDate(dateString: String) -> String {
     return shortFormatter.string(from: firstDateTime)
 }
 
+func formatAsShortDateString(date: Date) -> String {
+    let shortFormatter = DateFormatter()
+    shortFormatter.dateFormat = "YYYY-MM-dd"
+
+    return shortFormatter.string(from: date)
+}
+
 func formatAsTime(string: String) -> String {
     guard string.count > 0 else { return "" }
 
