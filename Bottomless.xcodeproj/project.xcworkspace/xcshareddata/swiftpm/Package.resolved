@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/mecid/SwiftUICharts.git",
         "state": {
           "branch": null,
-          "revision": "710dcd93d6ba9997ae360f9b6f33ebb223f42595",
-          "version": "0.3.1"
+          "revision": "6cacb77e8d3e0a9ed1d09ce9a19ba057c95ce529",
+          "version": "0.5.2"
         }
       }
     ]
