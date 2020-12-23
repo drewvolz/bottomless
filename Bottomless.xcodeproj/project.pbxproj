@@ -33,6 +33,7 @@
 		3A6A97DA252E63240071DBB9 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A97D9252E63240071DBB9 /* SwiftUICharts */; };
 		3A73055B24D36DC700E71882 /* AutomaticOrderingToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
+		3AAADFCD25932234003A0A09 /* clean-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AAADFCC25932234003A0A09 /* clean-data.json */; };
 		3ABC1F022554A6AA00910162 /* InTransitionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC1F012554A6AA00910162 /* InTransitionDetailView.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
 		3AD926982491547F000AEFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD926972491547F000AEFC8 /* Assets.xcassets */; };
@@ -121,6 +122,7 @@
 		3A6A950324C13F410053DF8C /* ListModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModifiers.swift; sourceTree = "<group>"; };
 		3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingToggle.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
+		3AAADFCC25932234003A0A09 /* clean-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "clean-data.json"; sourceTree = "<group>"; };
 		3ABC1F012554A6AA00910162 /* InTransitionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTransitionDetailView.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInTabsView.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				3AD9270A24973EEC000AEFC8 /* in-transition.json */,
 				3AD9272324981A5A000AEFC8 /* orders.json */,
 				3AD927312498ACB7000AEFC8 /* records.json */,
+				3AAADFCC25932234003A0A09 /* clean-data.json */,
 				3A0458EB2499CC1100366F10 /* products.json */,
 			);
 			path = Resources;
@@ -546,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD9272424981A5A000AEFC8 /* orders.json in Resources */,
+				3AAADFCD25932234003A0A09 /* clean-data.json in Resources */,
 				3AD927322498ACB7000AEFC8 /* records.json in Resources */,
 				3AD9270B24973EEC000AEFC8 /* in-transition.json in Resources */,
 				3AD9269B2491547F000AEFC8 /* Preview Assets.xcassets in Resources */,
