@@ -46,7 +46,7 @@ struct DataView: View {
                     }
 
                     Section(header: Text("Weight")) {
-                        BarChartView(dataPoints: weights ?? [], showLegends: false)
+                        BarChartView(dataPoints: weights ?? [])
                     }
                 }
             }
