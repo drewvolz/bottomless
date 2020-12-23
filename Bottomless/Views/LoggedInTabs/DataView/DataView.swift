@@ -25,6 +25,16 @@ struct DataView: View {
         }
     }
 
+    private func countLabels(for dataPoints: [DataPoint]?) -> Int {
+        var labelCount = 0
+
+        if let count = dataPoints?.count {
+            labelCount = count >= 3 ? 3 : count
+        }
+
+        return labelCount
+    }
+
     var weights: [DataPoint]? {
         recordsViewModel.recordsResponse?.reversed().compactMap { record in
             let relativeTime = formatAsRelativeTime(string: record.timestamp)
@@ -46,7 +56,15 @@ struct DataView: View {
                     }
 
                     Section(header: Text("Weight")) {
-                        BarChartView(dataPoints: weights ?? [], showLegends: false)
+                        BarChartView(dataPoints: weights ?? [])
+                            .chartStyle(
+                                BarChartStyle(
+                                    showAxis: true,
+                                    showLabels: true,
+                                    labelCount: countLabels(for: weights),
+                                    showLegends: false
+                                )
+                            )
                     }
                 }
             }
