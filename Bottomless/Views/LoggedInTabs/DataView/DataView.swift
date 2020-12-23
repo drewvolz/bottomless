@@ -47,6 +47,13 @@ struct DataView: View {
 
                     Section(header: Text("Weight")) {
                         BarChartView(dataPoints: weights ?? [])
+                            .chartStyle(
+                                BarChartStyle(
+                                    showAxis: true,
+                                    showLabels: true,
+                                    showLegends: false
+                                )
+                            )
                     }
                 }
             }
