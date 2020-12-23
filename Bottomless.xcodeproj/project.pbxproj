@@ -34,6 +34,7 @@
 		3A73055B24D36DC700E71882 /* AutomaticOrderingToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */; };
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3AAADFCD25932234003A0A09 /* clean-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AAADFCC25932234003A0A09 /* clean-data.json */; };
+		3AAADFD525932819003A0A09 /* CalendarHeatmap in Frameworks */ = {isa = PBXBuildFile; productRef = 3AAADFD425932819003A0A09 /* CalendarHeatmap */; };
 		3ABC1F022554A6AA00910162 /* InTransitionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC1F012554A6AA00910162 /* InTransitionDetailView.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
 		3AD926982491547F000AEFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD926972491547F000AEFC8 /* Assets.xcassets */; };
@@ -191,6 +192,7 @@
 			files = (
 				3AD926CB2491CA7A000AEFC8 /* KeychainSwift in Frameworks */,
 				3A6A97DA252E63240071DBB9 /* SwiftUICharts in Frameworks */,
+				3AAADFD525932819003A0A09 /* CalendarHeatmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +503,7 @@
 			packageProductDependencies = (
 				3AD926CA2491CA7A000AEFC8 /* KeychainSwift */,
 				3A6A97D9252E63240071DBB9 /* SwiftUICharts */,
+				3AAADFD425932819003A0A09 /* CalendarHeatmap */,
 			);
 			productName = Bottomless;
 			productReference = 3AD9268E2491547E000AEFC8 /* Bottomless.app */;
@@ -533,6 +536,7 @@
 			packageReferences = (
 				3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				3A6A97D8252E63240071DBB9 /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+				3AAADFD325932819003A0A09 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */,
 			);
 			productRefGroup = 3AD9268F2491547E000AEFC8 /* Products */;
 			projectDirPath = "";
@@ -859,6 +863,14 @@
 				minimumVersion = 0.3.1;
 			};
 		};
+		3AAADFD325932819003A0A09 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Zacharysp/CalendarHeatmap";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3AD926C92491CA7A000AEFC8 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -874,6 +886,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A6A97D8252E63240071DBB9 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
 			productName = SwiftUICharts;
+		};
+		3AAADFD425932819003A0A09 /* CalendarHeatmap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AAADFD325932819003A0A09 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */;
+			productName = CalendarHeatmap;
 		};
 		3AD926CA2491CA7A000AEFC8 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
