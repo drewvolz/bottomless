@@ -222,6 +222,7 @@
 		3A37E14D259468E7001E87D7 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				3AD926AE24915649000AEFC8 /* ButtonViews.swift */,
 				3A37E14E25946934001E87D7 /* ToggleFeedbackButton.swift */,
 			);
 			path = Buttons;
@@ -293,7 +294,7 @@
 				3AF296B0249E17B2004BADE8 /* Pickers */,
 				3AD926E524933570000AEFC8 /* Auth */,
 				3AD926E62493357C000AEFC8 /* Keyboard */,
-				3AD926AE24915649000AEFC8 /* ButtonViews.swift */,
+				3A37E14D259468E7001E87D7 /* Buttons */,
 				3AD926AC24915621000AEFC8 /* TextModifiers.swift */,
 				3A6A950324C13F410053DF8C /* ListModifiers.swift */,
 				3AD926E724935419000AEFC8 /* SharedTextField.swift */,
