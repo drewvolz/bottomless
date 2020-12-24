@@ -73,10 +73,10 @@ struct Urls {
             return ApiURL + "/products"
         }
 
-//        static var cleanData: String {
-//            return ApiURL + "/users/clean-data"
-//        }
-//
+        static var cleanData: String {
+            return ApiURL + "/users/clean-data"
+        }
+
 //        static var referrals: String {
 //            return ApiURL + "/users/referrals"
 //        }
