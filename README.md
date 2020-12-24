@@ -26,9 +26,9 @@ Thank you for your interest in contributing to this project. Contributions are w
 [1]: https://bottomless.com
 
 [image-1]: ./screenshots/2020-11-profile.png
-[image-2]: ./screenshots/2020-11-scale.png
+[image-2]: ./screenshots/2020-12-scale.png
 [image-3]: ./screenshots/2020-06-referral.png
 [image-4]: ./screenshots/2020-11-search.png
 [image-5]: ./screenshots/2020-11-search-detail.png
 [image-6]: ./screenshots/2020-07-settings.png
-[image-7]: ./screenshots/2020-11-profile-ipad.png
+[image-7]: ./screenshots/2020-12-profile-ipad.png
