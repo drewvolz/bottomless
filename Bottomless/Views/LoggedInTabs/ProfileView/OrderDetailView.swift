@@ -11,6 +11,8 @@ import SwiftUI
 struct OrderDetailView: View {
     var order: OrdersResponse
 
+    @ObservedObject var viewModel: OrdersViewModel
+
     typealias TrackingItems = [OrdersResponse.TrackingDetail]
     typealias GroupedTracking = [(key: String, value: TrackingItems)]
 
@@ -34,7 +36,7 @@ struct OrderDetailView: View {
 
     var body: some View {
         List {
-            PastOrder(order: order, shouldLink: false)
+            PastOrder(order: order, shouldLink: false, viewModel: viewModel)
             Tracking()
         }
         .groupedStyle()
@@ -72,6 +74,6 @@ private extension OrderDetailView {
 
 struct OrderDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderDetailView(order: mockOrders)
+        OrderDetailView(order: mockOrders, viewModel: OrdersViewModel())
     }
 }

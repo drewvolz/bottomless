@@ -52,7 +52,7 @@ private extension OrdersView {
     @ViewBuilder func PastSection() -> some View {
         if hasPastOrders(orders: pastOrdersViewModel.ordersResponse) {
             ForEach(pastOrdersViewModel.ordersResponse!) { order in
-                PastOrder(order: order)
+                PastOrder(order: order, viewModel: pastOrdersViewModel)
             }
         } else {
             NoOrders(message: "No past orders")

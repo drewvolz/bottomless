@@ -4,9 +4,11 @@ struct PastOrder: View {
     @State var order: OrdersResponse
     @State var shouldLink = true
 
+    @ObservedObject var viewModel: OrdersViewModel
+
     var body: some View {
         if shouldLink {
-            NavigationLink(destination: OrderDetailView(order: order)) {
+            NavigationLink(destination: OrderDetailView(order: order, viewModel: viewModel)) {
                 PastOrderRow()
             }
         } else {
@@ -46,7 +48,7 @@ struct PastOrder_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             List {
-                PastOrder(order: mockOrders)
+                PastOrder(order: mockOrders, viewModel: OrdersViewModel())
             }
         }
     }
