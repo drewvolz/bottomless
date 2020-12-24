@@ -37,6 +37,15 @@ struct OrderDetailView: View {
     var body: some View {
         List {
             PastOrder(order: order, shouldLink: false, viewModel: viewModel)
+
+            HStack(alignment: .center, spacing: 10, content: {
+                Spacer()
+                LikeButton()
+                Spacer()
+                DislikeButton()
+                Spacer()
+            })
+
             Tracking()
         }
         .groupedStyle()
@@ -69,6 +78,32 @@ private extension OrderDetailView {
             Link("Open in browser…", destination: URL(string: url)!)
                 .font(.caption)
         }
+    }
+
+    func LikeButton() -> some View {
+        func likeToggled() {}
+
+        return ToggleFeedbackButton(symbol: "hand.thumbsup",
+                                    tappedText: "Favorited",
+                                    untappedText: "Favorite",
+                                    feedbackType: .Like,
+                                    pressed: order.productFeedback?.like ?? false,
+                                    order: order,
+                                    callback: likeToggled,
+                                    viewModel: viewModel)
+    }
+
+    func DislikeButton() -> some View {
+        func dislikeToggled() {}
+
+        return ToggleFeedbackButton(symbol: "hand.thumbsdown",
+                                    tappedText: "Disliked",
+                                    untappedText: "Dislike",
+                                    feedbackType: .Dislike,
+                                    pressed: order.productFeedback?.dislike ?? false,
+                                    order: order,
+                                    callback: dislikeToggled,
+                                    viewModel: viewModel)
     }
 }
 
