@@ -84,8 +84,8 @@ private extension OrderDetailView {
         func likeToggled() {}
 
         return ToggleFeedbackButton(symbol: "hand.thumbsup",
-                                    tappedText: "Favorited",
-                                    untappedText: "Favorite",
+                                    tappedText: "Liked",
+                                    untappedText: "Like",
                                     feedbackType: .Like,
                                     pressed: order.productFeedback?.like ?? false,
                                     order: order,
