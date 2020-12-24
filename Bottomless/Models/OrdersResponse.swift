@@ -12,6 +12,7 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         case subproductID = "subproduct_id"
         case grind
         case trackingUpdates = "tracking_updates"
+        case productFeedback = "product_feedback"
     }
 
     struct Grind: Decodable, Hashable {
@@ -61,9 +62,24 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         var state: String
     }
 
+    struct ProductFeedback: Decodable, Hashable {
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case orderId = "order_id"
+            case like
+            case dislike
+        }
+
+        var id: String
+        var orderId: String
+        var like: Bool
+        var dislike: Bool
+    }
+
     var id: String
     var productID: OriginalProductIDClass
     var subproductID: OrderedProductIDClass
     var grind: Grind
     var trackingUpdates: [TrackingUpdate]?
+    var productFeedback: ProductFeedback?
 }
