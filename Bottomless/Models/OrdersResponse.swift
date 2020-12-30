@@ -1,11 +1,11 @@
 import Foundation
 import SwiftUI
 
-struct OrdersResultResponse: Decodable {
+public struct OrdersResultResponse: Encodable, Decodable {
     var data: [OrdersResponse?]
 }
 
-struct OrdersResponse: Hashable, Identifiable, Decodable {
+public struct OrdersResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case productID = "product_id"
@@ -14,27 +14,27 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         case trackingUpdates = "tracking_updates"
     }
 
-    struct Grind: Decodable, Hashable {
+    struct Grind: Encodable, Decodable, Hashable {
         var _id, name: String
     }
 
-    struct OriginalProductIDClass: Decodable, Hashable {
+    struct OriginalProductIDClass: Encodable, Decodable, Hashable {
         var product: String
         var variant: String
     }
 
-    struct OrderedProductIDClass: Decodable, Hashable {
+    struct OrderedProductIDClass: Encodable, Decodable, Hashable {
         var product: Product
         var variant: String
     }
 
-    struct Product: Decodable, Hashable {
+    struct Product: Encodable, Decodable, Hashable {
         var _id, name: String
         var small_image_src: String
         var vendor_name: String
     }
 
-    struct TrackingUpdate: Decodable, Hashable {
+    struct TrackingUpdate: Encodable, Decodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case trackingDetails = "tracking_details"
             case publicUrl = "public_url"
@@ -44,7 +44,7 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         var publicUrl: String?
     }
 
-    struct TrackingDetail: Decodable, Hashable {
+    struct TrackingDetail: Encodable, Decodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case trackingLocation = "tracking_location"
             case message
@@ -56,12 +56,12 @@ struct OrdersResponse: Hashable, Identifiable, Decodable {
         var datetime: String
     }
 
-    struct TrackingLocation: Decodable, Hashable {
+    struct TrackingLocation: Encodable, Decodable, Hashable {
         var city: String
         var state: String
     }
 
-    var id: String
+    public var id: String
     var productID: OriginalProductIDClass
     var subproductID: OrderedProductIDClass
     var grind: Grind

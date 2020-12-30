@@ -1,11 +1,11 @@
 import Foundation
 import SwiftUI
 
-struct InTransitionResultResponse: Decodable {
+public struct InTransitionResultResponse: Encodable, Decodable {
     var data: [InTransitionResponse?]
 }
 
-struct InTransitionResponse: Hashable, Identifiable, Decodable {
+public struct InTransitionResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case subproductID = "subproduct_id"
@@ -18,37 +18,37 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         case trackingUpdates = "tracking_updates"
     }
 
-    struct Grind: Decodable, Hashable {
+    struct Grind: Encodable, Decodable, Hashable {
         var _id, name: String
     }
 
-    struct OriginalProductID: Decodable, Hashable {
+    struct OriginalProductID: Encodable, Decodable, Hashable {
         var product, variant: String
     }
 
-    struct ProductID: Decodable, Hashable {
+    struct ProductID: Encodable, Decodable, Hashable {
         var product: Product
         var variant: String
     }
 
-    struct Product: Decodable, Hashable {
+    struct Product: Encodable, Decodable, Hashable {
         var _id: String
         var name: String
         var vendor_name: String
         var small_image_src: String
     }
 
-    struct VendorID: Decodable, Hashable {
+    struct VendorID: Encodable, Decodable, Hashable {
         var _id: String
         var name: String
     }
 
-    enum Status: String, Decodable, Hashable {
+    enum Status: String, Encodable, Decodable, Hashable {
         case inTransit = "in_transit"
         case preTransit = "pre_transit"
     }
 
-    struct TrackingUpdate: Decodable, Hashable {
+    struct TrackingUpdate: Encodable, Decodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case trackingDetails = "tracking_details"
             case publicUrl = "public_url"
@@ -58,7 +58,7 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         var publicUrl: String?
     }
 
-    struct TrackingDetail: Decodable, Hashable {
+    struct TrackingDetail: Encodable, Decodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case trackingLocation = "tracking_location"
             case message
@@ -70,12 +70,12 @@ struct InTransitionResponse: Hashable, Identifiable, Decodable {
         var datetime: String
     }
 
-    struct TrackingLocation: Decodable, Hashable {
+    struct TrackingLocation: Encodable, Decodable, Hashable {
         var city: String
         var state: String
     }
 
-    var id: String
+    public var id: String
     var subproductID: ProductID?
     var productID: ProductID?
     var originalProductID: OriginalProductID

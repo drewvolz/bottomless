@@ -3,30 +3,14 @@ import SwiftUI
 
 final class UpNextViewModel: ObservableObject {
     @Published private(set) var upNextResponse: UpNextResponse?
-
-    private var upNextCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        upNextCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func fetch() {
-        let url = URL(string: Urls.api.my)!
-
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        upNextCancellable = publisher
-            .map { $0.data }
-            .decode(type: UpNextResponse.self, decoder: JSONDecoder())
+        fetchProvider.getUpNext()
             .map { $0 }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.upNextResponse, on: self)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { self.upNextResponse = $0.value })
+            .store(in: &publishers)
     }
 }

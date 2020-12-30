@@ -5,13 +5,8 @@ final class SearchViewModel: ObservableObject {
     @Published var query = ""
     @Published private(set) var products: [ProductResponse]? = nil
 
-    private var searchCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        searchCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func search(product: ProductResponse) -> Bool {
         let notes = product.tastingNotes?
@@ -27,20 +22,12 @@ final class SearchViewModel: ObservableObject {
     }
 
     func loadData() {
-        let url = URL(string: Urls.api.products)!
-
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        searchCancellable = publisher
-            .map { $0.data }
-            .decode(type: ProductResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.products, on: self)
+        fetchProvider.getProducts()
+            .map { $0 }
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {
+                      self.products = $0.value?.data as [ProductResponse]?
+            })
+            .store(in: &publishers)
     }
 }

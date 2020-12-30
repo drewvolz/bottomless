@@ -38,7 +38,6 @@ var calendar: CalendarHeatmap = {
 
 var colorData: [String: UIColor] = [:]
 
-
 struct HeatmapView: UIViewRepresentable {
     @ObservedObject var cleanDataViewModel: CleanDataViewModel
 

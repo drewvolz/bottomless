@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ScaleResponse: Hashable, Identifiable, Decodable {
+public struct ScaleResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "scale_status"
         case scaleLastConnected = "scale_last_connected"
@@ -8,7 +8,7 @@ struct ScaleResponse: Hashable, Identifiable, Decodable {
         case scaleBatteryLevel = "scale_battery_level"
     }
 
-    var id: String?
+    public var id: String?
     var scaleLastConnected: String?
     var scaleLastWeight: Double?
     var scaleBatteryLevel: Double?

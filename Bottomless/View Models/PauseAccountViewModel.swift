@@ -3,18 +3,10 @@ import SwiftUI
 
 final class PauseAccountViewModel: ObservableObject {
     @Published private(set) var pauseAccountResponse: AccountResponse?
-
-    private var pauseAccountCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        pauseAccountCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func pauseAccount(pausedStatus: Bool, pausedUntil: String) {
-        let url = URL(string: Urls.api.pauseAccount)!
-
         let parameterDictionary = [
             "paused": pausedStatus,
             "pausedUntil": pausedUntil,
@@ -24,19 +16,10 @@ final class PauseAccountViewModel: ObservableObject {
             return
         }
 
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = httpBody
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        pauseAccountCancellable = publisher
-            .map { $0.data }
-            .decode(type: AccountResponse.self, decoder: JSONDecoder())
+        fetchProvider.setAccountPaused(status: httpBody)
             .map { $0 }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.pauseAccountResponse, on: self)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { self.pauseAccountResponse = $0.value })
+            .store(in: &publishers)
     }
 }

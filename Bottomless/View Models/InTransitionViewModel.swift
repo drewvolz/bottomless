@@ -3,30 +3,16 @@ import SwiftUI
 
 final class InTransitionViewModel: ObservableObject {
     @Published private(set) var inTransitionResponse: [InTransitionResponse]? = []
-
-    private var inTransitionCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        inTransitionCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func fetch() {
-        let url = URL(string: Urls.api.inTransition)!
-
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        inTransitionCancellable = publisher
-            .map { $0.data }
-            .decode(type: InTransitionResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data as? [InTransitionResponse] }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.inTransitionResponse, on: self)
+        fetchProvider.getInTransition()
+            .map { $0 }
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {
+                      self.inTransitionResponse = $0.value?.data as? [InTransitionResponse]
+            })
+            .store(in: &publishers)
     }
 }
