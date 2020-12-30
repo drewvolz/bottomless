@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct AccountResponse: Hashable, Identifiable, Decodable {
+public struct AccountResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case local
@@ -22,7 +22,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         case pausedUntil
     }
 
-    var id: String?
+    public var id: String?
     var local: Local?
     var alertSettings: AlertSettings?
     var firstName, lastName: String?
@@ -40,7 +40,7 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
     var paused: Bool?
     var pausedUntil: String?
 
-    struct AlertSettings: Codable, Hashable {
+    public struct AlertSettings: Codable, Hashable {
         var gifs: Bool?
         var orderingSoon, outForDelivery, onTheWay, arrived: String?
         var scaleNotifications: String?
@@ -55,15 +55,15 @@ struct AccountResponse: Hashable, Identifiable, Decodable {
         }
     }
 
-    struct Local: Decodable, Hashable {
+    struct Local: Decodable, Hashable, Encodable {
         var email: String?
     }
 
-    struct VerifiedAddress: Decodable, Hashable {
+    struct VerifiedAddress: Decodable, Hashable, Encodable {
         var street1, street2, city, zip, state: String?
     }
 
-    struct PricingRule: Decodable, Hashable {
+    struct PricingRule: Decodable, Hashable, Encodable {
         var id: String?
         var freeShipping: Bool?
         var monthlyFee: Int?

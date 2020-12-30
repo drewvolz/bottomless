@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct ProductResultResponse: Decodable {
+public struct ProductResultResponse: Encodable, Decodable {
     var data: [ProductResponse]
 }
 
-struct ProductResponse: Hashable, Identifiable, Decodable {
+public struct ProductResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case name
@@ -21,7 +21,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
         case variants
     }
 
-    var id: String?
+    public var id: String?
     var name: String?
     var vendorName: String?
     var vendorId: VendorId?
@@ -35,19 +35,19 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
     var tastingNotes: [TastingNote]?
     var variants: [Variant]?
 
-    struct VendorId: Decodable, Hashable {
+    struct VendorId: Decodable, Encodable, Hashable {
         var likes: Int?
     }
 
-    struct Origin: Decodable, Hashable {
+    struct Origin: Decodable, Encodable, Hashable {
         var name: String?
     }
 
-    struct Roast: Decodable, Hashable {
+    struct Roast: Decodable, Encodable, Hashable {
         var name: String?
     }
 
-    struct Tag: Decodable, Hashable {
+    struct Tag: Decodable, Encodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case id = "_id"
             case name
@@ -57,7 +57,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
         var name: String?
     }
 
-    struct TastingNote: Decodable, Hashable {
+    struct TastingNote: Decodable, Encodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case id = "_id"
             case name
@@ -67,7 +67,7 @@ struct ProductResponse: Hashable, Identifiable, Decodable {
         var name: String?
     }
 
-    struct Variant: Decodable, Hashable {
+    struct Variant: Decodable, Encodable, Hashable {
         enum CodingKeys: String, CodingKey {
             case id = "_id"
             case size

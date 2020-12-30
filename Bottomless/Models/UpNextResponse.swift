@@ -1,10 +1,10 @@
-struct UpNextResponse: Hashable, Identifiable, Decodable {
+public struct UpNextResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "variant"
         case product
     }
 
-    struct Product: Decodable, Hashable {
+    struct Product: Encodable, Decodable, Hashable {
         var _id: String
         var origin: String
         var size: Int
@@ -21,6 +21,6 @@ struct UpNextResponse: Hashable, Identifiable, Decodable {
         var _id: String
     }
 
-    var id: String
+    public var id: String
     var product: Product
 }

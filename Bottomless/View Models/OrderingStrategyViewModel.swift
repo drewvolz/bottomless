@@ -3,18 +3,10 @@ import SwiftUI
 
 final class OrderingStrategyViewModel: ObservableObject {
     @Published private(set) var strategyResponse: AccountResponse?
-
-    private var strategyCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        strategyCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func post(level: Int) {
-        let url = URL(string: Urls.api.orderingStrategy)!
-
         let parameterDictionary = [
             "ordering_aggression": String(level),
         ]
@@ -23,19 +15,10 @@ final class OrderingStrategyViewModel: ObservableObject {
             return
         }
 
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = httpBody
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        strategyCancellable = publisher
-            .map { $0.data }
-            .decode(type: AccountResponse.self, decoder: JSONDecoder())
+        fetchProvider.setOrderingStrategy(level: httpBody)
             .map { $0 }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.strategyResponse, on: self)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { self.strategyResponse = $0.value })
+            .store(in: &publishers)
     }
 }

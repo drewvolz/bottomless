@@ -3,18 +3,10 @@ import SwiftUI
 
 final class AlertsViewModel: ObservableObject {
     @Published private(set) var alertsResponse: AccountResponse?
-
-    private var alertsCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        alertsCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func post(settings: [String: Any]) {
-        let url = URL(string: Urls.api.alerts)!
-
         let parameterDictionary = [
             "alertSettings": settings,
         ]
@@ -23,20 +15,10 @@ final class AlertsViewModel: ObservableObject {
             return
         }
 
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = httpBody
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        // TODO: Show errors (especially for when phone number isn't set and we choose "text")
-        alertsCancellable = publisher
-            .map { $0.data }
-            .decode(type: AccountResponse.self, decoder: JSONDecoder())
+        fetchProvider.setAlertPreferences(settings: httpBody)
             .map { $0 }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.alertsResponse, on: self)
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: { self.alertsResponse = $0.value })
+            .store(in: &publishers)
     }
 }

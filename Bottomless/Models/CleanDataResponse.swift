@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct CleanDataResponse: Hashable, Identifiable, Decodable {
+public struct CleanDataResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case data
     }
 
-    struct CleanData: Decodable, Hashable {
+    struct CleanData: Encodable, Decodable, Hashable {
         var adjusted_weight: [String: Double?]
         var diff: [String: Double]
     }
 
-    var id = UUID()
+    public var id = UUID()
     var data: CleanData
 }

@@ -3,30 +3,16 @@ import SwiftUI
 
 final class RecordsViewModel: ObservableObject {
     @Published private(set) var recordsResponse: [RecordsResponse]? = []
-
-    private var recordsCancellable: Cancellable? {
-        didSet { oldValue?.cancel() }
-    }
-
-    deinit {
-        recordsCancellable?.cancel()
-    }
+    private var publishers = [AnyCancellable]()
+    private let fetchProvider = Fetch()
 
     func fetch() {
-        let url = URL(string: Urls.api.records)!
-
-        var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "GET"
-
-        let publisher = URLSession.shared.dataTaskPublisher(for: request)
-
-        recordsCancellable = publisher
-            .map { $0.data }
-            .decode(type: RecordsResultResponse.self, decoder: JSONDecoder())
-            .map { $0.data as? [RecordsResponse] }
-            .replaceError(with: nil)
-            .receive(on: RunLoop.main)
-            .assign(to: \.recordsResponse, on: self)
+        fetchProvider.getRecords()
+            .map { $0 }
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {
+                      self.recordsResponse = $0.value?.data as? [RecordsResponse]
+            })
+            .store(in: &publishers)
     }
 }
