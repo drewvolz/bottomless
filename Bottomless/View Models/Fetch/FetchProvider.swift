@@ -15,6 +15,10 @@ public struct Response<T> {
 }
 
 public enum FetchResponse {
+    // MARK: Auth
+
+    public typealias Login = AnyPublisher<Response<LoginResultResponse?>, Error>
+
     // MARK: Orders
 
     public typealias UpNext = AnyPublisher<Response<UpNextResponse?>, Error>
@@ -44,6 +48,10 @@ public enum FetchResponse {
 }
 
 public protocol FetchProvider {
+    // MARK: Auth
+
+    func login(credentials: Data) -> FetchResponse.Login
+
     // MARK: Orders
 
     func getUpNext() -> FetchResponse.UpNext
