@@ -1,10 +1,10 @@
 import SwiftUI
 
-struct LoginResultResponse: Decodable {
+public struct LoginResultResponse: Encodable, Decodable {
     var onboardingState: LoginResponse
 }
 
-struct LoginResponse: Hashable, Identifiable, Decodable {
+struct LoginResponse: Hashable, Identifiable, Encodable, Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "scaleLabelURL"
         case accountCreated
@@ -18,7 +18,7 @@ struct LoginResponse: Hashable, Identifiable, Decodable {
         case scale_shipping_service
     }
 
-    var id: String
+    public var id: String
     var accountCreated: Bool
     var bagOrdered: Bool
     var completed: Bool

@@ -12,6 +12,12 @@ import Combine
 import SwiftUI
 
 public extension Fetch {
+    // MARK: Auth
+
+    func login(credentials: Data) -> FetchResponse.Login {
+        return call(Urls.api.auth, method: .POST, body: credentials)
+    }
+
     // MARK: Orders
 
     func getUpNext() -> FetchResponse.UpNext {
