@@ -40,7 +40,10 @@ private extension RootView {
     @ViewBuilder func iPadNavigation() -> some View {
         NavigationView {
             iPadView()
-        }
+            NothingSelectedView()
+        }.navigationViewStyle(
+            DoubleColumnNavigationViewStyle()
+        )
     }
 
     @ViewBuilder func iPadView() -> some View {
