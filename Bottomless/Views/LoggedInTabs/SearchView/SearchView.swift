@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var searchViewModel = SearchViewModel()
+    @State var sort: Int = 0
 
     init() {
         UITableView.appearance().tableFooterView = UIView()
@@ -11,7 +12,10 @@ struct SearchView: View {
 
     var body: some View {
         VStack {
-            SearchBarView()
+            HStack {
+                SearchBarView()
+                SortMenuButton()
+            }
             ListView()
         }
     }
@@ -40,6 +44,21 @@ private extension SearchView {
         }
         .listStyle(DefaultListStyle())
         .resignKeyboardOnDragGesture()
+    }
+
+    @ViewBuilder func SortMenuButton() -> some View {
+        Menu {
+            Picker(selection: $sort, label: Text("Sorting options")) {
+                Label("Alphabetical", systemImage: "a.square").tag(0)
+                Label("Likes", systemImage: "heart").tag(2)
+                Label("Recently added", systemImage: "calendar.badge.clock").tag(1)
+                Label("Roaster", systemImage: "building.2").tag(3)
+            }
+        }
+        label: {
+            Label("", systemImage: "line.horizontal.3.decrease.circle")
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
+        }
     }
 }
 
