@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LoggedInSidebarView: View {
-    @State private var selectedItemId: Int?
+    @AppStorage("selectedItemId") private var selectedItemId: Int?
     private let initialSelection: Int?
 
     init(selectedId: Int? = nil) {
