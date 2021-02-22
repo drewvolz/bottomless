@@ -59,6 +59,10 @@ private extension SearchView {
             Label("", systemImage: "line.horizontal.3.decrease.circle")
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
         }
+        .onChange(of: sort, perform: { _ in
+            let sortBy = FilterType(rawValue: sort)
+            searchViewModel.sort(by: sortBy!)
+        })
     }
 }
 
