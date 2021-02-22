@@ -1,4 +1,6 @@
 extension String {
+    // MARK: Capitalize
+
     func uppercaseFirst() -> String {
         return prefix(1).capitalized + dropFirst()
     }
