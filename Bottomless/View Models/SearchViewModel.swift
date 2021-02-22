@@ -9,16 +9,18 @@ final class SearchViewModel: ObservableObject {
     private let fetchProvider = Fetch()
 
     func search(product: ProductResponse) -> Bool {
+        let searchQuery = query.lowercased().forSearch()
+
         let notes = product.tastingNotes?
-            .map { $0.name?.lowercased() ?? "" }
+            .map { $0.name?.lowercased().forSearch() ?? "" }
             .joined(separator: " ")
 
         return query.isEmpty ||
-            product.name?.lowercased().contains(query.lowercased()) ?? false ||
-            product.vendorName?.lowercased().contains(query.lowercased()) ?? false ||
-            product.roast?.name?.lowercased().contains(query.lowercased()) ?? false ||
-            product.origin?.name?.lowercased().contains(query.lowercased()) ?? false ||
-            notes?.contains(query.lowercased()) ?? false
+            product.name?.lowercased().forSearch().contains(searchQuery) ?? false ||
+            product.vendorName?.lowercased().forSearch().contains(searchQuery) ?? false ||
+            product.roast?.name?.lowercased().forSearch().contains(searchQuery) ?? false ||
+            product.origin?.name?.lowercased().forSearch().contains(searchQuery) ?? false ||
+            notes?.contains(searchQuery) ?? false
     }
 
     func loadData(sortBy: Int) {
