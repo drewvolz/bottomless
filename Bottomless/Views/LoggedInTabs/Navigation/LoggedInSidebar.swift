@@ -2,11 +2,6 @@ import SwiftUI
 
 struct LoggedInSidebarView: View {
     @AppStorage("selectedItemId") private var selectedItemId: Int?
-    private let initialSelection: Int?
-
-    init(selectedId: Int? = nil) {
-        initialSelection = selectedId
-    }
 
     var body: some View {
         List {
@@ -25,7 +20,7 @@ struct LoggedInSidebarView: View {
 
 private extension LoggedInSidebarView {
     func handleSelection() {
-        if let initialSelection = self.initialSelection {
+        if let initialSelection = self.selectedItemId {
             selectedItemId = initialSelection
         } else {
             selectedItemId = navigationItems.first?.id
