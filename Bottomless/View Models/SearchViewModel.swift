@@ -30,4 +30,34 @@ final class SearchViewModel: ObservableObject {
             })
             .store(in: &publishers)
     }
+
+    func sort(by: FilterType) {
+        switch by {
+        case .alpha:
+            products?.sort {
+                $0.name?.trimWhitespace() ?? "" < $1.name?.trimWhitespace() ?? ""
+            }
+        case .date:
+            products?.sort {
+                let date1 = formatStringAsDate(dateString: $0.dateAdded ?? "") ?? Date()
+                let date2 = formatStringAsDate(dateString: $1.dateAdded ?? "") ?? Date()
+                return date1 > date2
+            }
+        case .likes:
+            products?.sort {
+                $0.likes > $1.likes
+            }
+        case .roaster:
+            products?.sort {
+                $0.vendorName?.trimWhitespace() ?? "" < $1.vendorName?.trimWhitespace() ?? ""
+            }
+        }
+    }
+}
+
+enum FilterType: Int {
+    case alpha
+    case date
+    case likes
+    case roaster
 }

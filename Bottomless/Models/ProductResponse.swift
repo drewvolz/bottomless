@@ -19,6 +19,7 @@ public struct ProductResponse: Hashable, Identifiable, Encodable, Decodable {
         case likes
         case tastingNotes = "tasting_notes"
         case variants
+        case dateAdded = "date_added"
     }
 
     public var id: String?
@@ -34,6 +35,7 @@ public struct ProductResponse: Hashable, Identifiable, Encodable, Decodable {
     var likes: Int
     var tastingNotes: [TastingNote]?
     var variants: [Variant]?
+    var dateAdded: String?
 
     struct VendorId: Decodable, Encodable, Hashable {
         var likes: Int?
