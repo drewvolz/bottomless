@@ -6,4 +6,14 @@ extension String {
     mutating func uppercaseFirst() {
         self = uppercaseFirst()
     }
+
+    // MARK: Whitespace
+
+    func trimWhitespace() -> String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    mutating func trimWhitespace() {
+        self = trimWhitespace()
+    }
 }
