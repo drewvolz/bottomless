@@ -2,12 +2,12 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var searchViewModel = SearchViewModel()
-    @State var sort: Int = 0
+    @AppStorage("sort") var sort: Int = 0
 
     init() {
         UITableView.appearance().tableFooterView = UIView()
 
-        searchViewModel.loadData()
+        searchViewModel.loadData(sortBy: sort)
     }
 
     var body: some View {

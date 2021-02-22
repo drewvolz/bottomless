@@ -21,12 +21,15 @@ final class SearchViewModel: ObservableObject {
             notes?.contains(query.lowercased()) ?? false
     }
 
-    func loadData() {
+    func loadData(sortBy: Int) {
         fetchProvider.getProducts()
             .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.products = $0.value?.data as [ProductResponse]?
+
+                      let sortBy = FilterType(rawValue: sortBy)!
+                      self.sort(by: sortBy)
             })
             .store(in: &publishers)
     }
