@@ -18,4 +18,14 @@ extension String {
     mutating func trimWhitespace() {
         self = trimWhitespace()
     }
+
+    // MARK: Special characters
+
+    func forSearch() -> String {
+        return folding(options: .diacriticInsensitive, locale: .current)
+    }
+
+    mutating func forSearch() {
+        self = forSearch()
+    }
 }
