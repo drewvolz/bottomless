@@ -49,7 +49,7 @@ private extension RootView {
     @ViewBuilder func iPadView() -> some View {
         if authManager.hasAccount() {
             Group {
-                LoggedInSidebarView(selectedId: 0)
+                LoggedInSidebarView()
                 EmptyView()
             }
         } else {
