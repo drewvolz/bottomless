@@ -11,6 +11,7 @@ struct InProgressOrder: View {
             }
         } else {
             InProgressOrderRow()
+            EstimatedDelivery()
         }
     }
 }
@@ -38,8 +39,24 @@ private extension InProgressOrder {
                         .font(.caption)
                         .lineLimit(1)
                         .foregroundColor(Color.gray)
+
+                    if shouldLink {
+                        EstimatedDelivery()
+                    }
                 }
             }
+        }
+    }
+
+    @ViewBuilder func EstimatedDelivery() -> some View {
+        if let deliveryDate = order.trackingUpdates?.first?.estimatedDeliveryDate {
+            HStack(spacing: 3) {
+                Text("Estimated to arrive")
+                Text(formatAsRelativeTime(string: deliveryDate, fromFormatter: .utc))
+                    .bold()
+            }
+            .font(.caption)
+            .foregroundColor(Color.gray)
         }
     }
 }

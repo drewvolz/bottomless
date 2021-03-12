@@ -35,7 +35,6 @@ struct InTransitionDetailView: View {
     var body: some View {
         List {
             InProgressOrder(order: order, shouldLink: false)
-            EstimatedDelivery()
             Tracking()
         }
         .groupedStyle()
@@ -67,17 +66,6 @@ private extension InTransitionDetailView {
         if let url = order.trackingUpdates?.first?.publicUrl {
             Link("Open in browser…", destination: URL(string: url)!)
                 .font(.caption)
-        }
-    }
-
-    @ViewBuilder func EstimatedDelivery() -> some View {
-        if let deliveryDate = order.trackingUpdates?.first?.estimatedDeliveryDate {
-            HStack(spacing: 3) {
-                Text("Estimated to arrive")
-                Text(formatAsRelativeTime(string: deliveryDate, fromFormatter: .utc))
-                    .bold()
-            }
-            .font(.subheadline)
         }
     }
 }
