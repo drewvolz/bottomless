@@ -22,7 +22,7 @@ struct ScaleView: View {
             return "..."
         }
 
-        return String(format: "%.0f", floor(level * 100)) + "%"
+        return String(format: "%.0f", level) + "%"
     }
 
     var status: String {
