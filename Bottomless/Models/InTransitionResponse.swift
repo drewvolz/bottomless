@@ -52,10 +52,12 @@ public struct InTransitionResponse: Hashable, Identifiable, Encodable, Decodable
         enum CodingKeys: String, CodingKey {
             case trackingDetails = "tracking_details"
             case publicUrl = "public_url"
+            case estimatedDeliveryDate = "est_delivery_date"
         }
 
         var trackingDetails: [TrackingDetail]?
         var publicUrl: String?
+        var estimatedDeliveryDate: String?
     }
 
     struct TrackingDetail: Encodable, Decodable, Hashable {

@@ -1,6 +1,28 @@
 import SwiftUI
 
-func formatAsRelativeTime(string: String) -> String {
+enum BottomlessDateFormatter: String {
+    case utc = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    case gregorian = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+}
+
+func formatAsRelativeTime(string: String, fromFormatter: BottomlessDateFormatter = .gregorian) -> String {
+    guard string.count > 0 else { return "" }
+
+    let relativeFormatter = RelativeDateTimeFormatter()
+    relativeFormatter.unitsStyle = .full
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = fromFormatter.rawValue
+
+    let someDateTime = formatter.date(from: string)
+    let relativeDate = relativeFormatter.localizedString(for: someDateTime ?? Date(), relativeTo: Date())
+
+    if relativeDate == "in 0 seconds" { return "…" }
+
+    return relativeDate
+}
+
+func formatAsEnglishRelativeTo(string: String) -> String {
     guard string.count > 0 else { return "" }
 
     let relativeFormatter = RelativeDateTimeFormatter()
