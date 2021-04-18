@@ -26,7 +26,7 @@ struct OrderDetailView: View {
 
     private func groupItems(items: TrackingItems) -> GroupedTracking {
         Dictionary(grouping: items, by: {
-            formatAsLongDate(dateString: $0.datetime)
+            formatStringAsShortDateString(dateString: $0.datetime)
         }).sorted { (group1, group2) -> Bool in
             group1.key.compare(group2.key) == .orderedDescending
         }
@@ -44,7 +44,7 @@ struct OrderDetailView: View {
 private extension OrderDetailView {
     @ViewBuilder func Tracking() -> some View {
         ForEach(groupedItems ?? [], id: \.key) { day in
-            Section(header: Text(day.key)) {
+            Section(header: Text(formatAsReadableDateString(dateString: day.key))) {
                 ForEach(day.value.reversed(), id: \.self) { item in
                     HStack {
                         HStack {

@@ -61,6 +61,20 @@ func formatAsBottomlessDateString(date: Date) -> String {
     return formatter.string(from: date)
 }
 
+func formatStringAsShortDateString(dateString: String) -> String {
+    guard dateString.count > 0 else { return "" }
+
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+
+    let shortFormatter = DateFormatter()
+    shortFormatter.dateFormat = "yyyy-MM-dd"
+
+    let formattedDate = formatter.date(from: dateString) ?? Date()
+
+    return shortFormatter.string(from: formattedDate)
+}
+
 func datesAreTheSame(date1: String, date2: String) -> Bool {
     guard date1.count > 0, date2.count > 0 else { return true }
 
@@ -105,6 +119,18 @@ func formatAsShortDateString(date: Date) -> String {
     shortFormatter.dateFormat = "YYYY-MM-dd"
 
     return shortFormatter.string(from: date)
+}
+
+func formatAsReadableDateString(dateString: String) -> String {
+    let shortFormatter = DateFormatter()
+    shortFormatter.dateFormat = "YYYY-MM-dd"
+
+    let readableFormatter = DateFormatter()
+    readableFormatter.dateFormat = "MMMM dd, YYYY"
+
+    let formattedDate = shortFormatter.date(from: dateString) ?? Date()
+
+    return readableFormatter.string(from: formattedDate)
 }
 
 func formatAsTime(string: String) -> String {
