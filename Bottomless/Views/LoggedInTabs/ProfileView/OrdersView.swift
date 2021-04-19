@@ -9,20 +9,30 @@ struct OrdersView: View {
         Group {
             List {
                 Group {
-                    Section(header: Text("Up Next").font(.subheadline)) {
+                    Section(header:
+                        Text("Up Next")
+                            .font(.subheadline)
+                            .accessibilityIdentifier(Keys.Orders.UpNextHeader)) {
                         UpNextSection()
                     }
 
-                    Section(header: Text("Orders In Progress").font(.subheadline)) {
+                    Section(header:
+                        Text("Orders In Progress")
+                            .font(.subheadline)
+                            .accessibilityIdentifier(Keys.Orders.InProgressHeader)) {
                         InProgressSection()
                     }
 
-                    Section(header: Text("Past Orders").font(.subheadline)) {
+                    Section(header:
+                        Text("Past Orders")
+                            .font(.subheadline)
+                            .accessibilityIdentifier(Keys.Orders.PastHeader)) {
                         PastSection()
                     }
                 }
             }
             .groupedStyle()
+            .accessibilityIdentifier(Keys.Orders.List)
         }
         .onAppear(perform: fetch)
     }

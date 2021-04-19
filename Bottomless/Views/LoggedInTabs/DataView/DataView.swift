@@ -53,11 +53,15 @@ struct DataView: View {
         Group {
             List {
                 Group {
-                    Section(header: Text("Summary")) {
+                    Section(header:
+                        Text("Summary")
+                            .accessibilityIdentifier(Keys.Scale.Summary)) {
                         ScaleView(viewModel: scaleViewModel)
                     }
 
-                    Section(header: Text("Weight")) {
+                    Section(header:
+                        Text("Weight")
+                            .accessibilityIdentifier(Keys.Scale.Weight)) {
                         BarChartView(dataPoints: weights ?? [])
                             .chartStyle(
                                 BarChartStyle(
@@ -69,13 +73,16 @@ struct DataView: View {
                             )
                     }
 
-                    Section(header: Text("Consumption")) {
+                    Section(header:
+                        Text("Consumption")
+                            .accessibilityIdentifier(Keys.Scale.Consumption)) {
                         HeatmapView(viewModel: cleanDataViewModel)
                             .frame(minHeight: 200)
                     }
                 }
             }
             .groupedStyle()
+            .accessibilityIdentifier(Keys.Scale.List)
         }
         .onAppear(perform: fetch)
     }

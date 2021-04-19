@@ -14,11 +14,17 @@ struct FreeBagView: View {
                         Credits()
                     }
 
-                    Section(header: Text("Share your invite link").font(.subheadline)) {
+                    Section(header:
+                        Text("Share your invite link")
+                            .font(.subheadline)
+                            .accessibilityIdentifier(Keys.Referrals.Link)) {
                         Referral()
                     }
 
-                    Section(header: Text("Share Bottomless").font(.subheadline)) {
+                    Section(header:
+                        Text("Share Bottomless")
+                            .font(.subheadline)
+                            .accessibilityIdentifier(Keys.Referrals.About)) {
                         Text("Invite people you know to join Bottomless - for every person who signs up, you will get a free bag credit added to your account. Your friend will also get a free bag.")
                             .font(.body)
                             .padding(3)
@@ -26,6 +32,7 @@ struct FreeBagView: View {
                 }
             }
             .groupedStyle()
+            .accessibilityIdentifier(Keys.Referrals.List)
         }
         .onAppear(perform: fetch)
     }
@@ -40,6 +47,7 @@ private extension FreeBagView {
                 Image(systemName: "gift")
                 Text("Your free bag credits")
                     .font(.subheadline)
+                    .accessibilityIdentifier(Keys.Referrals.Credits)
             }
         }
     }

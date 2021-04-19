@@ -1,80 +1,301 @@
 {
     "data": [
         {
-            "_id": "5e96adf2c4ea3000170b041c",
-            "tasting_notes": [
-                {
-                    "_id": "5bb68bb9cddfa40013c6ed97",
-                    "category_id": "5bb5b1e13509ea001310f1ae",
-                    "name": "Molasses",
-                    "__v": 0
-                },
-                {
-                    "_id": "5bb464ed16d7fa07081daad4",
-                    "category_id": "5bb461809daf66064f20dcee",
-                    "name": "Chocolate",
-                    "__v": 0
-                }
-            ],
-            "varietal": [],
-            "tags": [
-                {
-                    "_id": "5bcee058ae8c5c6b0faae14a",
-                    "name": "Direct Trade"
-                },
-                {
-                    "_id": "5bcecdf6f325036b0f66bb09",
-                    "name": "Espresso"
-                },
-                {
-                    "_id": "5de6e41428476846505cf46e",
-                    "name": "Cold Brew"
-                },
-                {
-                    "_id": "5d8d9d61acdb795502d6ca74",
-                    "name": "Available Ground"
-                },
-            ],
-            "hidden": false,
-            "original_id": "https://www.clementinecoffee.com/coffee/1849blend",
-            "name": "1849",
-            "description": "This blend starts with high grown coffees from Guatemala and is roasted to enhance notes of caramelized sugars, molasses, fudge and deep herbs and peat. Timor rounds things out with a big, full body for the perfect dark roast. But... I thought you didn’t burn coffee. You’re right, we still don’t, instead think of our dark roast as “smoked”, when we normally “grill,” low, slow and steady heat, that’s how the tortoise won the race.",
-            "reference_url": "https://www.clementinecoffee.com/coffee/1849blend",
-            "variants": [
-                {
-                    "bottomlessProvidesPackaging": false,
-                    "skipShipment": false,
-                    "_id": "5e96e766dc809d0033dedb9f",
-                    "created_at": "2020-04-15T10:52:22.311Z",
-                    "updated_at": "2020-04-21T19:38:12.828Z",
-                    "available": true,
-                    "size": 12,
-                    "price": 19,
-                    "parcel": "5d398f8c2d63c01e62f316b2",
-                    "cost": 0
-                }
-            ],
-            "vendor_id": "5e96a34fcc5de700333ca147",
-            "vendor_name": "Clementine Coffee Roasters",
-            "updated_at": "2020-06-17T00:12:44.723Z",
-            "__v": 6,
-            "status": "active",
-            "date_added": "2020-04-15T10:51:05.753Z",
+            "_id": "5a32e7d2a78e090014e7e000",
+            "active": true,
             "origin": {
                 "_id": "5bced756ae8c5c6b0faae145",
                 "name": "Blend",
                 "__v": 0,
                 "code": "global"
             },
+            "size": 12,
+            "price": 18.5,
+            "vendor_id": {
+                "_id": "5a32e6796bd23b00147e33bd",
+                "website": "https://www.olympiacoffee.com",
+                "zip": "98501",
+                "state": "WA",
+                "city": "OLYMPIA",
+                "name": "Olympia Coffee Roasting Co",
+                "img_url": "https://bottomless.imgix.net/roaster-logos/olympia_logo.png",
+                "landing_page": "/olympia-coffee-roasting-co",
+                "created_at": "2017-12-14T21:00:41.000Z",
+                "status": "active",
+                "location": "west",
+                "likes": 537
+            },
+            "vendor_name": "Olympia Coffee Roasting Co.",
+            "image_src": "https://bottomless.imgix.net/products/Olympia/generic-nobg.png?auto=compress",
+            "description": "Roasted and blended for sweetness, with flavors of chocolate and berry in a syrupy body. Little Buddy was the name of a teenager's first car. This blend of coffees, just like the car Little Buddy, takes an inexperienced pallet and comfortably and safely guides one towards a new world. And just like Little Buddy the car this blend is very fun and exciting to roll with.",
+            "name": "Little Buddy",
+            "small_image_src": "https://bottomless.imgix.net/products/Olympia/generic-nobg.png?auto=compress&w=300",
+            "status": "active",
+            "roast": {
+                "_id": "5bcece3cae8c5c6b0faae13b",
+                "name": "Medium",
+                "order": 3
+            },
+            "tags": [
+                {
+                    "_id": "5bcee058ae8c5c6b0faae14a",
+                    "name": "Direct Trade"
+                },
+                {
+                    "_id": "5bcecde0f325036b0f66bb06",
+                    "name": "Fair Trade"
+                },
+                {
+                    "_id": "5bcecdf6f325036b0f66bb09",
+                    "name": "Espresso"
+                }
+            ],
+            "tasting_notes": [
+                {
+                    "_id": "5bb464ed16d7fa07081daad4",
+                    "category_id": "5bb461809daf66064f20dcee",
+                    "name": "Chocolate",
+                    "__v": 0
+                },
+                {
+                    "_id": "5bb6f9f16a0c09001362f8e2",
+                    "category_id": "5bb5b06e3509ea001310f1a7",
+                    "name": "Stone Fruit",
+                    "__v": 0
+                }
+            ],
+            "varietal": [],
+            "date_added": "2017-12-14T21:06:26.000Z",
+            "variants": [
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5d8c51d539badd3de3045189",
+                    "size": 12,
+                    "price": 17,
+                    "available": true,
+                    "original_id": "632666861"
+                },
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5eb84afbd17ce10033b18fc1",
+                    "size": 64,
+                    "price": 86.32,
+                    "available": true,
+                    "original_id": "32713188111"
+                },
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5ebec4d1a8e6190034a408ae",
+                    "size": 48,
+                    "price": 64.74,
+                    "available": true,
+                    "original_id": "32713164943"
+                },
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5f3de93a324b29004509caae",
+                    "size": 80,
+                    "price": 107.9,
+                    "available": true,
+                    "original_id": "1069926892"
+                }
+            ],
+            "hidden": false,
+            "original_id": "270011673",
+            "available_ground": false,
+            "feedback": [],
+            "likes": 20
+        },
+        {
+            "_id": "5c5c1b46fcd18d0016b9c9c2",
+            "image_src": "https://bottomless.imgix.net/products/Olympia/generic-nobg.png?auto=compress",
+            "small_image_src": "https://bottomless.imgix.net/products/Olympia/generic-nobg.png?auto=compress&w=300",
+            "price": 19.5,
+            "size": 12,
+            "vendor_id": {
+                "_id": "5a32e6796bd23b00147e33bd",
+                "website": "https://www.olympiacoffee.com",
+                "zip": "98501",
+                "state": "WA",
+                "city": "OLYMPIA",
+                "name": "Olympia Coffee Roasting Co",
+                "img_url": "https://bottomless.imgix.net/roaster-logos/olympia_logo.png",
+                "landing_page": "/olympia-coffee-roasting-co",
+                "created_at": "2017-12-14T21:00:41.000Z",
+                "status": "active",
+                "location": "west",
+                "likes": 537
+            },
+            "vendor_name": "Olympia Coffee Roasting Co.",
+            "description": "This coffee will ease you into your day, with flavors that are familiar and comforting, from our Colombian coffee producers. Morning Sun is our darkest roast, but you won't find any smoky flavors, just chocolatey and familiar. It's comfortable and reliable, just like a morning sunrise. ",
             "roast": {
                 "_id": "5bcece4bae8c5c6b0faae13d",
                 "name": "Dark Roast",
                 "order": 5
             },
-            "image_src": "https://bottomless.imgix.net/products/Clementine/Clementine18492-nobg.png?auto=compress,format&fit=crop&max-w=152&max-h=300",
-            "small_image_src": "https://bottomless.imgix.net/products/Clementine/Clementine18492-nobg.png?auto=compress,format&fit=crop&max-w=152&max-h=152",
+            "origin": {
+                "_id": "5bceed2b30629100151f4900",
+                "name": "Colombia",
+                "__v": 0,
+                "code": "co"
+            },
+            "name": "Morning Sun Organic",
+            "date_added": "2019-02-07T11:49:26.573Z",
+            "active": true,
+            "status": "active",
+            "tags": [
+                {
+                    "_id": "5bcee058ae8c5c6b0faae14a",
+                    "name": "Direct Trade"
+                },
+                {
+                    "_id": "5bcecde0f325036b0f66bb06",
+                    "name": "Fair Trade"
+                },
+                {
+                    "_id": "5f8e39210de3270034cebc15",
+                    "name": "Single Origin",
+                    "__v": 0
+                }
+            ],
+            "varietal": [],
+            "tasting_notes": [
+                {
+                    "_id": "5bb6b80e9ed992033954c0a6",
+                    "category_id": "5bb5b1e13509ea001310f1ae",
+                    "name": "Vanilla",
+                    "__v": 0
+                },
+                {
+                    "_id": "5bb6fa066a0c09001362f8e3",
+                    "category_id": "5bb461809daf66064f20dcee",
+                    "name": "Dark Chocolate",
+                    "__v": 0
+                },
+                {
+                    "_id": "5bcef21830629100151f4907",
+                    "category_id": "5bb5bb243509ea001310f1ba",
+                    "name": "Hazelnut",
+                    "__v": 0
+                }
+            ],
+            "variants": [
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5d8c51e839badd3de3045233",
+                    "size": 12,
+                    "price": 17.5,
+                    "available": true,
+                    "original_id": "19490309636184"
+                }
+            ],
+            "hidden": false,
+            "original_id": "1929857499224",
             "available_ground": false,
-            "score": 56
+            "feedback": [],
+            "likes": 35
         },
+        {
+            "_id": "5f6e69797de0940004d23bc8",
+            "tasting_notes": [
+                {
+                    "_id": "5bb5b0e03509ea001310f1ab",
+                    "category_id": "5bb5b06e3509ea001310f1a7",
+                    "name": "Mango",
+                    "__v": 0
+                },
+                {
+                    "_id": "5bb68c0ccddfa40013c6ed9a",
+                    "category_id": "5bb5b06e3509ea001310f1a7",
+                    "name": "Plum",
+                    "__v": 0
+                },
+                {
+                    "_id": "5bb68daacddfa40013c6ed9f",
+                    "category_id": "5bb5b1e13509ea001310f1ae",
+                    "name": "Honey",
+                    "__v": 0
+                }
+            ],
+            "varietal": [
+                "5bcfe724ae8c5c6b0faae150"
+            ],
+            "tags": [
+                {
+                    "_id": "5d8d9d61acdb795502d6ca74",
+                    "name": "Available Ground"
+                },
+                {
+                    "_id": "5f8e39210de3270034cebc15",
+                    "name": "Single Origin",
+                    "__v": 0
+                }
+            ],
+            "hidden": false,
+            "original_id": "https://cambercoffee.com/product/mosaic/",
+            "name": "Mosaic",
+            "description": "Mosaic is crafted to highlight the unique flavor characteristics of one or more coffees. Our roasters explore a variety of roast profiles and recipes to achieve a distinctive result. Mosaic should appeal to those with a more eclectic palate. Don Higinio and his wife Doña Aura bought their first small plot of land in 1988, […]",
+            "reference_url": "https://cambercoffee.com/product/mosaic/",
+            "variants": [
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5f711616a6964f003f005556",
+                    "available": true,
+                    "size": 12,
+                    "price": 28
+                },
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5f711616a6964f003f005557",
+                    "available": true,
+                    "size": 32,
+                    "price": 52
+                },
+                {
+                    "qualifiesForRotation": false,
+                    "_id": "5f711616a6964f003f005558",
+                    "available": true,
+                    "size": 80,
+                    "price": 110
+                }
+            ],
+            "vendor_id": {
+                "_id": "5e0eb67943863427ec3279db",
+                "city": "Bellingham",
+                "name": "Camber Coffee",
+                "zip": "98226",
+                "website": "https://www.cambercoffee.com/",
+                "state": "WA",
+                "landing_page": "/camber",
+                "img_url": "https://bottomless.imgix.net/roaster-logos/camber-black.png",
+                "created_at": "2020-01-03T03:35:21.000Z",
+                "status": "active",
+                "location": "west",
+                "likes": 281
+            },
+            "vendor_name": "Camber Coffee",
+            "status": "active",
+            "date_added": "2020-09-27T22:39:46.976Z",
+            "available_ground": true,
+            "image_src": "https://bottomless.imgix.net/Camber-Mosaic.png?auto=compress",
+            "origin": {
+                "_id": "5bced0e182aa5d0015407046",
+                "name": "Guatemala",
+                "__v": 0,
+                "code": "gt"
+            },
+            "process": {
+                "_id": "5bcece8df325036b0f66bb0c",
+                "name": "Washed"
+            },
+            "roast": {
+                "_id": "5bcece25f325036b0f66bb0b",
+                "name": "Light-Medium",
+                "order": 2
+            },
+            "small_image_src": "https://bottomless.imgix.net/Camber-Mosaic.png?auto=compress&w=300",
+            "feedback": [],
+            "likes": 12
+        }
     ]
 }
