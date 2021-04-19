@@ -29,6 +29,6 @@ jobs:
 
       - name: Test
         run: |
-          set -o pipefail && xcodebuild clean test -project Bottomless.xcodeproj -scheme BottomlessUITests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
+          set -o pipefail && xcodebuild clean test -project Bottomless.xcodeproj -scheme Bottomless -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
         env: 
          destination: ${{ matrix.destination }}
