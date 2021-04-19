@@ -41,10 +41,9 @@ final class BottomlessUITests: UITestCase {
             .selectTab()
             .checkListExists()
             .checkSearchbarExists()
-            .wait(10)
             .typeQuery("olympia coffee roasting")
-            .checkNumberOfResults(matches: 11)
-            .sort(by: .recentlyAdded)
-            .checkFirstResult(contains: "Gitwe Honey Micro Lot 1")
+            .checkNumberOfResults(matches: 2)
+            .sort(by: .likes)
+            .checkFirstResult(contains: "Big Truck Organic")
     }
 }

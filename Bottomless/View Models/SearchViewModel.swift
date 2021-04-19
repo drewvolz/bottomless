@@ -24,16 +24,20 @@ final class SearchViewModel: ObservableObject {
     }
 
     func loadData(sortBy: Int) {
-        fetchProvider.getProducts()
-            .map { $0 }
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: {
-                      self.products = $0.value?.data as [ProductResponse]?
+        if CommandLine.arguments.contains(Keys.UITesting) {
+            products = mockProducts.data
+        } else {
+            fetchProvider.getProducts()
+                .map { $0 }
+                .sink(receiveCompletion: { _ in },
+                      receiveValue: {
+                          self.products = $0.value?.data as [ProductResponse]?
 
-                      let sortBy = FilterType(rawValue: sortBy)!
-                      self.sort(by: sortBy)
-            })
-            .store(in: &publishers)
+                          let sortBy = FilterType(rawValue: sortBy)!
+                          self.sort(by: sortBy)
+                })
+                .store(in: &publishers)
+        }
     }
 
     func sort(by: FilterType) {

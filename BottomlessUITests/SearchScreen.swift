@@ -47,11 +47,6 @@ struct SearchScreen: Screen {
         return self
     }
 
-    func wait(_ seconds: UInt32) -> Self {
-        sleep(seconds)
-        return self
-    }
-
     func checkNumberOfResults(matches: Int) -> Self {
         XCTAssertTrue(list.cells.count == matches)
         return self
