@@ -27,6 +27,7 @@ private extension SearchView {
                   action: {},
                   placeholder: "Search")
             .disableAutocorrection(true)
+            .accessibilityIdentifier(Keys.Search.SearchBar)
     }
 
     @ViewBuilder func ListView() -> some View {
@@ -44,15 +45,20 @@ private extension SearchView {
         }
         .listStyle(DefaultListStyle())
         .resignKeyboardOnDragGesture()
+        .accessibilityIdentifier(Keys.Search.List)
     }
 
     @ViewBuilder func SortMenuButton() -> some View {
         Menu {
             Picker(selection: $sort, label: Text("Sorting options")) {
-                Label("Alphabetical", systemImage: "a.square").tag(0)
-                Label("Likes", systemImage: "heart").tag(2)
-                Label("Recently added", systemImage: "calendar.badge.clock").tag(1)
-                Label("Roaster", systemImage: "building.2").tag(3)
+                Label("Alphabetical", systemImage: "a.square")
+                    .tag(0)
+                Label("Likes", systemImage: "heart")
+                    .tag(2)
+                Label("Recently added", systemImage: "calendar.badge.clock")
+                    .tag(1)
+                Label("Roaster", systemImage: "building.2")
+                    .tag(3)
             }
         }
         label: {
@@ -63,6 +69,7 @@ private extension SearchView {
             let sortBy = FilterType(rawValue: sort)
             searchViewModel.sort(by: sortBy!)
         })
+        .accessibilityIdentifier(Keys.Search.SortByMenu)
     }
 }
 

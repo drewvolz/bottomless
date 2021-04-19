@@ -13,6 +13,8 @@ struct BottomlessApp: App {
     @StateObject private var store = Store()
     @StateObject private var authManager = AuthenticationManager()
 
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     init() {
         configure()
     }

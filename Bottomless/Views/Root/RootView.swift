@@ -26,7 +26,7 @@ private extension RootView {
     }
 
     @ViewBuilder func iPhoneView() -> some View {
-        if authManager.hasAccount() {
+        if authManager.hasAccount() || CommandLine.arguments.contains(Keys.UITesting) {
             LoggedInTabsView()
         } else {
             WelcomeView()
