@@ -11,12 +11,24 @@ on:
       - "Bottomless.xcodeproj/**"
 
 jobs:
-  build:
-    name: Build
+  test:
+    name: Test
     runs-on: macos-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.2.2,name=iPhone 11 Pro Max']
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Build
-        run: set -o pipefail && xcodebuild clean build -project Bottomless.xcodeproj -scheme Bottomless -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO | xcpretty --simple
+        run: |
+          set -o pipefail && xcodebuild clean build -project Bottomless.xcodeproj -scheme Bottomless -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
+        env: 
+         destination: ${{ matrix.destination }}
+
+      - name: Test
+        run: |
+          set -o pipefail && xcodebuild clean test -project Bottomless.xcodeproj -scheme BottomlessUITests -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
+        env: 
+         destination: ${{ matrix.destination }}
