@@ -9,6 +9,12 @@
 import Foundation
 
 struct Keys {
+    // Widget IDs
+    static let OrdersWidgetID = "com.drewvolz.Bottomless.widget"
+    static let SharedGroupID = "group.com.drewvolz.Bottomless"
+
+    static let UpNextOrder = "UpNextOrder"
+
     // Testing and accessibility IDs
     static let UITesting = "--uitesting"
 

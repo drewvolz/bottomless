@@ -29,12 +29,12 @@ struct UpNextOrder: View {
     }
 }
 
-struct UpNextOrder_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            List {
-                UpNextOrder(order: mockUpNext)
-            }
-        }
-    }
-}
+// struct UpNextOrder_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            List {
+//                UpNextOrder(order: mockUpNext)
+//            }
+//        }
+//    }
+// }

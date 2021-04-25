@@ -53,6 +53,17 @@
 		3AAF082F262CFAE10036578A /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF082E262CFAE10036578A /* SearchScreen.swift */; };
 		3AAF083A262CFC720036578A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF0803262CD1DE0036578A /* Keys.swift */; };
 		3ABC1F022554A6AA00910162 /* InTransitionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC1F012554A6AA00910162 /* InTransitionDetailView.swift */; };
+		3AC9669F2635D70100C94613 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC9669E2635D70100C94613 /* WidgetKit.framework */; };
+		3AC966A12635D70100C94613 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC966A02635D70100C94613 /* SwiftUI.framework */; };
+		3AC966A42635D70100C94613 /* OrdersWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC966A32635D70100C94613 /* OrdersWidget.swift */; };
+		3AC966A62635D70200C94613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC966A52635D70200C94613 /* Assets.xcassets */; };
+		3AC966AA2635D70200C94613 /* OrdersWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AC9669D2635D70100C94613 /* OrdersWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3AC966B22635D71B00C94613 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF0803262CD1DE0036578A /* Keys.swift */; };
+		3AC966CF2635E4EB00C94613 /* UpNextResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9271A2497F84F000AEFC8 /* UpNextResponse.swift */; };
+		3AC966D42635E9BE00C94613 /* UpNextOrdersWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC966D32635E9BE00C94613 /* UpNextOrdersWidgetModel.swift */; };
+		3AC966D52635E9BE00C94613 /* UpNextOrdersWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC966D32635E9BE00C94613 /* UpNextOrdersWidgetModel.swift */; };
+		3AC966E32635FD6A00C94613 /* UpNextOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD927162497F6F9000AEFC8 /* UpNextOrder.swift */; };
+		3AC966E72635FDC400C94613 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458F1249C9B0400366F10 /* ImageLoader.swift */; };
 		3AD926962491547E000AEFC8 /* LoggedInTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */; };
 		3AD926982491547F000AEFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD926972491547F000AEFC8 /* Assets.xcassets */; };
 		3AD9269B2491547F000AEFC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD9269A2491547F000AEFC8 /* Preview Assets.xcassets */; };
@@ -121,7 +132,28 @@
 			remoteGlobalIDString = 3AD9268D2491547E000AEFC8;
 			remoteInfo = Bottomless;
 		};
+		3AC966A82635D70200C94613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AD926862491547D000AEFC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AC9669C2635D70100C94613;
+			remoteInfo = OrdersWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3AC966AB2635D70200C94613 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3AC966AA2635D70200C94613 /* OrdersWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A0458D524996F2400366F10 /* AccountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountResponse.swift; sourceTree = "<group>"; };
@@ -170,6 +202,15 @@
 		3AAF0828262CF65A0036578A /* ReferralScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralScreen.swift; sourceTree = "<group>"; };
 		3AAF082E262CFAE10036578A /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		3ABC1F012554A6AA00910162 /* InTransitionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTransitionDetailView.swift; sourceTree = "<group>"; };
+		3AC9669D2635D70100C94613 /* OrdersWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrdersWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC9669E2635D70100C94613 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3AC966A02635D70100C94613 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3AC966A32635D70100C94613 /* OrdersWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersWidget.swift; sourceTree = "<group>"; };
+		3AC966A52635D70200C94613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AC966A72635D70200C94613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AC966B62635D7FD00C94613 /* OrdersWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrdersWidgetExtension.entitlements; sourceTree = "<group>"; };
+		3AC966BA2635D85800C94613 /* Bottomless.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bottomless.entitlements; sourceTree = "<group>"; };
+		3AC966D32635E9BE00C94613 /* UpNextOrdersWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNextOrdersWidgetModel.swift; sourceTree = "<group>"; };
 		3AD9268E2491547E000AEFC8 /* Bottomless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bottomless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD926952491547E000AEFC8 /* LoggedInTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInTabsView.swift; sourceTree = "<group>"; };
 		3AD926972491547F000AEFC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +279,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AC9669A2635D70100C94613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AC966A12635D70100C94613 /* SwiftUI.framework in Frameworks */,
+				3AC9669F2635D70100C94613 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AD9268B2491547E000AEFC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +314,8 @@
 		3A6A950024C131330053DF8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AC9669E2635D70100C94613 /* WidgetKit.framework */,
+				3AC966A02635D70100C94613 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,11 +343,31 @@
 			path = BottomlessUITests;
 			sourceTree = "<group>";
 		};
+		3AC966A22635D70100C94613 /* OrdersWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3AC966A32635D70100C94613 /* OrdersWidget.swift */,
+				3AC966A52635D70200C94613 /* Assets.xcassets */,
+				3AC966A72635D70200C94613 /* Info.plist */,
+			);
+			path = OrdersWidget;
+			sourceTree = "<group>";
+		};
+		3AC966D92635E9C500C94613 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				3AC966D32635E9BE00C94613 /* UpNextOrdersWidgetModel.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		3AD926852491547D000AEFC8 = {
 			isa = PBXGroup;
 			children = (
+				3AC966B62635D7FD00C94613 /* OrdersWidgetExtension.entitlements */,
 				3AD926902491547E000AEFC8 /* Bottomless */,
 				3AAF07F8262CCE550036578A /* BottomlessUITests */,
+				3AC966A22635D70100C94613 /* OrdersWidget */,
 				3AD9268F2491547E000AEFC8 /* Products */,
 				3A6A950024C131330053DF8C /* Frameworks */,
 			);
@@ -306,6 +378,7 @@
 			children = (
 				3AD9268E2491547E000AEFC8 /* Bottomless.app */,
 				3AAF07F7262CCE550036578A /* BottomlessUITests.xctest */,
+				3AC9669D2635D70100C94613 /* OrdersWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,6 +386,7 @@
 		3AD926902491547E000AEFC8 /* Bottomless */ = {
 			isa = PBXGroup;
 			children = (
+				3AC966BA2635D85800C94613 /* Bottomless.entitlements */,
 				3AD926CE2491E366000AEFC8 /* Models */,
 				3AD926B824915766000AEFC8 /* API */,
 				3AD926C62491C6F7000AEFC8 /* View Models */,
@@ -439,6 +513,7 @@
 				3AD926DC24932998000AEFC8 /* FormValidation.swift */,
 				3AD926DE249329CD000AEFC8 /* User.swift */,
 				3A0458F1249C9B0400366F10 /* ImageLoader.swift */,
+				3AC966D92635E9C500C94613 /* Widget */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,6 +665,23 @@
 			productReference = 3AAF07F7262CCE550036578A /* BottomlessUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		3AC9669C2635D70100C94613 /* OrdersWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AC966AE2635D70200C94613 /* Build configuration list for PBXNativeTarget "OrdersWidgetExtension" */;
+			buildPhases = (
+				3AC966992635D70100C94613 /* Sources */,
+				3AC9669A2635D70100C94613 /* Frameworks */,
+				3AC9669B2635D70100C94613 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrdersWidgetExtension;
+			productName = OrdersWidgetExtension;
+			productReference = 3AC9669D2635D70100C94613 /* OrdersWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		3AD9268D2491547E000AEFC8 /* Bottomless */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AD926A22491547F000AEFC8 /* Build configuration list for PBXNativeTarget "Bottomless" */;
@@ -598,10 +690,12 @@
 				3AD9268B2491547E000AEFC8 /* Frameworks */,
 				3AD9268C2491547E000AEFC8 /* Resources */,
 				3AD926D32491EC04000AEFC8 /* Swiftformat */,
+				3AC966AB2635D70200C94613 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3AC966A92635D70200C94613 /* PBXTargetDependency */,
 			);
 			name = Bottomless;
 			packageProductDependencies = (
@@ -626,6 +720,9 @@
 					3AAF07F6262CCE550036578A = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 3AD9268D2491547E000AEFC8;
+					};
+					3AC9669C2635D70100C94613 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 					3AD9268D2491547E000AEFC8 = {
 						CreatedOnToolsVersion = 11.5;
@@ -652,6 +749,7 @@
 			targets = (
 				3AD9268D2491547E000AEFC8 /* Bottomless */,
 				3AAF07F6262CCE550036578A /* BottomlessUITests */,
+				3AC9669C2635D70100C94613 /* OrdersWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -661,6 +759,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AC9669B2635D70100C94613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AC966A62635D70200C94613 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,11 +823,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3AC966992635D70100C94613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AC966D52635E9BE00C94613 /* UpNextOrdersWidgetModel.swift in Sources */,
+				3AC966E32635FD6A00C94613 /* UpNextOrder.swift in Sources */,
+				3AC966E72635FDC400C94613 /* ImageLoader.swift in Sources */,
+				3AC966A42635D70100C94613 /* OrdersWidget.swift in Sources */,
+				3AC966B22635D71B00C94613 /* Keys.swift in Sources */,
+				3AC966CF2635E4EB00C94613 /* UpNextResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3AD9268A2491547E000AEFC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3AD926C124917121000AEFC8 /* UIApplication.swift in Sources */,
+				3AC966D42635E9BE00C94613 /* UpNextOrdersWidgetModel.swift in Sources */,
 				3A73055B24D36DC700E71882 /* AutomaticOrderingToggle.swift in Sources */,
 				3AF4FC6824C9150E00A61940 /* NavItems.swift in Sources */,
 				3AD927172497F6F9000AEFC8 /* UpNextOrder.swift in Sources */,
@@ -818,6 +938,11 @@
 			target = 3AD9268D2491547E000AEFC8 /* Bottomless */;
 			targetProxy = 3AAF07FC262CCE550036578A /* PBXContainerItemProxy */;
 		};
+		3AC966A92635D70200C94613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AC9669C2635D70100C94613 /* OrdersWidgetExtension */;
+			targetProxy = 3AC966A82635D70200C94613 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -856,6 +981,52 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Bottomless;
+			};
+			name = Release;
+		};
+		3AC966AC2635D70200C94613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = OrdersWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFMTHAZVS9;
+				INFOPLIST_FILE = OrdersWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drewvolz.Bottomless.OrdersWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AC966AD2635D70200C94613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = OrdersWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFMTHAZVS9;
+				INFOPLIST_FILE = OrdersWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.drewvolz.Bottomless.OrdersWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -978,7 +1149,9 @@
 		3AD926A32491547F000AEFC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bottomless/Bottomless.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bottomless/Preview Content\"";
 				DEVELOPMENT_TEAM = NFMTHAZVS9;
@@ -999,7 +1172,9 @@
 		3AD926A42491547F000AEFC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bottomless/Bottomless.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bottomless/Preview Content\"";
 				DEVELOPMENT_TEAM = NFMTHAZVS9;
@@ -1025,6 +1200,15 @@
 			buildConfigurations = (
 				3AAF07FE262CCE550036578A /* Debug */,
 				3AAF07FF262CCE550036578A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AC966AE2635D70200C94613 /* Build configuration list for PBXNativeTarget "OrdersWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AC966AC2635D70200C94613 /* Debug */,
+				3AC966AD2635D70200C94613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
