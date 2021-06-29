@@ -55,9 +55,14 @@ private extension OrderDetailView {
                             Text(item.message)
                                 .font(.caption)
                         }
+
                         Spacer()
-                        Text("\(item.trackingLocation?.city ?? ""), \(item.trackingLocation?.state ?? "")")
-                            .font(.caption)
+
+                        if let city = item.trackingLocation?.city,
+                            let state = item.trackingLocation?.state {
+                            Text("\(city), \(state)")
+                                .font(.caption)
+                        }
                     }
                 }
             }

@@ -73,8 +73,8 @@ public struct InTransitionResponse: Hashable, Identifiable, Encodable, Decodable
     }
 
     struct TrackingLocation: Encodable, Decodable, Hashable {
-        var city: String
-        var state: String
+        var city: String?
+        var state: String?
     }
 
     public var id: String
