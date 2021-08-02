@@ -100,20 +100,6 @@ func formatStringAsDate(dateString: String) -> Date? {
     return formatter.date(from: dateString)
 }
 
-func formatAsLongDate(dateString: String) -> String {
-    guard dateString.count > 0 else { return "" }
-
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-
-    let shortFormatter = DateFormatter()
-    shortFormatter.dateFormat = "MMMM dd, YYYY"
-
-    let firstDateTime = formatter.date(from: dateString) ?? Date()
-
-    return shortFormatter.string(from: firstDateTime)
-}
-
 func formatAsShortDateString(date: Date) -> String {
     let shortFormatter = DateFormatter()
     shortFormatter.dateFormat = "YYYY-MM-dd"
@@ -126,7 +112,7 @@ func formatAsReadableDateString(dateString: String) -> String {
     shortFormatter.dateFormat = "YYYY-MM-dd"
 
     let readableFormatter = DateFormatter()
-    readableFormatter.dateFormat = "MMMM dd, YYYY"
+    readableFormatter.dateFormat = "MMMM d, YYYY"
 
     let formattedDate = shortFormatter.date(from: dateString) ?? Date()
 
