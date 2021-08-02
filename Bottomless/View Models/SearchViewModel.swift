@@ -35,7 +35,7 @@ final class SearchViewModel: ObservableObject {
 
                           let sortBy = FilterType(rawValue: sortBy)!
                           self.sort(by: sortBy)
-                })
+                      })
                 .store(in: &publishers)
         }
     }

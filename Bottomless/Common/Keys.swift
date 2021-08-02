@@ -12,7 +12,7 @@ struct Keys {
     // Testing and accessibility IDs
     static let UITesting = "--uitesting"
 
-    struct Tabs {
+    enum Tabs {
         static let Orders = "Orders"
         static let Scale = "Scale"
         static let Referrals = "Free Bag"
@@ -20,7 +20,7 @@ struct Keys {
         static let Settings = "Settings"
     }
 
-    struct Orders {
+    enum Orders {
         static let List = "OrdersListIdentifier"
 
         static let UpNextHeader = "OrdersUpNext"
@@ -28,7 +28,7 @@ struct Keys {
         static let PastHeader = "OrdersPast"
     }
 
-    struct Scale {
+    enum Scale {
         static let List = "ScaleListIdentifier"
 
         static let Summary = "ScaleSummary"
@@ -36,7 +36,7 @@ struct Keys {
         static let Consumption = "ScaleConsumption"
     }
 
-    struct Referrals {
+    enum Referrals {
         static let List = "ReferralsListIdentifier"
 
         static let Credits = "ReferralsCredits"
@@ -44,12 +44,12 @@ struct Keys {
         static let About = "ReferralsAbout"
     }
 
-    struct Search {
+    enum Search {
         static let List = "SearchListIdentifier"
         static let SearchBar = "SearchBarIdentifier"
         static let SortByMenu = "SearchSortByMenuIdentifier"
 
-        struct Filter {
+        enum Filter {
             static let Alphabetical = "AlphabeticalIdentifer"
             static let Likes = "LikesIdentifier"
             static let Recent = "RecentlyAddedIdentifer"

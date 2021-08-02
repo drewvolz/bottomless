@@ -14,7 +14,7 @@ struct AutomaticOrderingToggle: View {
     @State var initialPausedValue: Bool
     @State var pauseViewModel: PauseAccountViewModel
     @State var accountViewModel: AccountViewModel
-    @State var selectedDate: Date = Date()
+    @State var selectedDate = Date()
 
     @State private var pickerReset = UUID()
 

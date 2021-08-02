@@ -20,7 +20,7 @@ struct LoggedInSidebarView: View {
 
 private extension LoggedInSidebarView {
     func handleSelection() {
-        if let initialSelection = self.selectedItemId {
+        if let initialSelection = selectedItemId {
             selectedItemId = initialSelection
         } else {
             selectedItemId = navigationItems.first?.id

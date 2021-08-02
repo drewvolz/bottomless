@@ -50,7 +50,7 @@ struct HeatmapView: UIViewRepresentable {
         return calendar
     }
 
-    func updateUIView(_ view: UIView, context _: Context) {
+    func updateUIView(_: UIView, context _: Context) {
         setupColors()
     }
 
@@ -61,8 +61,8 @@ struct HeatmapView: UIViewRepresentable {
     class Coordinator: NSObject, CalendarHeatmapDelegate {
         func colorFor(dateComponents: DateComponents) -> UIColor {
             guard let year = dateComponents.year,
-                let month = dateComponents.month,
-                let day = dateComponents.day else { return .clear }
+                  let month = dateComponents.month,
+                  let day = dateComponents.day else { return .clear }
 
             let m = String(format: "%02d", month)
             let d = String(format: "%02d", day)
@@ -100,7 +100,7 @@ extension HeatmapView {
             }
         }
 
-        return builtObjects.sorted { (group1, group2) -> Bool in
+        return builtObjects.sorted { group1, group2 -> Bool in
             group1.key.compare(group2.key) == .orderedAscending
         }
     }
