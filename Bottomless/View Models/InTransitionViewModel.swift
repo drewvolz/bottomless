@@ -12,7 +12,7 @@ final class InTransitionViewModel: ObservableObject {
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.inTransitionResponse = $0.value?.data as? [InTransitionResponse]
-            })
+                  })
             .store(in: &publishers)
     }
 }

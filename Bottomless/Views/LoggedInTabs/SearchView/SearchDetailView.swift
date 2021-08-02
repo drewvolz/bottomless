@@ -14,7 +14,7 @@ struct SearchDetailView: View {
 
     var variants: [ProductResponse.Variant]? {
         product.variants?.sorted(by: { $0.size! < $1.size! })
-            .filter { ($0.available ?? false) }
+            .filter { $0.available ?? false }
     }
 
     var body: some View {

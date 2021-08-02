@@ -34,14 +34,14 @@ private extension SearchView {
         List(searchViewModel.products?.filter { product in
             searchViewModel.search(product: product)
         } ?? []) { product in
-            NavigationLink(destination: SearchDetailView(
-                searchViewModel: self.searchViewModel,
-                product: product
-            )) {
-                SearchRow(viewModel: searchViewModel,
-                          product: product,
-                          titleLineLimit: 1)
-            }
+                NavigationLink(destination: SearchDetailView(
+                    searchViewModel: self.searchViewModel,
+                    product: product
+                )) {
+                    SearchRow(viewModel: searchViewModel,
+                              product: product,
+                              titleLineLimit: 1)
+                }
         }
         .listStyle(DefaultListStyle())
         .resignKeyboardOnDragGesture()
