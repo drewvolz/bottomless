@@ -46,7 +46,7 @@ struct DataView: View {
             return DataPoint(value: record.adjusted_weight,
                              label: label,
                              legend: legend)
-        }.filter { $0.value > 0 }
+        }.filter { $0.endValue > 0 }
     }
 
     var body: some View {
