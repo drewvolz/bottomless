@@ -27,7 +27,7 @@ struct InTransitionDetailView: View {
     private func groupItems(items: TrackingItems) -> GroupedTracking {
         Dictionary(grouping: items, by: {
             formatAsLongDate(dateString: $0.datetime)
-        }).sorted { (group1, group2) -> Bool in
+        }).sorted { group1, group2 -> Bool in
             group1.key.compare(group2.key) == .orderedDescending
         }
     }
@@ -59,7 +59,8 @@ private extension InTransitionDetailView {
                         Spacer()
 
                         if let city = item.trackingLocation?.city,
-                            let state = item.trackingLocation?.state {
+                           let state = item.trackingLocation?.state
+                        {
                             Text("\(city), \(state)")
                                 .font(.caption)
                         }

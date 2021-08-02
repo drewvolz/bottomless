@@ -38,7 +38,7 @@ struct UIKitShowSidebar: UIViewRepresentable {
 
 extension UIResponder {
     func next<T>(of type: T.Type) -> T? {
-        guard let nextValue = self.next else {
+        guard let nextValue = next else {
             return nil
         }
         guard let result = nextValue as? T else {

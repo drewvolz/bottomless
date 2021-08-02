@@ -35,7 +35,7 @@ final class LoginViewModel: ObservableObject {
                               _ = authManager.authenticate()
                           }
                       }
-            })
+                  })
             .store(in: &publishers)
     }
 }

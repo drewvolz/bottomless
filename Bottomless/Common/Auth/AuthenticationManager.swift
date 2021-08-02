@@ -133,7 +133,8 @@ class AuthenticationManager: ObservableObject {
         }
 
         if let savedEmail = keychain.get(AuthKeys.email),
-            let savedPassword = keychain.get(AuthKeys.password) {
+           let savedPassword = keychain.get(AuthKeys.password)
+        {
             let hashedPassword = hashPassword(password)
 
             if savedEmail == email.lowercased(), hashedPassword == savedPassword {

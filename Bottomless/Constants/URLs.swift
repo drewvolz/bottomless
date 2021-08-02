@@ -1,15 +1,15 @@
 import Foundation
 
 struct Urls {
-    private struct Domains {
-        struct Bottomless {
+    private enum Domains {
+        enum Bottomless {
             static let Base = "https://app.bottomless.com"
             static let ReferralBase = "https://www.bottomless.com"
             static let ShortReferralBase = "bottomless.com"
         }
     }
 
-    private struct Routes {
+    private enum Routes {
         static let Api = "/api"
         static let Referral = "/referral"
     }
@@ -24,7 +24,7 @@ struct Urls {
 
     private static let ApiURL = Domains.Bottomless.Base + Routes.Api
 
-    struct api {
+    enum api {
         static var auth: String {
             return ApiURL + "/auth/login"
         }

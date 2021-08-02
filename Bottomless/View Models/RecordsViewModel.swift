@@ -12,7 +12,7 @@ final class RecordsViewModel: ObservableObject {
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.recordsResponse = $0.value?.data as? [RecordsResponse]
-            })
+                  })
             .store(in: &publishers)
     }
 }
