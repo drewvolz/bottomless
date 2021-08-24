@@ -6,10 +6,14 @@ final class AlertsViewModel: ObservableObject {
     private var publishers = [AnyCancellable]()
     private let fetchProvider = Fetch()
 
-    func post(settings: [String: Any]) {
-        let parameterDictionary = [
+    func post(settings: [String: Any], phone: String) {
+        var parameterDictionary: [String: Any] = [
             "alertSettings": settings,
         ]
+
+        if !phone.isEmpty {
+            parameterDictionary["phone"] = phone
+        }
 
         guard let httpBody = try? JSONSerialization.data(withJSONObject: parameterDictionary, options: []) else {
             return
