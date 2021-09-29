@@ -22,7 +22,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build and Test
+      - name: Build
         uses: mxcl/xcodebuild@v1
         with:
+          xcode: 13.0
+          scheme: "Bottomless"
+          platform: ${{ matrix.platform }}
+
+      - name: Test
+        uses: mxcl/xcodebuild@v1
+        with:
+          xcode: 13.0
+          scheme: "BottomlessUITests"
           platform: ${{ matrix.platform }}
