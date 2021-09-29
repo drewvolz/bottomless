@@ -33,6 +33,7 @@ struct OrdersView: View {
             }
             .groupedStyle()
             .accessibilityIdentifier(Keys.Orders.List)
+            .refreshable(action: fetch)
         }
         .onAppear(perform: fetch)
     }
@@ -73,7 +74,7 @@ private extension OrdersView {
 // MARK: functions
 
 private extension OrdersView {
-    func fetch() {
+    @Sendable func fetch() {
         upNextViewModel.fetch()
         inTransitionViewModel.fetch()
         pastOrdersViewModel.fetch()

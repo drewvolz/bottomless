@@ -25,6 +25,7 @@ struct AccountView: View {
                 }
             }
         }
+        .refreshable(action: fetch)
         .onAppear(perform: fetch)
     }
 }
@@ -52,7 +53,7 @@ private extension AccountView {
         case settings
     }
 
-    func fetch() {
+    @Sendable func fetch() {
         accountViewModel.fetch()
     }
 }

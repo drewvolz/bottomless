@@ -46,6 +46,9 @@ private extension SearchView {
         .listStyle(DefaultListStyle())
         .resignKeyboardOnDragGesture()
         .accessibilityIdentifier(Keys.Search.List)
+        .refreshable {
+            searchViewModel.loadData(sortBy: sort)
+        }
     }
 
     @ViewBuilder func SortMenuButton() -> some View {
