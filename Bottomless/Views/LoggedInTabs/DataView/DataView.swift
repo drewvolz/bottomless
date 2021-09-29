@@ -83,13 +83,14 @@ struct DataView: View {
             }
             .groupedStyle()
             .accessibilityIdentifier(Keys.Scale.List)
+            .refreshable(action: fetch)
         }
         .onAppear(perform: fetch)
     }
 }
 
 private extension DataView {
-    func fetch() {
+    @Sendable func fetch() {
         cleanDataViewModel.fetch()
         recordsViewModel.fetch()
         scaleViewModel.fetch()

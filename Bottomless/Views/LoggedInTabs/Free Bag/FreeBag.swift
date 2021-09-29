@@ -33,6 +33,7 @@ struct FreeBagView: View {
             }
             .groupedStyle()
             .accessibilityIdentifier(Keys.Referrals.List)
+            .refreshable(action: fetch)
         }
         .onAppear(perform: fetch)
     }
@@ -96,7 +97,7 @@ private extension FreeBagView {
 // MARK: functions
 
 private extension FreeBagView {
-    func fetch() {
+    @Sendable func fetch() {
         creditsViewModel.fetch()
         accountViewModel.fetch()
     }
