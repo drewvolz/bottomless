@@ -15,20 +15,14 @@ jobs:
     name: Build
     runs-on: macos-latest
     strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=15.0,name=iPhone 11 Pro Max']
+      matrix:
+        platform:
+          - iOS
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build
-        run: |
-          set -o pipefail && xcodebuild clean build -project Bottomless.xcodeproj -scheme Bottomless -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
-        env: 
-         destination: ${{ matrix.destination }}
-
-      - name: Test
-        run: |
-          set -o pipefail && xcodebuild clean test -project Bottomless.xcodeproj -scheme Bottomless -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO | xcpretty --simple
-        env: 
-         destination: ${{ matrix.destination }}
+      - name: Build and Test
+        uses: mxcl/xcodebuild@v1
+        with:
+          platform: ${{ matrix.platform }}
