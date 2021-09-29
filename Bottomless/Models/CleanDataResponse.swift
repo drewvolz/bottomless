@@ -19,5 +19,5 @@ public struct CleanDataResponse: Hashable, Identifiable, Encodable, Decodable {
     }
 
     public var id = UUID()
-    var data: String
+    var data: CleanData
 }
