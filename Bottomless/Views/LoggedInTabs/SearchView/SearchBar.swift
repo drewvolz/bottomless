@@ -15,7 +15,7 @@ struct SearchBar: View {
         .font(.body)
         .padding(.horizontal)
         .navigationBarHidden(showCancelButton)
-        .animation(.default)
+        .animation(.default, value: showCancelButton)
     }
 }
 
