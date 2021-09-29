@@ -4,6 +4,13 @@ struct SearchView: View {
     @ObservedObject var searchViewModel = SearchViewModel()
     @AppStorage("sort") var sort: Int = 0
 
+    let sortIcons = [
+        "textformat",
+        "heart",
+        "calendar.badge.clock",
+        "building.2",
+    ]
+
     init() {
         UITableView.appearance().tableFooterView = UIView()
 
@@ -54,18 +61,18 @@ private extension SearchView {
     @ViewBuilder func SortMenuButton() -> some View {
         Menu {
             Picker(selection: $sort, label: Text("Sorting options")) {
-                Label("Alphabetical", systemImage: "a.square")
+                Label("Alphabetical", systemImage: sortIcons[0])
                     .tag(0)
-                Label("Likes", systemImage: "heart")
-                    .tag(2)
-                Label("Recently added", systemImage: "calendar.badge.clock")
+                Label("Likes", systemImage: sortIcons[1])
                     .tag(1)
-                Label("Roaster", systemImage: "building.2")
+                Label("Recently added", systemImage: sortIcons[2])
+                    .tag(2)
+                Label("Roaster", systemImage: sortIcons[3])
                     .tag(3)
             }
         }
         label: {
-            Label("", systemImage: "line.horizontal.3.decrease.circle")
+            Label("", systemImage: sortIcons[sort])
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
         }
         .onChange(of: sort, perform: { _ in

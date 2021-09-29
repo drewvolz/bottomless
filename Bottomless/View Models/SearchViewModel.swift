@@ -66,7 +66,7 @@ final class SearchViewModel: ObservableObject {
 
 enum FilterType: Int {
     case alpha
-    case date
     case likes
+    case date
     case roaster
 }
