@@ -23,7 +23,7 @@ final class SearchViewModel: ObservableObject {
             notes?.contains(searchQuery) ?? false
     }
 
-    func loadData(sortBy: Int) {
+    func loadData(sortBy: Int, orderBy: Int) {
         if CommandLine.arguments.contains(Keys.UITesting) {
             products = mockProducts.data
         } else {
@@ -34,31 +34,51 @@ final class SearchViewModel: ObservableObject {
                           self.products = $0.value?.data as [ProductResponse]?
 
                           let sortBy = FilterType(rawValue: sortBy)!
-                          self.sort(by: sortBy)
+                          let orderBy = OrderByType(rawValue: orderBy)!
+                          self.sort(by: sortBy, order: orderBy)
                       })
                 .store(in: &publishers)
         }
     }
 
-    func sort(by: FilterType) {
+    func sort(by: FilterType, order: OrderByType) {
         switch by {
         case .alpha:
             products?.sort {
-                $0.name?.trimWhitespace() ?? "" < $1.name?.trimWhitespace() ?? ""
+                let name1 = $0.name?.trimWhitespace() ?? ""
+                let name2 = $1.name?.trimWhitespace() ?? ""
+
+                switch order {
+                case .ascending: return name1 < name2
+                case .descending: return name1 > name2
+                }
             }
         case .date:
             products?.sort {
                 let date1 = formatStringAsDate(dateString: $0.dateAdded ?? "") ?? Date()
                 let date2 = formatStringAsDate(dateString: $1.dateAdded ?? "") ?? Date()
-                return date1 > date2
+
+                switch order {
+                case .ascending: return date1 < date2
+                case .descending: return date1 > date2
+                }
             }
         case .likes:
             products?.sort {
-                $0.likes > $1.likes
+                switch order {
+                case .ascending: return $0.likes < $1.likes
+                case .descending: return $0.likes > $1.likes
+                }
             }
         case .roaster:
             products?.sort {
-                $0.vendorName?.trimWhitespace() ?? "" < $1.vendorName?.trimWhitespace() ?? ""
+                let name1 = $0.vendorName?.trimWhitespace() ?? ""
+                let name2 = $1.vendorName?.trimWhitespace() ?? ""
+
+                switch order {
+                case .ascending: return name1 < name2
+                case .descending: return name1 > name2
+                }
             }
         }
     }
@@ -69,4 +89,9 @@ enum FilterType: Int {
     case likes
     case date
     case roaster
+}
+
+enum OrderByType: Int {
+    case ascending
+    case descending
 }

@@ -3,6 +3,7 @@ import SwiftUI
 struct SearchView: View {
     @ObservedObject var searchViewModel = SearchViewModel()
     @AppStorage("sort") var sort: Int = 0
+    @AppStorage("order") var order: Int = OrderByType.ascending.rawValue
 
     let sortIcons = [
         "textformat",
@@ -11,10 +12,15 @@ struct SearchView: View {
         "building.2",
     ]
 
+    let orderIcons = [
+        "arrow.up.arrow.down",
+        "arrow.up.arrow.down",
+    ]
+
     init() {
         UITableView.appearance().tableFooterView = UIView()
 
-        searchViewModel.loadData(sortBy: sort)
+        searchViewModel.loadData(sortBy: sort, orderBy: order)
     }
 
     var body: some View {
@@ -54,7 +60,7 @@ private extension SearchView {
         .resignKeyboardOnDragGesture()
         .accessibilityIdentifier(Keys.Search.List)
         .refreshable {
-            searchViewModel.loadData(sortBy: sort)
+            searchViewModel.loadData(sortBy: sort, orderBy: order)
         }
     }
 
@@ -70,16 +76,28 @@ private extension SearchView {
                 Label("Roaster", systemImage: sortIcons[3])
                     .tag(3)
             }
+
+            Picker(selection: $order, label: Text("Ordering options")) {
+                Label("Ascending", systemImage: orderIcons[0])
+                    .tag(0)
+                Label("Descending", systemImage: orderIcons[1])
+                    .tag(1)
+            }
         }
-        label: {
-            Label("", systemImage: sortIcons[sort])
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
-        }
-        .onChange(of: sort, perform: { _ in
-            let sortBy = FilterType(rawValue: sort)
-            searchViewModel.sort(by: sortBy!)
-        })
-        .accessibilityIdentifier(Keys.Search.SortByMenu)
+            label: {
+                Label("", systemImage: sortIcons[sort])
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
+            }
+            .onChange(of: [sort, order], perform: { _ in
+                handleOnChange()
+            })
+            .accessibilityIdentifier(Keys.Search.SortByMenu)
+    }
+
+    func handleOnChange() {
+        let sortBy = FilterType(rawValue: sort)
+        let orderBy = OrderByType(rawValue: order)
+        searchViewModel.sort(by: sortBy!, order: orderBy!)
     }
 }
 
