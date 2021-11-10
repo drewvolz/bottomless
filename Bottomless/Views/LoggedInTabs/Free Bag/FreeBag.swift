@@ -18,16 +18,16 @@ struct FreeBagView: View {
                         Text("Share your invite link")
                             .font(.subheadline)
                             .accessibilityIdentifier(Keys.Referrals.Link)) {
-                            Referral()
+                        Referral()
                     }
 
                     Section(header:
                         Text("Share Bottomless")
                             .font(.subheadline)
                             .accessibilityIdentifier(Keys.Referrals.About)) {
-                            Text("Invite people you know to join Bottomless - for every person who signs up, you will get a free bag credit added to your account. Your friend will also get a free bag.")
-                                .font(.body)
-                                .padding(3)
+                        Text("Invite people you know to join Bottomless - for every person who signs up, you will get a free bag credit added to your account. Your friend will also get a free bag.")
+                            .font(.body)
+                            .padding(3)
                     }
                 }
             }

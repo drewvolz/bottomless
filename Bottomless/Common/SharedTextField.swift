@@ -45,9 +45,9 @@ private extension SharedTextfield {
         }, onCommit: {
             self.onCommit()
         })
-            .disableAutocorrection(true)
-            .autocapitalization(.none)
-            .padding(.vertical, 15)
+        .disableAutocorrection(true)
+        .autocapitalization(.none)
+        .padding(.vertical, 15)
     }
 
     @ViewBuilder func Icon() -> some View {
