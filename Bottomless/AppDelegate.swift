@@ -16,7 +16,8 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         }
 
         if CommandLine.arguments.contains(Keys.UITesting) {
-            UIView.setAnimationsEnabled(false)
+//            Text disabling animation speedup
+//            UIView.setAnimationsEnabled(false)
             resetState()
         }
     }
