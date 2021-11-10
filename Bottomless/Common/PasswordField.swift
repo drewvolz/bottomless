@@ -49,16 +49,16 @@ private extension PasswordField {
         SecureField(placeholder, text: $value, onCommit: {
             self.onEditingChanged(false)
         })
-            .padding(.vertical, 15)
-            .opacity(isSecure ? 1 : 0)
+        .padding(.vertical, 15)
+        .opacity(isSecure ? 1 : 0)
     }
 
     @ViewBuilder func PlainPasswordView() -> some View {
         TextField(placeholder, text: $value, onEditingChanged: { flag in
             self.onEditingChanged(flag)
         })
-            .padding(.vertical, 15)
-            .opacity(isSecure ? 0 : 1)
+        .padding(.vertical, 15)
+        .opacity(isSecure ? 0 : 1)
     }
 
     @ViewBuilder func ViewInsecureIcon() -> some View {

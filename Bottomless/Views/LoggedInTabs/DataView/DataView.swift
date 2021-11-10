@@ -56,28 +56,28 @@ struct DataView: View {
                     Section(header:
                         Text("Summary")
                             .accessibilityIdentifier(Keys.Scale.Summary)) {
-                            ScaleView(viewModel: scaleViewModel)
+                        ScaleView(viewModel: scaleViewModel)
                     }
 
                     Section(header:
                         Text("Weight")
                             .accessibilityIdentifier(Keys.Scale.Weight)) {
-                            BarChartView(dataPoints: weights ?? [])
-                                .chartStyle(
-                                    BarChartStyle(
-                                        showAxis: true,
-                                        showLabels: true,
-                                        labelCount: countLabels(for: weights),
-                                        showLegends: false
-                                    )
+                        BarChartView(dataPoints: weights ?? [])
+                            .chartStyle(
+                                BarChartStyle(
+                                    showAxis: true,
+                                    showLabels: true,
+                                    labelCount: countLabels(for: weights),
+                                    showLegends: false
                                 )
+                            )
                     }
 
                     Section(header:
                         Text("Consumption")
                             .accessibilityIdentifier(Keys.Scale.Consumption)) {
-                            HeatmapView(viewModel: cleanDataViewModel)
-                                .frame(minHeight: 200)
+                        HeatmapView(viewModel: cleanDataViewModel)
+                            .frame(minHeight: 200)
                     }
                 }
             }

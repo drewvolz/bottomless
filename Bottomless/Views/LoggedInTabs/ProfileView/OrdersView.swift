@@ -13,21 +13,21 @@ struct OrdersView: View {
                         Text("Up Next")
                             .font(.subheadline)
                             .accessibilityIdentifier(Keys.Orders.UpNextHeader)) {
-                            UpNextSection()
+                        UpNextSection()
                     }
 
                     Section(header:
                         Text("Orders In Progress")
                             .font(.subheadline)
                             .accessibilityIdentifier(Keys.Orders.InProgressHeader)) {
-                            InProgressSection()
+                        InProgressSection()
                     }
 
                     Section(header:
                         Text("Past Orders")
                             .font(.subheadline)
                             .accessibilityIdentifier(Keys.Orders.PastHeader)) {
-                            PastSection()
+                        PastSection()
                     }
                 }
             }
