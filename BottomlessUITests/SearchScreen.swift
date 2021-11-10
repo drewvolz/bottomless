@@ -26,6 +26,11 @@ struct SearchScreen: Screen {
         case roaster = "Roaster"
     }
 
+    enum OrderBy: String {
+        case ascending = "Ascending"
+        case descending = "Descending"
+    }
+
     func selectTab() -> Self {
         app.tabBars.buttons[Keys.Tabs.Search].tap()
         return self
@@ -47,6 +52,17 @@ struct SearchScreen: Screen {
         return self
     }
 
+    func clearSearch() -> Self {
+        if let value = searchbar.value as? String {
+            let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: value.count)
+
+            searchbar.tap()
+            searchbar.typeText(deleteString)
+        }
+        
+        return self
+    }
+
     func checkNumberOfResults(matches: Int) -> Self {
         XCTAssertTrue(list.cells.count == matches)
         return self
@@ -58,11 +74,24 @@ struct SearchScreen: Screen {
         return self
     }
 
-    func checkFirstResult(contains: String) {
-        let results = list.cells.firstMatch
-            .staticTexts
-            .containing(NSPredicate(format: "label CONTAINS %@", contains))
+    func order(by: OrderBy) -> Self {
+        app.buttons[Keys.Search.SortByMenu].tap()
+        app.buttons[by.rawValue].tap()
+        return self
+    }
 
-        XCTAssertNotNil(results)
+    @discardableResult
+    func checkFirstResult(contains: String) -> Self {
+        let result = list.cells.firstMatch
+        result.assertContains(text: contains)
+        return self
+    }
+}
+
+extension XCUIElement {
+    func assertContains(text: String) {
+        let predicate = NSPredicate(format: "label CONTAINS %@", text)
+        let elementQuery = staticTexts.containing(predicate)
+        XCTAssertTrue(elementQuery.count > 0)
     }
 }
