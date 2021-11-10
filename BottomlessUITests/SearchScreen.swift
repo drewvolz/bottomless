@@ -53,7 +53,7 @@ struct SearchScreen: Screen {
     }
 
     func clearSearch() -> Self {
-        searchbar.clearField()
+        app.buttons["Cancel"].tap()
         return self
     }
 
@@ -87,19 +87,5 @@ extension XCUIElement {
         let predicate = NSPredicate(format: "label CONTAINS %@", text)
         let elementQuery = staticTexts.containing(predicate)
         XCTAssertTrue(elementQuery.count > 0)
-    }
-
-    func clearField() {
-        guard let stringValue = value as? String else {
-            XCTFail("Tried to clear text into a non string value")
-            return
-        }
-
-        let deleteString = stringValue.map { _ in
-            XCUIKeyboardKey.delete.rawValue
-        }.joined(separator: "")
-
-        tap()
-        typeText(deleteString)
     }
 }
