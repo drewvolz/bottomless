@@ -4,8 +4,7 @@
 
 An iOS/iPadOS app written in SwiftUI/Combine for viewing your [Bottomless][1] coffee subscription account information.
 
-<details>
-<summary>📸 Screenshots</summary>
+📸 Screenshots
 
 ### iOS
 ~ | ~ | ~
@@ -16,8 +15,6 @@ An iOS/iPadOS app written in SwiftUI/Combine for viewing your [Bottomless][1] co
 ### iPadOS
 
 ![profile-ipad][image-7]
-
-</details>
 
 ## Contributing
 
