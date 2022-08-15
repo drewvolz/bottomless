@@ -74,9 +74,10 @@ private extension SearchDetailView {
     @ViewBuilder func Description() -> some View {
         if product.description != "" {
             Section(header: Text("Description").font(.subheadline)) {
-                Text(verbatim: product.description ?? "")
+                Text(String(htmlEncodedString: product.description ?? "") ?? "")
                     .font(.body)
                     .padding(.vertical)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
     }
