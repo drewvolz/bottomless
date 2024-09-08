@@ -53,12 +53,14 @@ struct DataView: View {
                 Group {
                     Section(header:
                         Text("Summary")
+                            .font(.subheadline)
                             .accessibilityIdentifier(Keys.Scale.Summary)) {
                         ScaleView(viewModel: scaleViewModel)
                     }
 
                     Section(header:
                         Text("Weight")
+                            .font(.subheadline)
                             .accessibilityIdentifier(Keys.Scale.Weight)) {
                         BarChartView(dataPoints: weights ?? [])
                             .chartStyle(
