@@ -15,7 +15,8 @@ struct WelcomeView: View {
             LoginSignup()
             Spacer()
         }
-        .navigationBarTitle("Bottomless")
+        .navigationTitle("Bottomless")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
