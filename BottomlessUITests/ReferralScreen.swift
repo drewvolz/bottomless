@@ -12,7 +12,7 @@ struct ReferralScreen: Screen {
     let app: XCUIApplication
 
     var list: XCUIElement {
-        app.tables[Keys.Referrals.List]
+        app.collectionViews[Keys.Referrals.List]
     }
 
     func selectTab() -> Self {

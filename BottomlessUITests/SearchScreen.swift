@@ -12,7 +12,7 @@ struct SearchScreen: Screen {
     let app: XCUIApplication
 
     var list: XCUIElement {
-        app.tables[Keys.Search.List]
+        app.collectionViews[Keys.Search.List]
     }
 
     var searchbar: XCUIElement {

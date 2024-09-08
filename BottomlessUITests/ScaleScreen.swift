@@ -12,7 +12,7 @@ struct ScaleScreen: Screen {
     let app: XCUIApplication
 
     var list: XCUIElement {
-        app.tables[Keys.Scale.List]
+        app.collectionViews[Keys.Scale.List]
     }
 
     func selectTab() -> Self {

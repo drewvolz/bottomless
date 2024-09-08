@@ -12,7 +12,7 @@ struct OrdersScreen: Screen {
     let app: XCUIApplication
 
     var list: XCUIElement {
-        app.tables[Keys.Orders.List]
+        app.collectionViews[Keys.Orders.List]
     }
 
     func selectTab() -> Self {
