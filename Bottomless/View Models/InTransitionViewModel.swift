@@ -8,7 +8,6 @@ final class InTransitionViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getInTransition()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.inTransitionResponse = $0.value?.data as? [InTransitionResponse]

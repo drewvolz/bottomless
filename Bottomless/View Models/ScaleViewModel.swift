@@ -8,7 +8,6 @@ final class ScaleViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getScale()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.scaleResponse = $0.value })
             .store(in: &publishers)

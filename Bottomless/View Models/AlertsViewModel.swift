@@ -20,7 +20,6 @@ final class AlertsViewModel: ObservableObject {
         }
 
         fetchProvider.setAlertPreferences(settings: httpBody)
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.alertsResponse = $0.value })
             .store(in: &publishers)

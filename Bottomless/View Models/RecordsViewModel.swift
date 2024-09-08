@@ -8,7 +8,6 @@ final class RecordsViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getRecords()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.recordsResponse = $0.value?.data as? [RecordsResponse]

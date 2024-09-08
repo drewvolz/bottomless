@@ -8,7 +8,6 @@ final class OrdersViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getPastOrders()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: {
                       self.ordersResponse = $0.value?.data as? [OrdersResponse]

@@ -16,7 +16,6 @@ final class OrderingStrategyViewModel: ObservableObject {
         }
 
         fetchProvider.setOrderingStrategy(level: httpBody)
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.strategyResponse = $0.value })
             .store(in: &publishers)

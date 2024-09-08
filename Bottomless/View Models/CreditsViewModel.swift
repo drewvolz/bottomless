@@ -8,7 +8,6 @@ final class CreditsViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getCredits()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.creditsResponse = $0.value })
             .store(in: &publishers)
