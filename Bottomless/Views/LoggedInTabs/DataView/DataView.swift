@@ -81,7 +81,7 @@ struct DataView: View {
 }
 
 private extension DataView {
-    @Sendable func fetch() {
+    func fetch() {
         recordsViewModel.fetch()
         scaleViewModel.fetch()
     }

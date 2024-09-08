@@ -97,7 +97,7 @@ private extension FreeBagView {
 // MARK: functions
 
 private extension FreeBagView {
-    @Sendable func fetch() {
+    func fetch() {
         creditsViewModel.fetch()
         accountViewModel.fetch()
     }
