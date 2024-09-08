@@ -74,7 +74,7 @@ private extension OrdersView {
 // MARK: functions
 
 private extension OrdersView {
-    func fetch() {
+    @Sendable func fetch() {
         upNextViewModel.fetch()
         inTransitionViewModel.fetch()
         pastOrdersViewModel.fetch()

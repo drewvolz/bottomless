@@ -53,7 +53,7 @@ private extension AccountView {
         case settings
     }
 
-    func fetch() {
+    @Sendable func fetch() {
         accountViewModel.fetch()
     }
 }
