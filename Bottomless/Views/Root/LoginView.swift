@@ -77,6 +77,17 @@ private extension LoginView {
         // showAlert = !authManager.authenticate()  // TODO: handle this
 
         loginViewModel.login(authManager: authManager)
+                .sink(receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        print("Login failed: \(error.localizedDescription)")
+                    }
+                }, receiveValue: { success in
+                    print("Login successful: \(success)")
+                })
+                .store(in: &loginViewModel.publishers)
 
         showProfile = authManager.isLoggedIn
     }
