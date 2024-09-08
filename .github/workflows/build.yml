@@ -25,6 +25,6 @@ jobs:
       - name: Build and Test
         uses: mxcl/xcodebuild@v1
         with:
-          xcode: 13.0
+          xcode: 15.0
           scheme: "Bottomless"
           platform: ${{ matrix.platform }}
