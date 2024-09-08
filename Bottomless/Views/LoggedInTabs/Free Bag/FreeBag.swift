@@ -45,7 +45,6 @@ private extension FreeBagView {
     @ViewBuilder func CreditsHeader() -> some View {
         Group {
             HStack(alignment: .center) {
-                Image(systemName: "gift")
                 Text("Your free bag credits")
                     .font(.subheadline)
                     .accessibilityIdentifier(Keys.Referrals.Credits)
