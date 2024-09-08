@@ -33,7 +33,6 @@ struct Keys {
 
         static let Summary = "ScaleSummary"
         static let Weight = "ScaleWeight"
-        static let Consumption = "ScaleConsumption"
     }
 
     enum Referrals {

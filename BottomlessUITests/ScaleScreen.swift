@@ -29,7 +29,6 @@ struct ScaleScreen: Screen {
         let sectionHeaders = [
             Keys.Scale.Summary,
             Keys.Scale.Weight,
-            Keys.Scale.Consumption,
         ]
 
         for header in sectionHeaders {
