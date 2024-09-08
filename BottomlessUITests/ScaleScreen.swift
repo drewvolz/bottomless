@@ -12,7 +12,7 @@ struct ScaleScreen: Screen {
     let app: XCUIApplication
 
     var list: XCUIElement {
-        app.tables[Keys.Scale.List]
+        app.collectionViews[Keys.Scale.List]
     }
 
     func selectTab() -> Self {
@@ -29,7 +29,6 @@ struct ScaleScreen: Screen {
         let sectionHeaders = [
             Keys.Scale.Summary,
             Keys.Scale.Weight,
-            Keys.Scale.Consumption,
         ]
 
         for header in sectionHeaders {

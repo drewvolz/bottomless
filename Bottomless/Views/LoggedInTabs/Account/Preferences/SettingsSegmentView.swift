@@ -7,16 +7,16 @@ struct SettingsSegmentView: View {
         Group {
             Form {
                 Group {
-                    Section(header: Text("Strategy")) {
+                    Section(header: Text("Strategy").font(.subheadline)) {
                         OrderingStrategyView(accountViewModel: accountViewModel)
                     }
 
-                    Section(header: Text("Pausing")) {
+                    Section(header: Text("Pausing").font(.subheadline)) {
                         AutomaticOrderingView(accountViewModel: accountViewModel)
                     }
 
-                    Section(header: Text("Alerts"),
-                            footer: Text("⚠️ There's a bug updating these toggles, leaving the view, and coming back. The state you see may not be correct.")) {
+                    Section(header: Text("Alerts").font(.subheadline),
+                            footer: Text("⚠️ There's a bug updating these toggles, leaving the view, and coming back. The state you see will be incorrect.").font(.subheadline)) {
                         AlertsView(accountViewModel: accountViewModel)
                     }
                 }

@@ -8,7 +8,6 @@ final class UpNextViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getUpNext()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.upNextResponse = $0.value })
             .store(in: &publishers)

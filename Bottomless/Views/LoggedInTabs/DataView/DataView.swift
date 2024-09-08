@@ -1,11 +1,9 @@
-import CalendarHeatmap
 import SwiftUI
 import SwiftUICharts
 
 struct DataView: View {
     @ObservedObject var recordsViewModel = RecordsViewModel()
     @ObservedObject var scaleViewModel = ScaleViewModel()
-    @ObservedObject var cleanDataViewModel = CleanDataViewModel()
 
     let full = Legend(color: .green, label: "Full", order: 4)
     let half = Legend(color: .yellow, label: "Half", order: 3)
@@ -55,12 +53,14 @@ struct DataView: View {
                 Group {
                     Section(header:
                         Text("Summary")
+                            .font(.subheadline)
                             .accessibilityIdentifier(Keys.Scale.Summary)) {
                         ScaleView(viewModel: scaleViewModel)
                     }
 
                     Section(header:
                         Text("Weight")
+                            .font(.subheadline)
                             .accessibilityIdentifier(Keys.Scale.Weight)) {
                         BarChartView(dataPoints: weights ?? [])
                             .chartStyle(
@@ -71,13 +71,6 @@ struct DataView: View {
                                     showLegends: false
                                 )
                             )
-                    }
-
-                    Section(header:
-                        Text("Consumption")
-                            .accessibilityIdentifier(Keys.Scale.Consumption)) {
-                        HeatmapView(viewModel: cleanDataViewModel)
-                            .frame(minHeight: 200)
                     }
                 }
             }
@@ -91,7 +84,6 @@ struct DataView: View {
 
 private extension DataView {
     @Sendable func fetch() {
-        cleanDataViewModel.fetch()
         recordsViewModel.fetch()
         scaleViewModel.fetch()
     }

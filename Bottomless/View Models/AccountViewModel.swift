@@ -8,7 +8,6 @@ final class AccountViewModel: ObservableObject {
 
     func fetch() {
         fetchProvider.getAccount()
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.accountResponse = $0.value })
             .store(in: &publishers)

@@ -28,7 +28,6 @@ final class SearchViewModel: ObservableObject {
             products = mockProducts.data
         } else {
             fetchProvider.getProducts()
-                .map { $0 }
                 .sink(receiveCompletion: { _ in },
                       receiveValue: {
                           self.products = $0.value?.data as [ProductResponse]?

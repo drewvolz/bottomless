@@ -13,7 +13,8 @@ struct LoggedInSidebarView: View {
             }
         }
         .listStyle(SidebarListStyle())
-        .navigationBarTitle("Bottomless")
+        .navigationTitle("Bottomless")
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: handleSelection)
     }
 }

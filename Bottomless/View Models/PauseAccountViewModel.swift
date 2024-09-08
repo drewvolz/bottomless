@@ -17,7 +17,6 @@ final class PauseAccountViewModel: ObservableObject {
         }
 
         fetchProvider.setAccountPaused(status: httpBody)
-            .map { $0 }
             .sink(receiveCompletion: { _ in },
                   receiveValue: { self.pauseAccountResponse = $0.value })
             .store(in: &publishers)

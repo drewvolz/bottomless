@@ -9,7 +9,8 @@ struct LoggedInTabsView: View {
                 buildTab(index: index)
             }
         }
-        .navigationBarTitle("Bottomless")
+        .navigationTitle("Bottomless")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
