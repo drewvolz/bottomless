@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,11 +39,7 @@
 		3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A858C9524AD05B900F535D2 /* NoOrdersView.swift */; };
 		3A9B492128A9F6E80062D078 /* EncodedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B492028A9F6E80062D078 /* EncodedString.swift */; };
 		3A9B492428A9F84A0062D078 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9270724972CB1000AEFC8 /* String.swift */; };
-		3AAADFC925931F2A003A0A09 /* CleanDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAADFC825931F2A003A0A09 /* CleanDataResponse.swift */; };
 		3AAADFCD25932234003A0A09 /* clean-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AAADFCC25932234003A0A09 /* clean-data.json */; };
-		3AAADFD1259322B9003A0A09 /* CleanDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAADFD0259322B9003A0A09 /* CleanDataViewModel.swift */; };
-		3AAADFD525932819003A0A09 /* CalendarHeatmap in Frameworks */ = {isa = PBXBuildFile; productRef = 3AAADFD425932819003A0A09 /* CalendarHeatmap */; };
-		3AAADFDD25932FD1003A0A09 /* HeatmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAADFDC25932FD1003A0A09 /* HeatmapView.swift */; };
 		3AAADFE32593E819003A0A09 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAADFE22593E819003A0A09 /* Date.swift */; };
 		3AAF07FA262CCE550036578A /* BottomlessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF07F9262CCE550036578A /* BottomlessUITests.swift */; };
 		3AAF0804262CD1DE0036578A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF0803262CD1DE0036578A /* Keys.swift */; };
@@ -157,10 +153,7 @@
 		3A73055A24D36DC700E71882 /* AutomaticOrderingToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticOrderingToggle.swift; sourceTree = "<group>"; };
 		3A858C9524AD05B900F535D2 /* NoOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOrdersView.swift; sourceTree = "<group>"; };
 		3A9B492028A9F6E80062D078 /* EncodedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodedString.swift; sourceTree = "<group>"; };
-		3AAADFC825931F2A003A0A09 /* CleanDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanDataResponse.swift; sourceTree = "<group>"; };
 		3AAADFCC25932234003A0A09 /* clean-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "clean-data.json"; sourceTree = "<group>"; };
-		3AAADFD0259322B9003A0A09 /* CleanDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanDataViewModel.swift; sourceTree = "<group>"; };
-		3AAADFDC25932FD1003A0A09 /* HeatmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapView.swift; sourceTree = "<group>"; };
 		3AAADFE22593E819003A0A09 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3AAF07F7262CCE550036578A /* BottomlessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottomlessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AAF07F9262CCE550036578A /* BottomlessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomlessUITests.swift; sourceTree = "<group>"; };
@@ -247,7 +240,6 @@
 			files = (
 				3AD926CB2491CA7A000AEFC8 /* KeychainSwift in Frameworks */,
 				3A6A97DA252E63240071DBB9 /* SwiftUICharts in Frameworks */,
-				3AAADFD525932819003A0A09 /* CalendarHeatmap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +414,6 @@
 				3AD9272524981A85000AEFC8 /* OrdersViewModel.swift */,
 				3AD9272924985D40000AEFC8 /* RecordsViewModel.swift */,
 				3AD927352498B954000AEFC8 /* ScaleViewModel.swift */,
-				3AAADFD0259322B9003A0A09 /* CleanDataViewModel.swift */,
 				3AD9273D24996059000AEFC8 /* CreditsViewModel.swift */,
 				3A0458D72499775300366F10 /* AccountViewModel.swift */,
 				3A0458FF249E13DE00366F10 /* OrderingStrategyViewModel.swift */,
@@ -441,7 +432,6 @@
 				3A0458D524996F2400366F10 /* AccountResponse.swift */,
 				3AD9273B24996010000AEFC8 /* CreditsResponse.swift */,
 				3AD9272C24985DF7000AEFC8 /* RecordsResponse.swift */,
-				3AAADFC825931F2A003A0A09 /* CleanDataResponse.swift */,
 				3AD927332498B8B4000AEFC8 /* ScaleResponse.swift */,
 				3AD9271A2497F84F000AEFC8 /* UpNextResponse.swift */,
 				3AD926F924943500000AEFC8 /* InTransitionResponse.swift */,
@@ -511,7 +501,6 @@
 			children = (
 				3AD926F224942D0B000AEFC8 /* DataView.swift */,
 				3A46478924AD1CE500B9D4B5 /* ScaleView.swift */,
-				3AAADFDC25932FD1003A0A09 /* HeatmapView.swift */,
 			);
 			path = DataView;
 			sourceTree = "<group>";
@@ -619,7 +608,6 @@
 			packageProductDependencies = (
 				3AD926CA2491CA7A000AEFC8 /* KeychainSwift */,
 				3A6A97D9252E63240071DBB9 /* SwiftUICharts */,
-				3AAADFD425932819003A0A09 /* CalendarHeatmap */,
 			);
 			productName = Bottomless;
 			productReference = 3AD9268E2491547E000AEFC8 /* Bottomless.app */;
@@ -752,7 +740,6 @@
 				3A0458FE249E11BC00366F10 /* OrderingStrategyView.swift in Sources */,
 				3AD9270D24973FE1000AEFC8 /* MockData.swift in Sources */,
 				3AD9272D24985DF7000AEFC8 /* RecordsResponse.swift in Sources */,
-				3AAADFC925931F2A003A0A09 /* CleanDataResponse.swift in Sources */,
 				3AD926BA24915774000AEFC8 /* Store.swift in Sources */,
 				3AD926D924932904000AEFC8 /* AuthKeys.swift in Sources */,
 				3A6A950424C13F410053DF8C /* ListModifiers.swift in Sources */,
@@ -771,13 +758,11 @@
 				3AD9272624981A85000AEFC8 /* OrdersViewModel.swift in Sources */,
 				3A0458F4249CA37F00366F10 /* SettingsSegmentView.swift in Sources */,
 				3AAF0804262CD1DE0036578A /* Keys.swift in Sources */,
-				3AAADFD1259322B9003A0A09 /* CleanDataViewModel.swift in Sources */,
 				3A858C9624AD05B900F535D2 /* NoOrdersView.swift in Sources */,
 				3AD926B124915679000AEFC8 /* Colors.swift in Sources */,
 				3A0458F02499D07200366F10 /* SearchDetailView.swift in Sources */,
 				3AD926CD2491CCE1000AEFC8 /* PasswordField.swift in Sources */,
 				3AF4FC6624C8E65700A61940 /* LoggedInSidebar.swift in Sources */,
-				3AAADFDD25932FD1003A0A09 /* HeatmapView.swift in Sources */,
 				3AD9273C24996010000AEFC8 /* CreditsResponse.swift in Sources */,
 				3A46478A24AD1CE500B9D4B5 /* ScaleView.swift in Sources */,
 				3AD9273924995D2E000AEFC8 /* FreeBag.swift in Sources */,
@@ -1095,11 +1080,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A6A97D8252E63240071DBB9 /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
 			productName = SwiftUICharts;
-		};
-		3AAADFD425932819003A0A09 /* CalendarHeatmap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AAADFD325932819003A0A09 /* XCRemoteSwiftPackageReference "CalendarHeatmap" */;
-			productName = CalendarHeatmap;
 		};
 		3AD926CA2491CA7A000AEFC8 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;

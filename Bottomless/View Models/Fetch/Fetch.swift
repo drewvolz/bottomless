@@ -42,10 +42,6 @@ public extension Fetch {
         return call(Urls.api.records, method: .GET)
     }
 
-    func getHeatmap() -> FetchResponse.Heatmap {
-        return call(Urls.api.cleanData, method: .GET)
-    }
-
     // MARK: Credits & Referrals
 
     func getCredits() -> FetchResponse.Credits {

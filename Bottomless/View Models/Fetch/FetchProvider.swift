@@ -29,7 +29,6 @@ public enum FetchResponse {
 
     public typealias Scale = AnyPublisher<Response<ScaleResponse?>, Error>
     public typealias Records = AnyPublisher<Response<RecordsResultResponse?>, Error>
-    public typealias Heatmap = AnyPublisher<Response<CleanDataResponse?>, Error>
 
     // MARK: Credits & Referrals
 
@@ -62,7 +61,6 @@ public protocol FetchProvider {
 
     func getScale() -> FetchResponse.Scale
     func getRecords() -> FetchResponse.Records
-    func getHeatmap() -> FetchResponse.Heatmap
 
     // MARK: Credits & Referrals
 
