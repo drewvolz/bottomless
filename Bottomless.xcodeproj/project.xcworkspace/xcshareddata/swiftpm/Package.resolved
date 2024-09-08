@@ -1,34 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "CalendarHeatmap",
-        "repositoryURL": "https://github.com/Zacharysp/CalendarHeatmap",
-        "state": {
-          "branch": "master",
-          "revision": "dac4e0094d32ef8f4c59fecf6ed978b7b6b8d3e3",
-          "version": null
-        }
-      },
-      {
-        "package": "KeychainSwift",
-        "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
-          "version": "19.0.0"
-        }
-      },
-      {
-        "package": "SwiftUICharts",
-        "repositoryURL": "https://github.com/mecid/SwiftUICharts.git",
-        "state": {
-          "branch": null,
-          "revision": "6caa314f63912d37bb26fdf88ae7974747573f9b",
-          "version": "0.6.3"
-        }
+  "pins" : [
+    {
+      "identity" : "keychain-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/keychain-swift.git",
+      "state" : {
+        "revision" : "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
+        "version" : "19.0.0"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swiftuicharts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mecid/SwiftUICharts.git",
+      "state" : {
+        "revision" : "6caa314f63912d37bb26fdf88ae7974747573f9b",
+        "version" : "0.6.3"
+      }
+    }
+  ],
+  "version" : 2
 }
